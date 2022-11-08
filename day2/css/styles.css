@@ -1,0 +1,11 @@
+h1 {
+    color: red;
+    text-align: center;
+    text-decoration: solid underline 1px white;
+    text-transform: capitalize;
+    height: 300px;
+    background-image: url(https://cf.shopee.vn/file/5b8e1e0f256e51e057396a3e4834194f_tn);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: scroll;
+}
