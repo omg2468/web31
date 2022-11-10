@@ -1,0 +1,16 @@
+table, th, td {
+  border: 1px solid;
+}
+
+th, td {
+    padding: 5px;
+}
+
+.footer {
+    text-align: center;
+}
+
+
+input {
+    margin: 0 6px;
+}
