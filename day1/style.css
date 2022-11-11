@@ -1,0 +1,14 @@
+*{
+    margin-left: 5px;
+}
+
+blockquote {
+    background-color: antiquewhite;
+    padding: 10px;
+    border-left: 2px solid rgb(159, 96, 0);
+}
+
+.date {
+    text-decoration: underline;
+}
+
