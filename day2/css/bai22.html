@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style22.css" />
+    <title>bai2</title>
+  </head>
+  <body>
+    <h1>BEM là gì?</h1>
+    <p>
+      BEM là viết tắt của Block-Element-Modifier, là một tiêu chuẩn quy ước đặt
+      tên cho các tên lớp CSS. BEM giúp cho việc code Frontend dễ đọc và dễ hiểu
+      hơn, dễ làm việc và dễ mở rộng cũng như bảo trì khi làm việc với CSS.
+    </p>
+    <p>
+      Việc đặt tên theo chuẩn giúp các lập trình viên frontend hiểu được đoạn
+      code đó có ý nghĩa gì, nó thực hiện nhiệm vụ gì. Từ đó những lập trình
+      viên khác khi đọc vào code của bạn họ cũng hiểu được bạn đang làm gì, từ
+      đó dễ dàng phân tích, thay đổi và quản lý hơn sau này.
+    </p>
+    <h1>Quy ước đặt tên</h1>
+    <img
+      src="https://topdev.vn/blog/wp-content/uploads/2019/04/bem-la-gi.jpeg"
+      alt="quy ước"
+    />
+    <p>
+      <b>1. Block</b> Là một thành phần của trang web hay ứng dụng đó, các thành
+      phần của DOM cũng có thể là các block. Block ở đây thường là các thành
+      phần header, body, content, footer. Ví dụ section td bên dưới tập hợp các
+      block sau:
+    </p>
+    <ul>
+      <li>
+        <code>.td__container</code> làm nhiệm vụ cân max width và padding left
+        right
+      </li>
+      <li>
+        <code>.td__inner</code> làm nhiệm vụ cân padding top bottom và điểm bám
+        cho các element absolute. VD: chỉnh một button…
+      </li>
+      <li><code>.td__header</code> chứa Sub-title.</li>
+      <li><code>.td__content</code> chứa Headline và Description.</li>
+      <li><code>.td__footer</code> chứa button CTA.</li>
+    </ul>
+    <p>
+      Các prefix của các class đều là td giúp chúng ta có thể nhận diện section
+      khi muốn update mục tương ứng trong css.
+    </p>
+    <p>
+      <b>2. Elements:</b>Là một thành phần của một block và sẽ không tồn tại độc
+      lập mà không có block vì được đặt bên trong nó, và chúng phụ thuộc vào
+      parent block của nó. Trong BEM, các phần tử được biểu thị bằng dấu gạch
+      dưới kép __.
+    </p>
+    <ul>
+      <li>
+        <code>.td__headline</code> là Text cỡ lớn. Style thường là H1 hoặc H2.
+      </li>
+      <li>
+        <code>.td__intro</code>, <code>.td__description</code> làm mô tả
+        content.
+      </li>
+      <li><code>.td__image</code> chứa ảnh.</li>
+      <li>
+        <code>.td__button</code> với style riêng cho button trong section này.
+      </li>
+    </ul>
+    <p>
+      <b>3. Modifers:</b>Được dùng để thao tác thay đổi cách hiển thị trên block
+      hoặc phần tử. Ví dụ mình muốn tạo thêm một block
+      <code>.block__elem</code> khác nữa và muốn làm nổi bật nó thì sẽ thêm một
+      class <code>.block__elem--hightlight</code> để tạo sự khác biệt đó.
+    </p>
+    <hr />
+    <h1>BOX MODEL VÀ CÁC THUỘC TÍNH</h1>
+    <p class="boxmodel">
+      <b>1.Khái niệm</b> Box Model là một kỹ thuật cơ bản nhất trong CSS Layout
+      và được sử dụng để bạn mô tả về khoảng cách mà mỗi phần tử trên website
+      được sở hữu, hay nói cách khác là kỹ thuật tinh chỉnh khoảng cách hiển thị
+      cho mỗi phần tử trên website.
+    </p>
+    <p>Kỹ thuật Box Model trong CSS bao gồm 4 phần quan trọng đó là:</p>
+    <ul>
+      <li>Margin: Khoảng cách tính từ bên ngoài của phần tử.</li>
+      <li>Border: Đường viền của phần tử.</li>
+      <li>Padding: Khoảng cách tính từ bên trong của phần tử.</li>
+      <li>Content: Nội dung trong phần tử.</li>
+    </ul>
+    <p>4 phần này chúng ta có cái hình ảnh (mượn từ W3Scools) như sau:</p>
+    <img
+      src="https://thachpham.com/wp-content/uploads/2015/04/box-model.gif"
+      alt="box-model"
+    />
+    <h3>Padding</h3>
+    <p>
+      Padding nghĩa là chúng ta sẽ thiết lập khoảng cách được tính từ phần
+      Content trở ra viền của phần tử, đơn giản vậy thôi. Padding được khai báo
+      trong CSS bởi thuộc tính padding với giá trị theo tuần tự top right bottom
+      left (trên > phải > dưới > trái) và giá trị là số kèm theo đơn vị đo
+      lường.
+    </p>
+    <h3>Border</h3>
+    <p>
+      Border nghĩa là thuộc tính để bạn tạo viền cho phần tử và nó sẽ được khai
+      báo bằng thuộc tính border trong CSS.
+    </p>
+    <p>Thuộc tính border này bạn sẽ viết theo cấu trúc như sau:</p>
+    <pre class="inline-code">border: [size] [type] [color];</pre>
+    <h3>Margin</h3>
+    <p>
+      Trong khi Padding có nhiệm vụ tạo khoảng cách giữa phần Content với Border
+      thì Margin sẽ có tác dụng tạo khoảng cách từ Border trở ra ngoài, nói dễ
+      hiểu thì nó sẽ giúp bạn tinh chỉnh khoảng cách giữa các phần tử với nhau.
+      Để dễ hiểu hơn thì các bạn hãy xem ví dụ bên dưới.
+    </p>
+    <hr />
+    <h1>"Cascading" trong CSS</h1>
+    <p>
+      CSS là viết tắt của Cascading Style Sheets, trong đó "Cascading" có nghĩa
+      là "Xếp tầng".
+    </p>
+    <p>VD bạn viết 2 đoạn code css như sau:</p>
+    <pre>
+  //custom.css
+h1 {
+    color: red;
+}
+
+//custom2.css
+h1 {
+    color: blue;
+}
+</pre
+    >
+    <p>
+      Vậy trình duyệt nên hiểu đoạn code trên như thế nào ? Đó chính là nhờ cơ
+      chế "Cascading" trong CSS. Hay nói cách khác, nếu như không có "Cascading"
+      thì CSS sẽ nghĩa là "Conflicting Style Sheets" =))) Và để áp dụng được
+      Cascading, CSS phải tuân theo 3 bước sau, chúng ta hãy cùng tìm hiểu nhé !
+    </p>
+    <h3>1, Importance</h3>
+    <p>
+      Đây là bước đầu tiên để xác định xem "rules" CSS nào sẽ được áp dụng.
+      Importance sẽ dựa trên "nguồn gốc xuất xứ" của Style Sheets để quyết định
+      xem nó có được áp dụng không. Ta hãy xem qua ảnh sau:
+    </p>
+    <img
+      src="https://images.viblo.asia/fd18e48f-c2a6-4a9d-af4a-b0f6baa45c3a.png"
+      alt="importan"
+    />
+    <p>
+      Có 3 nguồn gốc của Style Sheets mà CSS quy định, được xếp theo thứ tự độ
+      ưu tiên tăng dần (1 là kém ưu tiên nhất, 3 là được ưu tiên cao nhất):
+    </p>
+    <ol>
+      <li>
+        User Agent Styles: Đây là những CSS mặc định mà các trình duyệt đặt sẵn,
+        nếu như file HTML của bạn không được style bằng CSS, nó sẽ vẫn có một
+        vài Style mặc định (như là h1 sẽ to và được bôi đậm,...)
+      </li>
+      <li>
+        User Styles: Một vài người dùng sẽ có các Style Custom được cài đặt cho
+        cá nhân họ, những Style này chỉ áp dụng cho bản thân người dùng đó và nó
+        được cài dưới dạng local.
+      </li>
+      <li>
+        Author Styles: Đây là CSS do chúng ta - những developer viết nên và gửi
+        qua các server về máy khách.
+      </li>
+    </ol>
+    <p>
+      Vậy xét theo mức độ Importace, CSS do server gửi đến máy khách luôn được
+      ưu tiên cao nhất, do đó nó sẽ không bị CSS do trình duyệt mặc định hay của
+      máy khách custom ghi đè.
+    </p>
+    <h3>2, Specificity</h3>
+    <p class="inside">
+      Specificity is a common reason why your CSS-rules don't apply to some
+      elements, although you think they should.
+    </p>
+    <p>
+      Tạm dịch: Tính cụ thể là lý do phổ biến cho việc các quy tắc CSS không
+      được áp dụng cho một số elements, mặc dù bạn nghĩ rằng chúng được áp dụng.
+    </p>
+    <p>
+      Trong CSS có khái niệm CSS selector, khái niệm này liên quan chặt chẽ với
+      "Specificity". Bởi vì CSS sẽ phân cấp các selector này, xem selector nào
+      "specific" hơn thì sẽ áp dụng selector đó.
+    </p>
+    <p>Các cấp độ "Specific" của CSS được xếp như sau:</p>
+    <ol>
+      <li>
+        Inline styles - Trong ví dụ trên mình không đề cập đến do kiểu này khá
+        riêng biệt, nhưng bằng cách viết CSS rules trực tiếp trong HTML thông
+        qua thuộc tính style thì CSS ở đó luôn có độ ưu tiên cao nhất.
+      </li>
+      <li>
+        IDs - ID được sử dụng như một định danh duy nhất cho một thành phần
+        trong trang. Bạn không được phép sử dụng 1 ID cho nhiều element khác
+        nhau trong trang. Nó là duy nhất, chỉ đích thị đến element đó cho nên độ
+        ưu tiên của nó chỉ xếp sau Inline styles
+      </li>
+      <li>
+        Classes, attributes và pseudo-classes - Selector kiểu này thường chỉ đến
+        những định danh theo nhóm, custom mà người dùng đặt ra. Nó "specific"
+        hơn so với selector theo tên element nên được ưu tiên hơn.
+      </li>
+      <li>
+        Elements and pseudo-elements - Đây là loại selector kiểu "chung chung"
+        nhất nên có độ ưu tiên thấp nhất.
+      </li>
+    </ol>
+    <h3>3, Source Order</h3>
+    <p>Ta xét đến 2 VD sau:</p>
+    <p>VD thứ 1:</p>
+    <pre>
+#heading {
+    color: orange;
+    color: grey;
+}
+
+.heading {
+    color: red;
+}
+
+h1 {
+    color: blue;
+}</pre
+    >
+    <p>Và VD ở đầu bài viết:</p>
+    <pre>//custom.css
+h1 {
+    color: red;
+}
+
+//custom2.css
+h1 {
+    color: blue;
+}</pre>
+<p>Nhắc đến Source order chắc các bạn đã đoán được CSS rule nào được áp dụng trong mỗi VD rồi chứ ?</p>
+<p>Ở VD 1 đó là <code>color: grey</code> và ở VD sau đó là <code>color: blue</code>.</p>
+<p>Đúng vậy, nếu như các CSS rule có cùng Importance và Specificity thì ta sẽ xét đến thứ tự xuất hiện của nó. CSS rule nào được viết sau thì sẽ được ưu tiên áp dụng hơn so với CSS được viết trước.</p>
+
+</code></pre>
+  </body>
+</html>

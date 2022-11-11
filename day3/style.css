@@ -1,0 +1,27 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+  height: auto;
+}
+
+.box {
+  border: 1px solid bisque;
+  /* height: 300px; */
+  width: 300px;
+  margin: 20px;
+  text-align: center;
+}
+
+.out {
+  border: 1px solid;
+}
+
+.box .image {
+  padding: 10px;
+}
