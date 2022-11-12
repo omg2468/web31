@@ -220,29 +220,30 @@
       hoặc chiều dọc tùy thuộc vào flex-direction.
     </p>
     <p>Cú pháp:</p>
-    <code
-      >.container { align-items: stretch | flex-start | flex-end | center |
+    <code>.container { align-items: stretch | flex-start | flex-end | center |
       baseline; }
     </code>
-    <ul></ul>
-    <li>
-      stretch: giá trị mặc định, các phần tử sẽ được kéo dài để lấp đầy
-      container chứa nó, nhưng sẽ ưu tiên giá trị height/width nếu có, khi đó
-      item sẽ không cao full mà chỉ lấy giá trị height/width mà bạn set.
-    </li>
-    <li>flex-start: item sẽ bắt đầu từ lề cross-start của container.</li>
-    <li>
-      flex-end: item sẽ bắt đầu từ lề cross-end của container. Trường hợp mặc
-      định với cross axis đứng dọc, flex-direction: row thì các item sẽ dồn
-      xuống dưới.
-    </li>
-    <li>center: item sẽ căn giữa theo chiều của cross axis.</li>
-    <li>
-      baseline: item được căn chỉnh theo đường cơ sở của chúng. Đường cơ sở là
-      đường mà tất cả các chữ cái sẽ "ngồi lên". Bạn có thể sử dụng kích thước
-      font chữ khác nhau để thấy rằng các mục được căn chỉnh theo đường cơ sở
-      baseline:
-    </li>
+  <ul>
+      
+      <li>
+        stretch: giá trị mặc định, các phần tử sẽ được kéo dài để lấp đầy
+        container chứa nó, nhưng sẽ ưu tiên giá trị height/width nếu có, khi đó
+        item sẽ không cao full mà chỉ lấy giá trị height/width mà bạn set.
+      </li>
+      <li>flex-start: item sẽ bắt đầu từ lề cross-start của container.</li>
+      <li>
+        flex-end: item sẽ bắt đầu từ lề cross-end của container. Trường hợp mặc
+        định với cross axis đứng dọc, flex-direction: row thì các item sẽ dồn
+        xuống dưới.
+      </li>
+      <li>center: item sẽ căn giữa theo chiều của cross axis.</li>
+      <li>
+        baseline: item được căn chỉnh theo đường cơ sở của chúng. Đường cơ sở là
+        đường mà tất cả các chữ cái sẽ "ngồi lên". Bạn có thể sử dụng kích thước
+        font chữ khác nhau để thấy rằng các mục được căn chỉnh theo đường cơ sở
+        baseline:
+      </li>
+  </ul>
 
     <h3>align-content</h3>
     <img src="3.png" alt="align-content" />
@@ -285,7 +286,7 @@
 <p>Cú pháp:
 
 </p>
-<code>.item {   order: <integer>; /* mặc định là 0 */ }
+<code>.item {   order: &lt;integer&gt;; /* mặc định là 0 */ }
 </code>
 <h3>flex-grow
 </h3>
@@ -294,7 +295,7 @@
 
 </p>
 <p>Cú pháp</p>
-<code>.item {  flex-grow: <number>; /* mặc định là 0 */ }
+<code>.item {  flex-grow: &lt;number&gt; ;/* mặc định là 0 */ }
 </code>
 <p>flex-shrink
 </p>
@@ -304,7 +305,7 @@
 <p>Cú pháp:
 
 </p>
-<code>.item {   flex-shrink: <number>; /* mặc định là 1 */ }
+<code>.item {   flex-shrink: &lt;number&gt;; /* mặc định là 1 */ }
 </code>
 <h3>flex-basis
 </h3>
@@ -312,7 +313,7 @@
 
 </p>
 <p>Cú pháp</p>
-<code>.item {   flex-basis: <length> | auto; /* mặc định là auto */ }
+<code>.item {   flex-basis: &lt;lenght&gt; | auto; /* mặc định là auto */ }
 </code>
 <h3>flex</h3>
 <p>Thuộc tính flex sử dụng để gộp chung ba thuộc tính flex-grow, flex-shrink và flex-basis.
@@ -321,7 +322,7 @@
 <p>Cú pháp:
 
 </p>
-<code>.item {   flex: none | [ <'flex-grow'> <'flex-shrink'> || <'flex-basis'> ] }
+<code>.item {   flex: none | [ &lt;'flex-grow'&gt; &lt;'flex-shrink'&gt; || &lt;'flex-basis'&gt; ] }
 </code>
 <h3>align-self
 </h3>
