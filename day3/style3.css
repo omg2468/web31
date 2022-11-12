@@ -1,0 +1,58 @@
+* {
+  font-family: sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.box {
+  margin: 10px;
+  background-color: rgb(255, 255, 255);
+  width: 400px;
+  height: 500px;
+  box-shadow: 1px 1px 1px 1px rgb(125, 120, 120);
+  border-radius: 10px;
+}
+
+img {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  max-width: 100%;
+  vertical-align: middle;
+  height: auto;
+}
+
+.main {
+  margin: 20px;
+}
+
+.content p {
+  margin: 10px 0px;
+}
+
+.content i {
+    margin-right: 10px;
+}
+
+.call {
+  background-color: rgb(35, 117, 232);
+  color: white;
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.call:hover {
+    background-color: rgb(37, 103, 190);
+}
+
+.call i {
+    margin-right: 5px;
+}
+
+.money h3 {
+    word-spacing: 10px;
+}
+
+
