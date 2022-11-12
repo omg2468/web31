@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style2.css" />
+    <title>bai 2</title>
+  </head>
+  <body>
+    <h1>Flexbox là gì?</h1>
+    <p>
+      Flexbox là một kiểu dàn trang (layout mode) mà nó sẽ tự cân đối kích thước
+      của các phần tử bên trong để hiển thị trên mọi thiết bị. Nói theo cách
+      khác, bạn không cần thiết lập kích thước của phần tử, không cần cho nó
+      float, chỉ cần thiết lập nó hiển thị chiều ngang hay chiều dọc, lúc đó các
+      phần tử bên trong có thể hiển thị theo ý muốn.
+    </p>
+    <p>
+      Hiện nay, theo lời khuyên từ Mozilla thì chúng ta sử dụng Flexbox để thiết
+      lập bố cục trong phạm vi nhỏ (ví dụ như những khung trong website) và khi
+      thiết lập bố cục ở phạm vi lớn hơn (như chia cột website) thì vẫn nên sử
+      dụng kiểu thông thường là dàn trang theo dạng lưới (grid layout).
+    </p>
+    <p>
+      Thuật ngữ các thành phần trong Flexbox. Trước khi đi vào tìm hiểu sâu hơn
+      về Flexbox, chúng ta cần nắm qua cấu trúc của Flexbox là như thế nào và
+      một số thuật ngữ liên quan. Dưới đây là sơ đồ cấu trúc Flexbox .
+    </p>
+    <img
+      src="https://images.viblo.asia/839da714-330f-42b8-adf4-336cd7f95bd4.jpg"
+      alt="flexobx"
+    />
+    <p>
+      Hai thành phần quan trọng nhất trong một bố cục Flexbox là gồm container
+      và item:
+    </p>
+    <ul>
+      <li>
+        Container: là thành phần lớn bao quanh các phần tử bên trong, bạn sẽ
+        thiết lập kiểu hiển thị inline (sắp xếp theo chiều ngang) hoặc kiểu sắp
+        xếp theo chiều dọc. Khi đó, các item bên trong sẽ hiển thị dựa trên
+        thiết lập của container này.
+      </li>
+      <li>
+        item: Các phần tử con của container được gọi là item, ở item bạn có thể
+        thiết lập nó sẽ sử dụng bao nhiêu cột trong một container, hoặc thiết
+        lập thứ tự hiển thị của nó.
+      </li>
+    </ul>
+    <img
+      src="https://st.quantrimang.com/photos/image/2019/05/14/flexbox-2.jpg"
+      alt="flexbox-2"
+    />
+    <img
+      src="https://st.quantrimang.com/photos/image/2019/05/14/flexbox-3.jpg"
+      alt="itemandcontainer"
+    />
+    <p>Ngoài hai thành phần chính đó, chúng ta có thể thấy hình trên sẽ có:</p>
+    <ul>
+      <li>
+        Main start, main end: Khi thiết lập flexbox, điểm bắt đầu của container
+        gọi là main start và điểm kết thúc được gọi là main end. Điều này có
+        nghĩa, các item bên trong sẽ heienr thị từ main start đến main end (hoặc
+        là được phép hiển thị đến main end). Và chiều vuông góc của nó là cross
+        start, cross end cũng có ý nghĩa tương tự nhưng luôn vuông góc với main
+        start, main end.
+      </li>
+      <li>
+        Main axis: Trục này là trục chính để điều khiển hướng mà các item sẽ
+        hiển thị. Như bạn thấy ở trên hình main axis là trục dọc nên các item sẽ
+        hiển thị theo chiều dọc, tuy nhiên ta có thể sử dụng thuộc tính
+        flex-direction để thay đổi trục của main axis và lúc đó các item sẽ hiển
+        thị theo nó. Và cross axis luôn là trục vuông góc của main axis.
+      </li>
+      <li>
+        Main size: Bạn có thể hiểu đơn giản là kích thước (chiều rộng hoặc dọc)
+        của mỗi item dựa theo trục main axis.
+      </li>
+      <li>
+        Cross size: Là kích thước (chiều rộng hoặc dọc) của mỗi item dựa theo
+        trục cross axis.
+      </li>
+    </ul>
+    <h2>Các thuộc tính của Flex Container</h2>
+
+    <img
+      src="https://st.quantrimang.com/photos/image/2019/05/14/flexbox-4.jpg"
+      alt="container"
+    />
+    <h3>Display</h3>
+    <p>
+      Để sử dụng flex trong css thì đơn giản là chúng ta chỉ cần khai báo thuộc
+      tính display: flex
+    </p>
+    <code>.container { display: flex; /* hoặc inline-flex */}</code>
+    <p>
+      Lưu ý: các cột CSS thông thường không sử dụng được trong flex container.
+    </p>
+    <h3>flex-direction</h3>
+    <p>
+      Thuộc tính flex-direction xác định hướng của main-axis để container sắp
+      xếp các item.
+    </p>
+    <img
+      src="https://st.quantrimang.com/photos/image/2019/05/14/flexbox-5.jpg"
+      alt="flexbox-5"
+    />
+    <img
+      src="https://st.quantrimang.com/photos/image/2019/05/14/flexbox-6.jpg"
+      alt="flex-direction"
+    />
+    <p>Cú pháp</p>
+    <code
+      >.container { justify-content: flex-start | flex-end | center |
+      space-between | space-around | space-evenly; }
+    </code>
+    <p>Các tham số:</p>
+    <ul>
+      <li>
+        flex-start: giá trị mặc định, item sẽ bắt đầu từ lề chính main-start của
+        container.
+      </li>
+      <li>
+        flex-end: item sẽ bắt đầu từ lề chính main-end của container (khác với
+        row-reverse là đổi hướng hiển thị).
+      </li>
+      <li>center: item sẽ nằm giữa container.</li>
+      <li>
+        space-between: các item sẽ có khoảng cách giữa các phần tử bằng nhau do
+        container sẽ tự động căn khoảng cách, item đầu tiên sát lề chứa điểm
+        main-start, item cuối cùng sát lề chứa điểm main-end.
+      </li>
+      <li>
+        space-around: tương tự space-between, nhưng khác ở chỗ là mỗi item có
+        khoảng cách 2 bên cạnh và những khoảng cách này bằng nhau.
+      </li>
+      <li>
+        space-evenly: các item được phân phối sao cho khoảng cách giữa hai item
+        bất kỳ, giữa item và các lề là bằng nhau.
+      </li>
+    </ul>
+    <h3>flex-wrap</h3>
+    <img
+      src="https://st.quantrimang.com/photos/image/2019/05/14/flexbox-7.jpg"
+      alt="flex-box7"
+    />
+    <p>
+      Theo mặc định, item sẽ tự động thay đổi kích thước phần tử để nó luôn hiển
+      thị trên cùng một dòng dù bạn có resize trình duyệt theo kích thước nào,
+      điều này dễ làm cho nội dung bên trong (nếu có) bị giãn hay ép nhỏ lại, có
+      thể gây xấu giao diện. Vì vậy, ta có thuộc tính flex-wrap cho phép item tự
+      động xuống dòng khi kích thước container thay đổi.
+    </p>
+    <p>Cú pháp:</p>
+    <code>.container{ flex-wrap: nowrap | wrap | wrap-reverse; } </code>
+    <p>Tham số:</p>
+    <ul>
+      <li>nowrap: mặc định, tất cả các item sẽ nằm trên một dòng.</li>
+      <li>
+        wrap: khi kích thước container thay đổi và tổng chiều rộng các item cộng
+        lại lớn hơn chiều rộng của container thì item sẽ tự động xuống dòng.
+      </li>
+      <li>
+        wrap-reverse: tương tự như wrap, nhưng thay vì xuống dòng thì item sẽ tự
+        động nhảy lên trên.
+      </li>
+    </ul>
+    <h3>flex-flow</h3>
+    <p>
+      Thuộc tính flex-flow sử dụng để gộp chung hai thuộc tính flex-direction và
+      flex-wrap.
+    </p>
+    <p>Cú pháp:</p>
+    <code>flex-flow: <'flex-direction'> || <'flex-wrap'> </code>
+    <h3>justify-content</h3>
+    <img src="1.png" alt="justify-content" />
+    <p>
+      Theo mặc định, các item bên trong sẽ bắt đầu từ main start đến main end,
+      tuy nhiên, đôi khi container vẫn còn khoảng trống. Vì vậy, bạn có thể sử
+      dụng thuộc tính justify-content để điều chỉnh vị trí bắt đầu và căn chỉnh
+      các item bên trong container theo dọc theo trục main axis, chiều ngang
+      hoặc chiều dọc tùy thuộc vào flex-direction.
+    </p>
+    <p>Cú pháp:</p>
+    <code
+      >.container { justify-content: flex-start | flex-end | center |
+      space-between | space-around | space-evenly; }
+    </code>
+    <p>Các tham số:</p>
+    <ul>
+      <li>
+        flex-start: giá trị mặc định, item sẽ bắt đầu từ lề chính main-start của
+        container.
+      </li>
+      <li>
+        flex-start: giá trị mặc định, item sẽ bắt đầu từ lề chính main-start của
+        container.
+      </li>
+      <li>center: item sẽ nằm giữa container.</li>
+      <li>
+        space-between: các item sẽ có khoảng cách giữa các phần tử bằng nhau do
+        container sẽ tự động căn khoảng cách, item đầu tiên sát lề chứa điểm
+        main-start, item cuối cùng sát lề chứa điểm main-end.
+      </li>
+      <li>
+        space-around: tương tự space-between, nhưng khác ở chỗ là mỗi item có
+        khoảng cách 2 bên cạnh và những khoảng cách này bằng nhau.
+      </li>
+      <li>
+        space-evenly: các item được phân phối sao cho khoảng cách giữa hai item
+        bất kỳ, giữa item và các lề là bằng nhau.
+      </li>
+    </ul>
+    <h3>align-items</h3>
+    <img src="2.png" alt="align-items" />
+    <p>
+      Thuộc tính align-items sử dụng để điều chỉnh vị trí bắt đầu và căn chỉnh
+      các item bên trong container theo dọc theo trục cross axis, chiều ngang
+      hoặc chiều dọc tùy thuộc vào flex-direction.
+    </p>
+    <p>Cú pháp:</p>
+    <code
+      >.container { align-items: stretch | flex-start | flex-end | center |
+      baseline; }
+    </code>
+    <ul></ul>
+    <li>
+      stretch: giá trị mặc định, các phần tử sẽ được kéo dài để lấp đầy
+      container chứa nó, nhưng sẽ ưu tiên giá trị height/width nếu có, khi đó
+      item sẽ không cao full mà chỉ lấy giá trị height/width mà bạn set.
+    </li>
+    <li>flex-start: item sẽ bắt đầu từ lề cross-start của container.</li>
+    <li>
+      flex-end: item sẽ bắt đầu từ lề cross-end của container. Trường hợp mặc
+      định với cross axis đứng dọc, flex-direction: row thì các item sẽ dồn
+      xuống dưới.
+    </li>
+    <li>center: item sẽ căn giữa theo chiều của cross axis.</li>
+    <li>
+      baseline: item được căn chỉnh theo đường cơ sở của chúng. Đường cơ sở là
+      đường mà tất cả các chữ cái sẽ "ngồi lên". Bạn có thể sử dụng kích thước
+      font chữ khác nhau để thấy rằng các mục được căn chỉnh theo đường cơ sở
+      baseline:
+    </li>
+
+    <h3>align-content</h3>
+    <img src="3.png" alt="align-content" />
+    <p>
+      Thuộc tính align-content sử dụng để căn chỉnh khoảng cách các item bên
+      trong container theo dọc theo trục cross axis, chiều ngang hoặc chiều dọc
+      tùy thuộc vào flex-direction.
+    </p>
+    <p>Cú pháp:</p>
+    <code
+      >.container { align-content: flex-start | flex-end | center |
+      space-between | space-around | stretch; }
+    </code>
+    <ul>
+    <li>flex-start: item sẽ bắt đầu từ lề chứa cross-start của container.
+
+</li>
+    <li>flex-end: item sẽ bắt đầu từ lề chứa cross-end của container.
+
+</li>
+    <li>center: item sẽ nằm giữa container căn theo cross-axis.
+
+</li>
+    <li>space-between: các item sẽ có khoảng cách giữa các phần tử bằng nhau do container tự động căn khoảng cách, item đầu tiên sát lề chứa cross-start, item cuối cùng sát lề chứa cross-end.
+
+</li>
+    <li>space-around: tương tự space-between, nhưng khác ở chỗ là mỗi item có khoảng cách 2 bên cạnh và những khoảng cách này bằng nhau.
+
+</li>
+    <li>stretch: giá trị mặc định, các phần tử sẽ được kéo dài, căn chỉnh sao cho lấp đầy container chứa nó (vẫn ưu tiên giá trị height/width nếu có).
+
+    </li>
+</ul>
+<h2>Các thuộc tính của Flex Item
+</h2>
+<img src="https://st.quantrimang.com/photos/image/2019/05/15/flexbox-46.jpg" alt="flexbox-46">
+  <h3>order</h3>
+  <p>Theo mặc định, các item sẽ hiển thị theo thứ tự xuất hiện trong HTML, nhưng với thuộc tính order, bạn có thể sắp xếp lại vị trí sắp xếp của các item.</p>
+<img src="4.png" alt="oder">
+<p>Cú pháp:
+
+</p>
+<code>.item {   order: <integer>; /* mặc định là 0 */ }
+</code>
+<h3>flex-grow
+</h3>
+<img src="https://st.quantrimang.com/photos/image/2019/05/15/flexbox-49.jpg" alt="flex-grow">
+<p>Thuộc tính flex-grow cho phép các phần tử giãn theo độ rộng của container.
+
+</p>
+<p>Cú pháp</p>
+<code>.item {  flex-grow: <number>; /* mặc định là 0 */ }
+</code>
+<p>flex-shrink
+</p>
+<p>Thuộc tính flex-shrink ngược lại với thuộc tính flex-grow ở trên, nó không giãn ra mà lại co lại khi chúng ta thay đổi độ rộng của container.
+
+</p>
+<p>Cú pháp:
+
+</p>
+<code>.item {   flex-shrink: <number>; /* mặc định là 1 */ }
+</code>
+<h3>flex-basis
+</h3>
+<p>Thuộc tính flex-basis sử dụng để xác định độ dài ban đầu của một item.
+
+</p>
+<p>Cú pháp</p>
+<code>.item {   flex-basis: <length> | auto; /* mặc định là auto */ }
+</code>
+<h3>flex</h3>
+<p>Thuộc tính flex sử dụng để gộp chung ba thuộc tính flex-grow, flex-shrink và flex-basis.
+
+</p>
+<p>Cú pháp:
+
+</p>
+<code>.item {   flex: none | [ <'flex-grow'> <'flex-shrink'> || <'flex-basis'> ] }
+</code>
+<h3>align-self
+</h3>
+<img src="https://st.quantrimang.com/photos/image/2019/05/16/flexbox-57.jpg" alt="align-self">
+<p>Thuộc tính align-self có tác dụng tương tự như align-items của phần container nhưng sử dụng riêng cho từng item, bạn có thể dùng nó để đặt lại vị trí cho một số item mà align-items đã quy định.</p>
+<code>.item {   align-self: auto | flex-start | flex-end | center | baseline | stretch; }
+</code>
+<p>Align-self cũng có các giá trị giống như align-items đó là: flex-start, flex-end, center, stretch và baseline.</p>
+</body>
+</html>
