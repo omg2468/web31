@@ -1,0 +1,26 @@
+* {
+  box-sizing: border-box;
+}
+
+code {
+  background-color: bisque;
+  color: rgb(181, 42, 42);
+  padding: 2px;
+}
+
+pre {
+  background-color: bisque;
+  padding: 5px;
+}
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+  text-decoration: underline;
+}
+
+img {
+    width: 100%;
+}

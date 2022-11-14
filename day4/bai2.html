@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style2.css">
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Tìm hiểu về Position trong CSS</h1>
+    <p>
+      Hiểu về thuôc tính position trong CSS có thể là một trong những trải
+      nghiệm khó khăn cho chúng ta khi khi bắt đầu. Nó là thuộc tính xác định
+      loại của phương pháp định vị trí cho thành phần.
+    </p>
+    <p>Cấu trúc:</p>
+    <pre>
+tag {
+    position: giá trị;
+}
+</pre
+    >
+    <h2>Có 2 loại positioning</h2>
+    <p>Static positioning và relative positioning</p>
+    <p>
+      Static positoning chỉ có một giá trị: <code>position: static</code>. Nó là
+      mặc định nên sẽ ít khi thấy nó được khai báo.
+    </p>
+    <p>
+      Relative positioning bao gồm các giá trị:
+      <code>relative, absolute, fixed</code>. Các giá trị này tương tác với nhau
+      và cho phép bạn di chuyển các yếu tố xung quanh theo những cách thú vị.
+    </p>
+    <h2>Static Positioning</h2>
+    <p>
+      Mặc dù không thường xuyên nhưng thỉnh thoảng bạn sẽ thấy nó được khai báo:
+    </p>
+    <pre>
+.tag {
+        position: static;
+    }</pre
+    >
+    <img
+      src="https://images.viblo.asia/810bb5f2-70c6-49cb-8aac-e4c9e59ba16f.png"
+      alt="position static"
+    />
+    <p>
+      Static position là position mặc định của mọi thành phần, bất kể bạn khai
+      báo hay không. Tất cả các thành phần sẽ nằm theo thứ tự trong document.
+    </p>
+    <h2>Relative Positioning</h2>
+    <p>
+      Các gía trị của nó là: <code>relative, fixed, absolute</code> Nó cho phép
+      các thành phần được xác định vị trí của chính chùng với các thuộc tính bố
+      me, trình duyệt...
+    </p>
+    <p>
+      Tất cả loại relative positoning có làm như sau: . Được di chuyển thông qua
+      việc sử dụng offset properties, đó là: top, left, right, bottom. . Chúng
+      ta tạo relative-position , nó cho phép thành phần con với
+      <code>position: absolute</code> được định vị tương đối với vị trí của yếu
+      tố này.
+    </p>
+    <h2>Positon Relative</h2>
+    <p>Cấu trúc:</p>
+    <pre>
+tag {
+        positon: relative;
+    }</pre
+    >
+    <p>
+      Yếu tố: <code>position: relative</code> của một phần tử liên quan đến vị
+      trí hiện tại của nó mà không thay đổi bố cục xung quanh vị trí đó.
+    </p>
+    <p>
+      Để rõ ràng, khi bạn sử dụng một offset để di chuyển trực quan một phần tử
+      có <code>position: relative</code>, không gian mà nó chiếm trong document
+      sẽ không di chuyển.
+    </p>
+    <p>Hãy xem ví dụ:</p>
+    <pre>
+    .ourBox {
+          position: relative;
+          top: 20px;
+          left: 20px;
+    }
+</pre
+    >
+    <img
+      src="https://images.viblo.asia/a938d899-8840-4803-bd22-bbd1a1093477.png"
+      alt="position relative"
+    />
+    <p>
+      Ở đây chúng ta có thể thấy phần trên của phần tử được bù 20 pixel, liên
+      quan đến vị trí của phần tử trong luồng thông thường. Điều tương tự đang
+      được áp dụng cho phía bên trái.
+    </p>
+    <p>
+      Lưu ý rằng vị trí của các hộp ở hai bên không thay đổi. Hãy nhớ rằng, khi
+      bạn bù một vị trí phần tử với <code>position: relative</code>, không gian
+      nó chiếm không di chuyển, vì vậy nó sẽ giành được ảnh hưởng đến mọi thứ
+      xung quanh nó.
+    </p>
+    <p>
+      Nó giống như chiếc hộp của chúng tôi có một tinh thần tự do và có thể đi
+      bất cứ nơi nào nó muốn, nhưng luôn luôn liên quan đến nơi ban đầu.
+    </p>
+    <h2>Position Absolute</h2>
+    <p>
+      <code>position: absolute </code>của một phần tử liên quan đến vị trí của
+      bố mẹ và thay đổi bố cục xung quanh vị trí đó.
+    </p>
+    <p>Hãy xem ví dụ sau:</p>
+    <pre>
+      .ourBoxesParent {
+          position: relative;
+    }
+    .ourBox {
+          position: absolute;
+          top: 0;
+          left: 0;
+    }  
+</pre
+    >
+    <img
+      src="https://images.viblo.asia/051632ba-7099-429f-9aad-ae1a9f38aa5d.png"
+      alt="position absolute"
+    />
+    <p>
+      Chúng ta đã thêm một set vị trị của box <code>position: relative</code>.
+      Chúng ta cũng đã thay đổi bõ của chúng ta để được
+      <code>position: absolute</code>. Bây giờ 2 box sẽ xuất hiên cạnh nhau.
+    </p>
+    <h2>Position Fixed</h2>
+    <p>
+      <code>fixed</code> giống như <code>absolute</code> nhưng có một điểm chính
+      khác nhau: Phần tử được định vị tương đối với khung nhìn.
+    </p>
+    <pre>
+    .ourBox {
+          position: fixed;  
+          top: 0;
+          left: 0;
+    }
+</pre
+    >
+    <img
+      src="https://images.viblo.asia/e5eae793-0207-471c-a95e-b88ee718e10f.png"
+      alt="position fixed"
+    />
+    <p>
+      Phần tử được định vị tương đối với chế độ xem. Điều này có nghĩa là ngay
+      cả khi trang được cuộn, thì nó sẽ nằm luôn trên màn hình ngay tại vị trí
+      chuẩn đó và đè lên trên các phần tử bên dưới.
+    </p>
+  </body>
+</html>
