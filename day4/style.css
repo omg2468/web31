@@ -54,11 +54,12 @@ i {
   flex-wrap: nowrap;
   color: white;
   background-color: rgb(87, 87, 211);
+  width: 100%;
 }
 
 .foot1 {
   margin: 20px 15px 0px;
-  width: 360px;
+  width: 16.7%;
   padding: 20px;
 }
 
