@@ -1,0 +1,28 @@
+.foot {
+    display: flex;
+    flex-wrap: nowrap;
+    color: white;
+    background-color: rgb(87, 87, 211);
+    
+}
+
+.foot1 {
+    margin: 20px 15px 0px;
+    width: 360px;
+    padding: 20px;
+}
+
+.foot1 a { 
+    text-decoration: none;
+    line-height: 30px;
+    color: white;
+    
+}
+
+.foot1 a:hover {
+    opacity: 0.7;
+}
+
+ul {
+    list-style-type: none;
+}
