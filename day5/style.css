@@ -1,0 +1,50 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.everything {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.box {
+    position: relative;
+
+}
+
+
+
+.box>img {
+    position: relative;
+    width: 320px;
+    height: 180px;
+}
+
+.button img {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 70px;
+    height: 70px;
+}
+
+.content {
+    color:white;
+    position: absolute;
+    top: 110px;
+    width: 320px;
+    padding: 20px;   
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav .container {
+    display: flex;
+}
+

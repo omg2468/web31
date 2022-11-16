@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style2.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Form trong HTML</h1>
+    <h2>HTML Form là gì?</h2>
+    <div class="khainiem">
+      Một HTML Form là một phần của trang web có chứa các điều khiển như các
+      trường văn bản, các trường mật khẩu, các checkbox, các radio button,
+      submit button, các menu... HTML Form là phương tiện cho người dùng nhập dữ
+      liệu được gửi đến máy chủ để xử lý.
+    </div>
+    <h2>Tại sao sử dụng HTML Form</h2>
+    <div class="lido">
+      HTML Form được sử dụng khi bạn muốn thu thập một số dữ liệu của người truy
+      cập trang web. Ví dụ: Nếu người dùng muốn mua một số mặt hàng trên online,
+      họ phải điền vào form các thông tin như địa chỉ giao hàng và chi tiết thẻ
+      tín dụng / thẻ ghi nợ để có thể gửi hàng đến địa chỉ đó.
+    </div>
+    <h2>Khai báo HTML Form</h2>
+    <img src="0.png" alt="form" />
+    <h2>Các thẻ HTML sử dụng trong Form</h2>
+    <p>Bảng sau thể hiện danh sách các thẻ HTML hay được sử dụng trong form.</p>
+    <table>
+      <tr>
+        <th>Thẻ</th>
+        <th>Mô tả</th>
+      </tr>
+      <tr>
+        <td>form</td>
+        <td>Định nghĩa một HTML Form để nhập liệu từ phía người dùng.</td>
+      </tr>
+      <tr>
+        <td>input</td>
+        <td>
+          Định nghĩa một điền khiển nhập liệu dự vào thuộc tính type của nó.
+        </td>
+      </tr>
+      <tr>
+        <td>textarea</td>
+        <td>Định nghĩa ô nhập văn bản có thể nhập nhiều dòng.</td>
+      </tr>
+      <tr>
+        <td>label</td>
+        <td>Định nghĩa nhãn cho các input.</td>
+      </tr>
+      <tr>
+        <td>fieldset</td>
+        <td>Nhóm các phần tử liên quan.</td>
+      </tr>
+      <tr>
+        <td>legend</td>
+        <td>Định nghĩa mô tả cho thẻ fieldset</td>
+      </tr>
+      <tr>
+        <td>select</td>
+        <td>Định nghĩa một danh sách drop-down.</td>
+      </tr>
+      <tr>
+        <td>optgroup</td>
+        <td>
+          Định nghĩa một nhóm các tùy chọn liên quan thành một danh sách
+          drop-down.
+        </td>
+      </tr>
+      <tr>
+        <td>option</td>
+        <td>Định nghĩa một option trong một danh sách drop-down.</td>
+      </tr>
+      <tr>
+        <td>button</td>
+        <td>Định nghĩa một nút có thể click.</td>
+      </tr>
+    </table>
+    <h2>Các thẻ HTML 5 sử dụng trong Form</h2>
+    <p>Bảng sau thể hiện danh sách các thẻ HTML5 được sử dụng trong form.</p>
+    <table>
+      <tr>
+        <th>Tag</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>datalist</td>
+        <td>
+          Chỉ định một danh sách của các option được định nghĩa trước cho việc
+          điều khiển nhập liệu.
+        </td>
+      </tr>
+      <tr>
+        <td>keygen</td>
+        <td>Định nghĩa trường sinh ra cặp key (key-pair) cho các form.</td>
+      </tr>
+      <tr>
+        <td>output</td>
+        <td>Định nghĩa kết quả tính toán.</td>
+      </tr>
+    </table>
+    <h2>Trường HTML TextField trong form</h2>
+    <p>
+      Thuộc tính type="text" của thẻ input tạo ra một textfield là trường nhập
+      văn bản trong một dòng. Thuộc tính name là tùy chọn, nhưng nó là bắt buộc
+      khi phía server là JSP, ASP, PHP...
+    </p>
+    <img src="1.png" alt="textfield" />
+    <h2>Thẻ lable trong form</h2>
+    <div class="label">
+      Đây được xem là một cách tốt hơn để hiển thị nhãn trong form. Vì nó tạo
+      được trải nghiệm thân thiện hơn cho người dùng/trình duyệt/bộ phân tích mã
+      nguồn. Khi bạn click vào thẻ label, nó sẽ focus vào ô nhập text tương ứng.
+      Để làm được như vậy, bạn cần có thuộc tính for trong thẻ label phải giống
+      với thuộc tính id trong thẻ input.
+    </div>
+    <img src="2.png" alt="label" />
+    <h2>Trường HTML Password trong form</h2>
+    <p>Password sẽ không được hiện thị trong trường password.</p>
+    <img src="3.png" alt="password" />
+    <h2>Trường HTML 5 Email trong form</h2>
+    <div class="email">
+      Trường email là một trường mới trong HTML 5. Nó sẽ kiểm tra tính hợp lệ
+      của một địa chỉ email. Bạn phải sử dụng @ và dấu chấm (.) bên trong trường
+      này.
+    </div>
+
+    <img src="4.png" alt="email" />
+    <h2>Radio Button trong form</h2>
+    <div class="button">
+      Radio button được sử dụng để chọn chỉ một trong nhiều lựa chọn. Nó được sử
+      dụng để lựu chọn giới tính, câu hỏi trắc nghiệm... Sử dụng name giống nhau
+      cho tất cả các radio button, thì chỉ duy nhất một radio button được chọn
+      tại một thời điểm.
+    </div>
+    <img src="5.png" alt="button" />
+    <h2>Checkbox trong form</h2>
+    <p>
+      Checkbox được sử dụng để có thể chọn nhiều lựa chọn từ các checkbox đã
+      cho.
+    </p>
+    <img src="6.png" alt="checkbox" />
+    <hr />
+    <h1>Table trong HTML</h1>
+    <div class="khainiem">
+      Thẻ table trong HTML được sử dụng để hiển thị dữ liệu ở dạng bảng (hàng *
+      cột). Có thể có nhiều cột trong một hàng. Các thẻ table trong HTML được sử
+      dụng để quản lý việc bố cục trang web. Ví dụ: Phần tiêu đề, thanh điều
+      hướng, nội dung trang, phần chân trang... Nhưng bạn nên sử dụng thẻ div
+      thay vì table để quản lý bố cục của trang.
+    </div>
+    <h2>Các thẻ định nghĩa bảng trong HTML</h2>
+    <table>
+      <tr>
+        <th>Thẻ</th>
+        <th>Mô tả</th>
+      </tr>
+      <tr>
+        <td>table</td>
+        <td>Định nghĩa bảng.</td>
+      </tr>
+      <tr>
+        <td>tr</td>
+        <td>Định nghĩa một hàng trong một bảng.</td>
+      </tr>
+      <tr>
+        <td>td</td>
+        <td>Định nghĩa 1 ô của bảng.</td>
+      </tr>
+      <tr>
+        <td>caption</td>
+        <td>Định nghĩa phụ đề bảng.</td>
+      </tr>
+      <tr>
+        <td>colgroup</td>
+        <td>
+          Chỉ định một nhóm của một hoặc nhiều cột trong một bảng để định dạng.
+        </td>
+      </tr>
+      <tr>
+        <td>col</td>
+        <td>
+          Được sử dụng với thẻ colgroup để chỉ định thuộc tính cột cho mỗi cột.
+        </td>
+      </tr>
+      <tr>
+        <td>tbody</td>
+        <td>Được sử dụng để nhóm nội dung body trong một bảng.</td>
+      </tr>
+      <tr>
+        <td>thead</td>
+        <td>Được sử dụng để nhóm nội dung header trong một bảng.</td>
+      </tr>
+      <tr>
+        <td>tfooter</td>
+        <td>Được sử dụng để nhóm nội dung footer trong một bảng.</td>
+      </tr>
+    </table>
+    <h2>Thuộc tính border của bảng trong HTML</h2>
+    <p>Có hai cách để xác định border cho các bảng trong HTML.</p>
+    <ul>
+      <li>Sử dụng thuộc tính border của bảng trong HTML.</li>
+      <li>Sử dụng thuộc tính border trong CSS.</li>
+    </ul>
+    <h2>1. Sử dụng thuộc tính border của bảng trong HTML</h2>
+    <p>
+      Bạn có thể sử dụng thuộc tính border của thẻ table trong HTML để chỉ định
+      đường viền. Nhưng bạn không nên sử dụng cách này.
+    </p>
+    <p>Ví dụ:</p>
+    <img src="7.png" alt="border" />
+    <p>Output</p>
+    <img src="8.png" alt="output" />
+    <h2>2. Sử dụng thuộc tính border trong CSS</h2>
+    <p>
+      Bạn nên sử dụng thuộc tính border của CSS để chỉ định đường viền của bảng.
+    </p>
+    <p>Ví dụ:</p>
+    <img src="9.png" alt="border" />
+    <p>Output:</p>
+    <img src="10.png" alt="borderred" />
+    <h2>Table trong HTML với cell padding</h2>
+    <p>
+      Bạn có thể chỉ định padding cho tiêu đề của bảng và data của bảng bằng hai
+      cách:
+    </p>
+    <ol>
+      <li>Bằng thuộc tính cellpadding của thẻ table trong HTML</li>
+      <li>Bằng tính chất padding trong CSS</li>
+    </ol>
+    <div>
+      Bạn nên sử dụng tính chất của CSS thay vì thuộc tính của thẻ trong HTML,
+      dưới đây là ví dụ chỉ định padding cho tiêu đề và nội dung của bẳng bằng
+      CSS.
+    </div>
+    <img src="11.png" alt="cellpadding" />
+    <p>Output:</p>
+    <img src="12.png" alt="image" />
+    <h2>Thuộc tính colspan</h2>
+    <p>
+      Nếu bạn muốn tạo một ô có độ dài lơn hơn 1 cột, thì bạn có thể dùng thuộc
+      tính colspan. Ví dụ:
+    </p>
+    <p>Code css:</p>
+    <img src="13.png" alt="colspan" />
+    <p>Code html:</p>
+    <img src="15.png" alt="codehtml" />
+    <p>Output:</p>
+    <img src="16.png" alt="outputcolspan" />
+    <h2>Thuộc tính rowspan</h2>
+    <p>
+      Nếu bạn muốn tạo một ô có độ dài lơn hơn hàng, thì bạn có thể dùng thuộc
+      tính rowspan. Ví dụ:
+    </p>
+    <p>Code css:</p>
+    <img src="17.png" alt="css" />
+    <p>code html</p>
+    <img src="18.png" alt="output" />
+    <p>Output:</p>
+    <img src="19.png" alt="outputrowspan" />
+    <h2>Thẻ caption</h2>
+    <p>
+      Thẻ caption được sử dụng để định nghĩa bảng, thẻ này chỉ được sử dụng ngay
+      sau thẻ table. Ví dụ:
+    </p>
+    <img src="20.png" alt="caption" />
+    <p>Output:</p>
+    <img src="21.png" alt="outputcaption" />
+  </body>
+</html>
