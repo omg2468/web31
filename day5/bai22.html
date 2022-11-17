@@ -67,33 +67,33 @@
       hoặc mili giây. Như với tất cả các thuộc tính transition khác, delay nhiều
       lần, các giá trị cũng được cách nhau bằng dấu phẩy.
     </div>
-    <img src="https://images.viblo.asia/0427a025-429a-4e46-a2a9-5659e7c5a1f4.PNG" alt="transition-delay">
-<hr>
-<h1>Animation trong CSS3</h1>  
-<header>CSS animation là công nghệ được giới thiệu trong phiên bản CSS3. Nó cho phép chúng ta tạo hiệu ứng chuyển động mà không phải sử dụng Javascript hay Flash. Trong bài học này bạn sẽ tìm hiểu cách tạo chuyển động thẳng và quay vòng đồng thời cho một thẻ div nhờ sử dụng HTML5 và CSS3.</header>
-<p>Một số thuộc tính
-
-</p>
-<h2>1. @keyframes: dùng để thiết lập một chuyển động.
-</h2>
-<p>Cú Pháp @keyframes Name { /code/ }</p>
-<div>Trong đó
-
-Name: là tên của chuyển động.
-Code: là các đoạn code cho tiến trình chuyển động.</div>
-<h2>2. animation-name tác dụng xác định thành phần sẽ thực thi animation nào.
-</h2>
-<p>Cú Pháp
-
-</p>
-<code>animation-name: name;
-
-</code>
-<div>Trong đó : Name chính là tên của thuộc tính @keyframes
-
-</div>
-<div class="code">
-    <pre><code>.element {
+    <img
+      src="https://images.viblo.asia/0427a025-429a-4e46-a2a9-5659e7c5a1f4.PNG"
+      alt="transition-delay"
+    />
+    <hr />
+    <h1>Animation trong CSS3</h1>
+    <header>
+      CSS animation là công nghệ được giới thiệu trong phiên bản CSS3. Nó cho
+      phép chúng ta tạo hiệu ứng chuyển động mà không phải sử dụng Javascript
+      hay Flash. Trong bài học này bạn sẽ tìm hiểu cách tạo chuyển động thẳng và
+      quay vòng đồng thời cho một thẻ div nhờ sử dụng HTML5 và CSS3.
+    </header>
+    <p>Một số thuộc tính</p>
+    <h2>1. @keyframes: dùng để thiết lập một chuyển động.</h2>
+    <p>Cú Pháp @keyframes Name { /code/ }</p>
+    <div>
+      Trong đó Name: là tên của chuyển động. Code: là các đoạn code cho tiến
+      trình chuyển động.
+    </div>
+    <h2>
+      2. animation-name tác dụng xác định thành phần sẽ thực thi animation nào.
+    </h2>
+    <p>Cú Pháp</p>
+    <code>animation-name: name; </code>
+    <div>Trong đó : Name chính là tên của thuộc tính @keyframes</div>
+    <div class="code">
+      <pre><code>.element {
         width: 50px;
         height: 50px;
         background-color: #009966;
@@ -125,20 +125,16 @@ Code: là các đoạn code cho tiến trình chuyển động.</div>
             top: 150px;
         }
     }</code></pre>
-</div>
-<h2>3. animation-duration :thiết lập khoảng thời gian thực thị 1 chuyển động animation
-</h2>
-<p>Cú Pháp
-
-</p>
-<code>animation-duration: time
-
-</code>
-<p>Trong đó: time là có thể tính bằng s hoặc ms.
-
-</p>
-<div class="code">
-    <pre><code>.element {
+    </div>
+    <h2>
+      3. animation-duration :thiết lập khoảng thời gian thực thị 1 chuyển động
+      animation
+    </h2>
+    <p>Cú Pháp</p>
+    <code>animation-duration: time </code>
+    <p>Trong đó: time là có thể tính bằng s hoặc ms.</p>
+    <div class="code">
+      <pre><code>.element {
       width: 50px;
       height: 50px;
       left: 0;
@@ -188,175 +184,185 @@ Code: là các đoạn code cho tiến trình chuyển động.</div>
         left: 0px;
       }
     }</code></pre>
-</div>
-<h2>4. animation-timing-function : xác định tốc độ chuyển động của một animation sẽ như thế nào.
-</h2>
-<p>Cú Pháp:
-
-</p>
-<code>animation-timing-function: value;</code>
-<h2>5. animation-delay : xác định độ trễ của mỗi lượt chuyển động.
-</h2>
-<p>Cú Pháp
-
-</p>
-<code>animation-delay: value;
-
-</code>
-<h2>6. animation-iteration-count: thiết lập số lần thực hiện một animation.
-</h2>
-<p>Cú Pháp
-
-</p>
-<code>animation-iteration-count: value;
-
-</code>
-<h2>7.animation-direction : xác định xem chiều chạy của animation sẽ như thế nào.
-</h2>
-<p>Cú Pháp
-
-</p>
-<code>aniamtion-direction: value;
-
-</code>
-<h2>8. animation-fill-mode: xác định trạng thái của một animation, khi mà animation không được chạy (có thể là animation này đã chạy xong hoặc đang bị delay).
-</h2>
-<p>Cú pháp</p>
-<code>animation-fill-mode: value;
-
-</code>
-<h2>9. animation-play-state: xác định trạng thái của animation.
-</h2>
-<code>animation-platy-state: value;
-
-</code>
-<hr>
-<h1>2D Transform CSS là gì?
-</h1>
-<header>2D Transform CSS là những thuộc tính được dùng để xử lý các hiệu ứng di chuyển 2D của các phần tử trên website. 
-Để tạo một transform 2D bạn sẽ sử dụng cú pháp sau đây: 
-transform: value(argument);
-Các giá trị thường được sử dụng trong 2D Transform gồm có: translate(), rotate(), scale(), skewX(), skewY(), matrix(). Sau đây chúng tôi sẽ giới thiệu cụ thể về chức năng của từng thuộc tính này. </header>
-<h2>Chức năng của các thuộc tính trong 2D Transform CSS
-</h2>
-<table>
-    <tr>
+    </div>
+    <h2>
+      4. animation-timing-function : xác định tốc độ chuyển động của một
+      animation sẽ như thế nào.
+    </h2>
+    <p>Cú Pháp:</p>
+    <code>animation-timing-function: value;</code>
+    <h2>5. animation-delay : xác định độ trễ của mỗi lượt chuyển động.</h2>
+    <p>Cú Pháp</p>
+    <code>animation-delay: value; </code>
+    <h2>
+      6. animation-iteration-count: thiết lập số lần thực hiện một animation.
+    </h2>
+    <p>Cú Pháp</p>
+    <code>animation-iteration-count: value; </code>
+    <h2>
+      7.animation-direction : xác định xem chiều chạy của animation sẽ như thế
+      nào.
+    </h2>
+    <p>Cú Pháp</p>
+    <code>aniamtion-direction: value; </code>
+    <h2>
+      8. animation-fill-mode: xác định trạng thái của một animation, khi mà
+      animation không được chạy (có thể là animation này đã chạy xong hoặc đang
+      bị delay).
+    </h2>
+    <p>Cú pháp</p>
+    <code>animation-fill-mode: value; </code>
+    <h2>9. animation-play-state: xác định trạng thái của animation.</h2>
+    <code>animation-platy-state: value; </code>
+    <hr />
+    <h1>2D Transform CSS là gì?</h1>
+    <header>
+      2D Transform CSS là những thuộc tính được dùng để xử lý các hiệu ứng di
+      chuyển 2D của các phần tử trên website. Để tạo một transform 2D bạn sẽ sử
+      dụng cú pháp sau đây: transform: value(argument); Các giá trị thường được
+      sử dụng trong 2D Transform gồm có: translate(), rotate(), scale(),
+      skewX(), skewY(), matrix(). Sau đây chúng tôi sẽ giới thiệu cụ thể về chức
+      năng của từng thuộc tính này.
+    </header>
+    <h2>Chức năng của các thuộc tính trong 2D Transform CSS</h2>
+    <table>
+      <tr>
         <th>Giá trị</th>
         <th>Mô tả</th>
-    </tr>
-    <tr>
-        <td>translate(x,y)	</td>
-        <td>Di chuyển phần tử dọc theo trục x và trục y
-</td>
-    </tr>
-    <tr>
-        <td>translateX(n)	</td>
-        <td>Di chuyển phần tử dọc theo trục x
-</td>
-    </tr>
-    <tr>
-        <td>translateY(n)	</td>
-        <td>Di chuyển phần tử dọc theo trục y
-</td>
-</tr>
-<tr>
-    <td>scale(x,y)	</td>
-    <td>Thay đổi chiều rộng và chiều cao của một phần tử
-</td>
-</tr>
-    </tr>
-    <tr><td>scaleX(n)	</td>
-    <td>Thay đổi chiều rộng của một phần tử
-</td></tr>
-    <tr>
-        <td>scaleY(n)	</td>
-        <td>Thay đổi chiều cao của một phần tử
-</td>
-    </tr>
-
-    <tr>
-        <td>rotate(angle)	</td>
-        <td>Xoay phần tử theo một góc nào đó (angle)
-</td>
-    </tr>
-    <tr>
-        <td>skew(x-angle,y-angle)	</td>
-        <td>Định dạng phần tử có độ nghiêng theo một góc nhất định
-</td>
-    </tr>
-    <tr>
-        <td>skewX(angle)	</td>
-        <td>Định dạng phần tử nghiêng một góc theo trục Ox
-</td>
-    </tr>
-    <tr>
-        <td>skewY(angle)	</td>
-        <td>Định dạng phần tử nghiêng một góc theo trục Oy
-</td>
-    </tr>
-    <tr>
-        <td>matrix(n,n,n,n,n,n)	</td>
-        <td>Tổng hợp giữa scale, skew và translate
-</td>
-    </tr>
-</table>
-<h2>Hướng dẫn sử dụng 2D Transform CSS
-</h2>
-<div>Sau đây chúng tôi sẽ hướng dẫn bạn cách sử dụng các hiệu ứng chuyển đổi dạng 2D. Trong phần hướng dẫn này các Div có màu xanh lam sẽ ký hiệu cho các phần tử chưa được chuyển đổi. Các Div có màu cam sẽ đại diện cho các phần tử đã được áp dụng hiệu ứng. 
-
-</div>
-<h2>Cách sử dụng Transform CSS Translate
-</h2>
-<div>Phương thức translate hay còn gọi là dịch hoặc di chuyển sẽ giúp bạn di chuyển một phần từ từ trang lên, xuống, trái hoặc phải. Bạn có thể dịch chuyển theo một số lượng nhất định. 
-Trong cấu trúc, translate chữ số đầu tiên sẽ xác định khoảng cách theo chiều ngang. Chữ số thứ hai xác định khoảng cách theo chiều dọc bạn nhé. 
-Đây là cấu trúc cụ thể:</div>
-<code>transform: translate(100px, 75px);
-</code>
-<img src="https://tenten.vn/tin-tuc/wp-content/uploads/2022/05/How-To-Use-the-CSS-Transform-Property-3-4.webp" alt="trang">
-<p>Ở cấu trúc này bạn có thể dịch chuyển div theo chỉ số pixel. 
-Ngoài ra, bạn cũng có thể sử dụng tỷ lệ phần trăm để định dạng. Phần trăm di chuyển div từ ngang so với dọc, rộng so với cao sẽ xác định vị trí dịch chuyển của div. Cấu trúc cụ thể như sau: </p>
-<code>transform: translate(100%, 50%);
-
-</code>
-<img src="https://tenten.vn/tin-tuc/wp-content/uploads/2022/05/How-To-Use-the-CSS-Transform-Property-Oct-30-2020-04-10-13-47-PM-4.webp" alt="trang">
-<h2>Cách sử dụng Transform scale 
-</h2>
-<div>Phương thức transform Scale giúp thay đổi kích thước của phần tử cuối cùng. Nếu bạn cung cấp một chỉ số, nó sẽ làm tăng hoặc giảm đi kích thước của phần tử theo chỉ số mà bạn đã chọn. 
-Bạn có thể sử dụng phương thức này một cách đơn giản qua việc sử dụng cấu trúc sau đây:</div>
-<code>transform: scale(2);
-
-</code>
-<p>Khi bạn sử dụng cấu trúc trên kết quả sẽ hiển thị như sau: 
-</p>
-<img src="https://tenten.vn/tin-tuc/wp-content/uploads/2022/05/How-To-Use-the-CSS-Transform-Property-Oct-30-2020-04-10-11-77-PM-4.webp" alt="div">
-<p>Ngoài ra bạn cũng có thể sử dụng cấu trúc sau đây và kết quả sẽ được hiển thị như hình bên dưới: </p>
-<code>
-transform: scale(0.75);
-
-</code>
-<img src="https://tenten.vn/tin-tuc/wp-content/uploads/2022/05/How-To-Use-the-CSS-Transform-Property-Oct-30-2020-04-10-12-38-PM-4.webp" alt="scale">
-<p>Nếu bạn lựa chọn hai chỉ số và phân cách chúng bằng dấu phẩy thì chỉ số đầu tiên sẽ xác định chiều ngang. Chỉ số thứ hai sẽ xác định chiều dọc của phần tử mà bạn muốn chỉnh sửa. </p>
-<code>transform: scale(4, 2);
-
-</code>
-<p>Phương thức scaleX () thì chỉ thay đổi tỷ lệ theo chiều ngang của một phần tử vì chỉ có một chỉ số. Bạn có thể sử dụng theo cấu trúc dưới đây:
-
-</p>
-<code>transform: scaleX(2);
-
-</code>
-<h2>Hướng dẫn cách chuyển đổi CSS: Rotate
-</h2>
-<div>Transform CSS Rotate là một cấu trúc xoay vòng. Theo mặc định thì các phần tử sẽ xoay xung quanh trục tâm của nó. Bạn có thể chỉ định nó xoay theo độ nghiêng bao nhiêu độ, bao nhiêu radian hoặc quay từ 0turn đến 1turn.
-</div>
-<code>transform: rotate(45deg)
-
-</code>
-<img src="https://tenten.vn/tin-tuc/wp-content/uploads/2022/05/How-To-Use-the-CSS-Transform-Property-Oct-30-2020-04-10-14-65-PM-4.webp" alt="rotate">
-<code>transform: rotate(0.75turn);
-
-</code>
-<img src="https://tenten.vn/tin-tuc/wp-content/uploads/2022/05/How-To-Use-the-CSS-Transform-Property-1-4.webp" alt="rotate">
-<div>Khi nhìn vào những hình ảnh mô tả chắc chắn bạn đã hiểu được kết quả khi áp dụng công thức đối với mỗi phần tử rồi phải không nào. Đây là một cấu trúc đơn giản, dễ hiểu và cũng đem lại nhiều hiệu ứng độc đáo. Trên thực tế các cấu trúc 2D transform còn rất nhiều và cũng đa dạng về đơn vị và cách thực hiện. Bạn đọc cũng có thể tham khảo thêm nhiều cấu trúc hơn liên quan đến 3D transform CSS để giúp cho website của mình ngày càng sinh động hơn. </div>
-</body>
+      </tr>
+      <tr>
+        <td>translate(x,y)</td>
+        <td>Di chuyển phần tử dọc theo trục x và trục y</td>
+      </tr>
+      <tr>
+        <td>translateX(n)</td>
+        <td>Di chuyển phần tử dọc theo trục x</td>
+      </tr>
+      <tr>
+        <td>translateY(n)</td>
+        <td>Di chuyển phần tử dọc theo trục y</td>
+      </tr>
+      <tr>
+        <td>scale(x,y)</td>
+        <td>Thay đổi chiều rộng và chiều cao của một phần tử</td>
+      </tr>
+      <tr>
+        <td>scaleX(n)</td>
+        <td>Thay đổi chiều rộng của một phần tử</td>
+      </tr>
+      <tr>
+        <td>scaleY(n)</td>
+        <td>Thay đổi chiều cao của một phần tử</td>
+      </tr>
+      <tr>
+        <td>rotate(angle)</td>
+        <td>Xoay phần tử theo một góc nào đó (angle)</td>
+      </tr>
+      <tr>
+        <td>skew(x-angle,y-angle)</td>
+        <td>Định dạng phần tử có độ nghiêng theo một góc nhất định</td>
+      </tr>
+      <tr>
+        <td>skewX(angle)</td>
+        <td>Định dạng phần tử nghiêng một góc theo trục Ox</td>
+      </tr>
+      <tr>
+        <td>skewY(angle)</td>
+        <td>Định dạng phần tử nghiêng một góc theo trục Oy</td>
+      </tr>
+      <tr>
+        <td>matrix(n,n,n,n,n,n)</td>
+        <td>Tổng hợp giữa scale, skew và translate</td>
+      </tr>
+    </table>
+    <h2>Hướng dẫn sử dụng 2D Transform CSS</h2>
+    <div>
+      Sau đây chúng tôi sẽ hướng dẫn bạn cách sử dụng các hiệu ứng chuyển đổi
+      dạng 2D. Trong phần hướng dẫn này các Div có màu xanh lam sẽ ký hiệu cho
+      các phần tử chưa được chuyển đổi. Các Div có màu cam sẽ đại diện cho các
+      phần tử đã được áp dụng hiệu ứng.
+    </div>
+    <h2>Cách sử dụng Transform CSS Translate</h2>
+    <div>
+      Phương thức translate hay còn gọi là dịch hoặc di chuyển sẽ giúp bạn di
+      chuyển một phần từ từ trang lên, xuống, trái hoặc phải. Bạn có thể dịch
+      chuyển theo một số lượng nhất định. Trong cấu trúc, translate chữ số đầu
+      tiên sẽ xác định khoảng cách theo chiều ngang. Chữ số thứ hai xác định
+      khoảng cách theo chiều dọc bạn nhé. Đây là cấu trúc cụ thể:
+    </div>
+    <code>transform: translate(100px, 75px); </code>
+    <img
+      src="https://tenten.vn/tin-tuc/wp-content/uploads/2022/05/How-To-Use-the-CSS-Transform-Property-3-4.webp"
+      alt="trang"
+    />
+    <p>
+      Ở cấu trúc này bạn có thể dịch chuyển div theo chỉ số pixel. Ngoài ra, bạn
+      cũng có thể sử dụng tỷ lệ phần trăm để định dạng. Phần trăm di chuyển div
+      từ ngang so với dọc, rộng so với cao sẽ xác định vị trí dịch chuyển của
+      div. Cấu trúc cụ thể như sau:
+    </p>
+    <code>transform: translate(100%, 50%); </code>
+    <img
+      src="https://tenten.vn/tin-tuc/wp-content/uploads/2022/05/How-To-Use-the-CSS-Transform-Property-Oct-30-2020-04-10-13-47-PM-4.webp"
+      alt="trang"
+    />
+    <h2>Cách sử dụng Transform scale</h2>
+    <div>
+      Phương thức transform Scale giúp thay đổi kích thước của phần tử cuối
+      cùng. Nếu bạn cung cấp một chỉ số, nó sẽ làm tăng hoặc giảm đi kích thước
+      của phần tử theo chỉ số mà bạn đã chọn. Bạn có thể sử dụng phương thức này
+      một cách đơn giản qua việc sử dụng cấu trúc sau đây:
+    </div>
+    <code>transform: scale(2); </code>
+    <p>Khi bạn sử dụng cấu trúc trên kết quả sẽ hiển thị như sau:</p>
+    <img
+      src="https://tenten.vn/tin-tuc/wp-content/uploads/2022/05/How-To-Use-the-CSS-Transform-Property-Oct-30-2020-04-10-11-77-PM-4.webp"
+      alt="div"
+    />
+    <p>
+      Ngoài ra bạn cũng có thể sử dụng cấu trúc sau đây và kết quả sẽ được hiển
+      thị như hình bên dưới:
+    </p>
+    <code> transform: scale(0.75); </code>
+    <img
+      src="https://tenten.vn/tin-tuc/wp-content/uploads/2022/05/How-To-Use-the-CSS-Transform-Property-Oct-30-2020-04-10-12-38-PM-4.webp"
+      alt="scale"
+    />
+    <p>
+      Nếu bạn lựa chọn hai chỉ số và phân cách chúng bằng dấu phẩy thì chỉ số
+      đầu tiên sẽ xác định chiều ngang. Chỉ số thứ hai sẽ xác định chiều dọc của
+      phần tử mà bạn muốn chỉnh sửa.
+    </p>
+    <code>transform: scale(4, 2); </code>
+    <p>
+      Phương thức scaleX () thì chỉ thay đổi tỷ lệ theo chiều ngang của một phần
+      tử vì chỉ có một chỉ số. Bạn có thể sử dụng theo cấu trúc dưới đây:
+    </p>
+    <code>transform: scaleX(2); </code>
+    <h2>Hướng dẫn cách chuyển đổi CSS: Rotate</h2>
+    <div>
+      Transform CSS Rotate là một cấu trúc xoay vòng. Theo mặc định thì các phần
+      tử sẽ xoay xung quanh trục tâm của nó. Bạn có thể chỉ định nó xoay theo độ
+      nghiêng bao nhiêu độ, bao nhiêu radian hoặc quay từ 0turn đến 1turn.
+    </div>
+    <code>transform: rotate(45deg) </code>
+    <img
+      src="https://tenten.vn/tin-tuc/wp-content/uploads/2022/05/How-To-Use-the-CSS-Transform-Property-Oct-30-2020-04-10-14-65-PM-4.webp"
+      alt="rotate"
+    />
+    <code>transform: rotate(0.75turn); </code>
+    <img
+      src="https://tenten.vn/tin-tuc/wp-content/uploads/2022/05/How-To-Use-the-CSS-Transform-Property-1-4.webp"
+      alt="rotate"
+    />
+    <div>
+      Khi nhìn vào những hình ảnh mô tả chắc chắn bạn đã hiểu được kết quả khi
+      áp dụng công thức đối với mỗi phần tử rồi phải không nào. Đây là một cấu
+      trúc đơn giản, dễ hiểu và cũng đem lại nhiều hiệu ứng độc đáo. Trên thực
+      tế các cấu trúc 2D transform còn rất nhiều và cũng đa dạng về đơn vị và
+      cách thực hiện. Bạn đọc cũng có thể tham khảo thêm nhiều cấu trúc hơn liên
+      quan đến 3D transform CSS để giúp cho website của mình ngày càng sinh động
+      hơn.
+    </div>
+  </body>
 </html>
