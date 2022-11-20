@@ -2,6 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  
 }
 
 img {
@@ -16,6 +17,12 @@ img {
   border-radius: 5px;
   margin: 20px;
   box-shadow: 1px 1px 1px 1px rgb(161, 159, 159);
+  transition: all 0.5s 0s linear;
+}
+
+.box:hover {
+  width: 400px;
+  box-shadow: 5px 5px 5px 5px green;
 }
 
 i {
@@ -123,3 +130,4 @@ a.button {
 .allinjava {
     margin-top: 20px;
 }
+
