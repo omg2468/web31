@@ -1,40 +1,50 @@
 * {
-
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #000;
+.hero {
+    background-color: rgb(176, 159, 159);
 }
 
-.wavy {
+.menu {
+    width: 200px;
+    height: 200px;
+    background-color: rgb(201, 190, 190);
+}
+
+ul {
+    list-style-type: none;
+}
+
+.container .menu a {
+    text-decoration: none;
+}
+
+.container {
     position: relative;
-    -webkit-box-flex: below -12px linear-gradient(transparent, rgba(0,0,0,0.2));
+    background-color: antiquewhite;
 }
 
-.wavy span{
-    position: relative;
-    display: inline-block;
-    color: #fff;
-    font-size: 2em;
-    text-transform: uppercase;
-    animation: animate 1s ease-in-out infinite;
-    animation-delay: calc(0.3s * var(--i));
+.dropdown {
+    position: absolute;
+    top: 0;
+    left: 150px;
+    display: none;
 }
 
-@keyframes animate {
-    0% {
-        transform: translateY(0px);
-    }
+.container .menu .menu-item:hover .dropdown {
+    display: block;
+}
 
-    20% {
-        transform: translateY(-20px);
-    }
+.container .dropdown .sub-dropdown {
+    position: absolute;
+    top: 0;
+    left: 150px;
+    display: none;
+}
 
-    40%,100% {
-        transform: translateY(0px);
-    }
+.container .dropdown .menu-item:hover  .sub-dropdown {
+display: block;
 }

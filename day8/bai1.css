@@ -1,0 +1,269 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{color: #6c6c6f;
+    background-color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 27px;}
+
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 570px;
+  margin-left: 205px;
+}
+
+.nav>img {
+    width: 109px;
+    height: 77px;
+}
+
+.nav .nav-menu ul {
+    padding-top: 50px;
+    display: flex;
+    list-style-type: none;
+}
+
+.nav .nav-menu li a {
+    margin: 0 20px;
+    text-decoration: none;
+    color: black
+}
+
+.nav .nav-menu a:hover {
+    color:#ff817e;
+}
+
+
+.spa>img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  width: 43.3%;
+  height: 700px;
+}
+
+.header {
+    padding: 12% 0;
+    height: 375px;
+    width: 700px;
+    position: relative;
+    left: 200px;
+}
+
+.header img {
+    position: absolute;
+    top: 30px;
+    left: -200px;
+    z-index: -1;
+}
+
+.content-header {
+    margin-left: 75px;
+    width: 450px;
+}
+
+.content-header span {
+    color: #ff817e;
+}
+
+.content-header h2 {
+    margin: 25px 0px;
+    font-size: 49px;
+    line-height: 60px;
+}
+
+.content-header p {
+    color: #555;
+    margin-bottom: 50px;
+}
+
+.button-header {
+    display: flex;
+}
+
+.buton-reverse {
+    background-color: #ff817e;
+    color: white;
+    padding: 20px 15px;
+    margin-right: 15px;
+}
+
+.button-header svg {
+    border-radius: 50%;
+    background-color: #fcf5ee;
+    color: #ff817e;
+    height: 44px;
+    width: 44px; 
+}
+
+.button-header a {
+    text-decoration: none;
+    color: black;
+    margin-top: 16px;
+    margin-left: 20px;
+}
+
+.section {
+    height: 850px;
+}
+.about {
+    display: block;
+    text-align: center;
+}
+
+.about img {
+    margin-bottom: 60px;
+    width: 90px;
+    height: 75px;
+}
+
+.about h2 {
+    margin: 50px auto;
+}
+
+.about .about-content {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 60px
+}
+
+.about .button {
+    background-color: #ff817e;
+    color: white;
+    border-radius: 10px;
+    padding: 15px 20px;
+    width: 200px;
+    margin: 0 auto;
+}
+
+.about .button:hover {
+    color: black;
+}
+
+.method {
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    gap:10px;
+    margin: 100px auto;
+}
+
+
+
+.method .hover-method {
+    position: absolute;
+    background-color: #ff817e;
+    display: none;
+    top: 0;
+    right: 0;
+}
+
+.method img {
+    width: 100%;
+}
+
+
+
+.populer {
+    width: 705px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.box {
+    height: 550px;
+    text-align: center;
+    padding: 10px 10px 20px;
+    border :1px solid rgba(100, 91, 91, 0.673);
+    width: 350px;
+}
+
+.massage .box img {
+    width: 100%;
+
+}
+
+.massage {
+    width: 100%;
+    height: 550px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.box h3 {
+    margin: 30px;
+}
+
+.box .content-box {
+    margin-bottom: 30px;
+}
+
+.box .button-box {
+    background-color: rgba(13, 12, 12, 0.611);
+    width: fit-content;
+    padding: 10px 30px;
+    margin: 0 auto;
+    color: white;
+    border-radius: 20px;
+}
+
+.box .button-box:hover {
+    background-color: #ff817e;
+    cursor: pointer;
+}
+
+.experience-header {
+    text-align: center;
+    margin-top: 100px;
+    width: 50%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 50px;
+}
+
+.team-info {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.info-person {
+    position: relative;
+}
+
+.info-detail {
+    background-color: white;
+    position: absolute;
+    bottom: -40px;
+    left: 90px;
+    margin: 0 auto;
+    z-index: 1;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.contact {
+    display: flex;
+    margin-top: 100px;
+}
+
+.contact img {
+    width: 40%;
+}
+
+.contact-form {
+    background-color: #fff9f8;
+    width: 60%;
+}
+
+
