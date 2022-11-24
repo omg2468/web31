@@ -1,0 +1,67 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.box {
+    width: 30%;
+    border: 1px solid rgba(0, 0, 0, 0.32);
+    margin: 20px;
+    border-radius: 15px;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.372);
+}
+
+.header {
+    padding: 20px;
+    text-align: ;
+    border-bottom: 1px solid black;
+    position: relative;
+}
+
+.header-right {
+    position: absolute;
+    top:20px;
+    right: 20px;
+}
+
+.form {
+    margin: 0 10px;
+}
+
+.name-form {
+    display: flex;
+    width: 100%;
+    gap: 10px
+}
+
+input {
+    border: 1px solid rgba(0, 0, 0, 0.193);
+    border-radius: 4px;
+    width: 100%;
+}
+
+.name input {
+    margin: 10px auto;
+}
+
+.email-pass input {
+    margin-bottom: 10px;
+}
+
+label {
+    margin: 10px;
+}
+
+.date-form {
+    margin : 0 10px;
+    display: flex;
+    justify-content: space-around;
+    gap: 10px
+}
+
+.date-form select {
+    width: 100%;
+}
+
+
