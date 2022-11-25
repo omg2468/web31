@@ -50,7 +50,7 @@ input {
 }
 
 label {
-    margin: 10px;
+    margin-left: 10px
 }
 
 .date-form {
@@ -63,5 +63,7 @@ label {
 .date-form select {
     width: 100%;
 }
+
+
 
 

@@ -339,20 +339,557 @@
       Toán tử 3 ngôi là một toán tử vô cùng hữu ích trong JavaScript, toán tử
       này giống như là bản rút gọn của câu lệnh if-else
     </p>
-    <img src="math5.png" alt="">
-    <h3>Toán tử với chuỗi trong JS
-</h3>
-<p>Toán tử với chuỗi sử dụng nhiều là nối hai chuỗi lại với nhau, sử dụng toán tử + để nối. Lưu ý toán tử này có thể nối số vào chuỗi.
+    <img src="math5.png" alt="" />
+    <h3>Toán tử với chuỗi trong JS</h3>
+    <p>
+      Toán tử với chuỗi sử dụng nhiều là nối hai chuỗi lại với nhau, sử dụng
+      toán tử + để nối. Lưu ý toán tử này có thể nối số vào chuỗi.
+    </p>
+    <h3>Toán tử typeof</h3>
+    <p>
+      Toán tử typeof trả về kiểu dữ liệu cần kiểm tra của một biến, một giá trị.
+    </p>
+    <hr />
+    <h1>Chuyển đổi dữ liệu trong js</h1>
+    <p>
+      Khi chúng ta cần chuyển đổi kiểu của một <code>value</code> sang
+      <code>string</code> chúng ta có thể sử dụng <code>String()</code>:
+    </p>
+    <pre
+      class="language-js"
+      data-filename
+    ><code class="language-js"><span class="token keyword">var</span> x <span class="token operator">=</span> <span class="token number">15</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> y <span class="token operator">=</span> <span class="token function">String</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">alert</span><span class="token punctuation">(</span><span class="token keyword">typeof</span><span class="token punctuation">(</span>y<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// string</span>
 
-</p>
-<h3>Toán tử typeof
-</h3>
-<p>Toán tử typeof trả về kiểu dữ liệu cần kiểm tra của một biến, một giá trị.
+<span class="token comment">//Hoặc khi ta có 1 mảng</span>
 
-</p>
-<hr>
-<h1><a href="https://techmaster.vn/posts/35024/cach-chuyen-doi-kieu-du-lieu-trong-javascript">Chuyển đổi dữ liệu trong js</a></h1>
-<hr>
-<h1><a href="https://freetuts.net/bien-va-khai-bao-bien-trong-javascript-265.html">Cách khai báo biến trong JS</a></h1>
-</body>
+<span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> b <span class="token operator">=</span> <span class="token function">String</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">alert</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 1,2,3</span>
+<span class="token function">alert</span><span class="token punctuation">(</span><span class="token keyword">typeof</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// string</span>
+
+<span class="token comment">//Tuy nhiên khi ta áp dụng với Object</span>
+<span class="token keyword">var</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">1</span><span class="token operator">:</span> <span class="token string">'a'</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token operator">:</span> <span class="token string">'b'</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> objToString <span class="token operator">=</span> <span class="token function">String</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">alert</span><span class="token punctuation">(</span>objToString<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// [object Object]</span>
+</code></pre>
+    <h4>2. toString()</h4>
+    <p>
+      Ngoài việc sử dụng <code>String()</code> thì chúng ta có vẻ quen thuộc hơn
+      với <code>toString()</code>, nó cũng sẽ ép kiểu các giá trị về
+      <code>string</code>:
+    </p>
+    <pre
+      class="language-js"
+      data-filename
+    ><code class="language-js"><span class="token keyword">var</span> x <span class="token operator">=</span> <span class="token number">15</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> y <span class="token operator">=</span> x<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">alert</span><span class="token punctuation">(</span><span class="token keyword">typeof</span><span class="token punctuation">(</span>y<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// string</span>
+
+<span class="token comment">//Hoặc khi ta có 1 mảng</span>
+
+<span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> b <span class="token operator">=</span> a<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">alert</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 1,2,3</span>
+<span class="token function">alert</span><span class="token punctuation">(</span><span class="token keyword">typeof</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// string</span>
+
+<span class="token comment">//Và áp dụng với Object cũng chưa ra được kq mong muốn</span>
+<span class="token keyword">var</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">1</span><span class="token operator">:</span> <span class="token string">'a'</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token operator">:</span> <span class="token string">'b'</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> objToString <span class="token operator">=</span> obj<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">alert</span><span class="token punctuation">(</span>objToString<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// [object Object]</span>
+</code></pre>
+    <h4>3. Sử dụng toán tử cộng "+"</h4>
+    <p>
+      Khi sử dụng toán tử, chúng ta đặc biệt phải lưu ý đến toán tử
+      <code>+</code> khi toán hạng có kiểu <code>string</code>. Khi chúng ta sử
+      dụng toán tử <code>+</code> mà một trong các toán hạng có kiểu là
+      <code>string</code> thì Javascript sẽ cố gắng ép kiểu của toán hạng còn
+      lại về kiểu <code>string</code>. Hãy cùng xem ví dụ dưới đây:
+    </p>
+    <pre
+      class="language-js"
+      data-filename
+    ><code class="language-js"><span class="token comment">// Trong trường hợp có 2 toán hạng, 1 trong 2 toán hạng có kiểu là "string" </span>
+<span class="token comment">// thì JS sẽ ép kiểu của toán hạng còn lại về "string"</span>
+<span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">"1"</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// "11"</span>
+<span class="token function">alert</span><span class="token punctuation">(</span><span class="token number">1</span> <span class="token operator">+</span> <span class="token string">"1"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// "11"</span>
+
+<span class="token comment">// Trong trường hợp có nhiều hơn 2 toán hạng và 1 trong các toán hạng có kiểu là "string"</span>
+<span class="token comment">// thì tùy vào vị trí của toán hạng kiểu "string" mà ta có các kq khác nhau.</span>
+
+<span class="token function">alert</span><span class="token punctuation">(</span><span class="token number">1</span> <span class="token operator">+</span> <span class="token number">2</span> <span class="token operator">+</span> <span class="token string">"string"</span> <span class="token operator">+</span> <span class="token number">3</span> <span class="token operator">+</span> <span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// "3string34"</span>
+<span class="token function">alert</span><span class="token punctuation">(</span><span class="token number">1</span> <span class="token operator">+</span> <span class="token string">"string"</span> <span class="token operator">+</span> <span class="token number">2</span> <span class="token operator">+</span> <span class="token number">3</span> <span class="token operator">+</span> <span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// "1string234"</span>
+<span class="token function">alert</span><span class="token punctuation">(</span><span class="token number">1</span> <span class="token operator">+</span> <span class="token number">2</span> <span class="token operator">+</span> <span class="token number">3</span> <span class="token operator">+</span> <span class="token number">4</span> <span class="token operator">+</span> <span class="token string">"string"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// "10string"</span>
+
+<span class="token comment">// Chúng ta sẽ chuyển đổi kiểu như thế nào?</span>
+<span class="token keyword">var</span> x <span class="token operator">=</span> <span class="token number">15</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> y <span class="token operator">=</span> <span class="token string">""</span> <span class="token operator">+</span> <span class="token number">15</span><span class="token punctuation">;</span>
+<span class="token function">alert</span><span class="token punctuation">(</span>y<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// "15"</span>
+</code></pre>
+    <h2>Numeric Conversion</h2>
+    <h4>1. Number()</h4>
+    <p>
+      Khi chúng ta muốn chuyển đổi từ một giá trị khác sang giá trị kiểu
+      <code>number</code>, chúng ta có thể sử dụng <code>Number()</code>:
+    </p>
+    <pre
+      class="language-js"
+      data-filename
+    ><code class="language-js"><span class="token keyword">var</span> x <span class="token operator">=</span> <span class="token string">"123"</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> y <span class="token operator">=</span> <span class="token function">Number</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">alert</span><span class="token punctuation">(</span>y<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 123</span>
+
+<span class="token comment">// Hoặc với các giá trị true/false</span>
+<span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token function">Number</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">alert</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 1</span>
+<span class="token comment">// còn Number(false), Number(''), Number([]) hoặc Number(null) sẽ trả về 0</span>
+
+<span class="token comment">// Khi chúng ta truyền vào Number() một string không phải chứa toàn là số</span>
+<span class="token comment">// thì sẽ trả về NaN: Not a Number</span>
+
+<span class="token keyword">var</span> string <span class="token operator">=</span> <span class="token string">"string"</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> toNumber <span class="token operator">=</span> <span class="token function">Number</span><span class="token punctuation">(</span>string<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">alert</span><span class="token punctuation">(</span>toNumber<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// NaN</span>
+<span class="token comment">// Ngoài ra khi truyền vào Object, undefined</span>
+<span class="token comment">//hoặc array có length &gt; 2 hoặc có 1 giá trị nhưng không phải number hoặc string là số thì cũng trả về NaN</span>
+</code></pre>
+    <h4>2. parseInt()/parseFloat()</h4>
+    <ul>
+      <li>
+        <p>
+          parseInt() sẽ chuyển đổi kiểu của một <code>string</code> về kiểu
+          <code>number</code> nhưng ở dạng interger (số nguyên)
+        </p>
+        <p>
+          parseInt() sẽ trả về các số nằm đầu tiên trong giá trị
+          <code>string</code> đó, nếu chuỗi đó không thể chuyển thành
+          <code>number</code> thì nó sẽ trả về NaN. Cùng xét ví dụ sau:
+        </p>
+      </li>
+    </ul>
+    <pre
+      class="language-js"
+      data-filename
+    ><code class="language-js"><span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token function">parseInt</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// NaN</span>
+<span class="token keyword">var</span> b <span class="token operator">=</span> <span class="token function">parseInt</span><span class="token punctuation">(</span><span class="token string">"10.00"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 10</span>
+<span class="token keyword">var</span> c <span class="token operator">=</span> <span class="token function">parseInt</span><span class="token punctuation">(</span><span class="token string">"10.33"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 10</span>
+<span class="token keyword">var</span> d <span class="token operator">=</span> <span class="token function">parseInt</span><span class="token punctuation">(</span><span class="token string">"34 45 66"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 34</span>
+<span class="token keyword">var</span> e <span class="token operator">=</span> <span class="token function">parseInt</span><span class="token punctuation">(</span><span class="token string">"   60   "</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 60</span>
+<span class="token keyword">var</span> f <span class="token operator">=</span> <span class="token function">parseInt</span><span class="token punctuation">(</span><span class="token string">"40 years"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 40</span>
+<span class="token keyword">var</span> g <span class="token operator">=</span> <span class="token function">parseInt</span><span class="token punctuation">(</span><span class="token string">"He was 40"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// NaN</span>
+</code></pre>
+    <ul>
+      <li>
+        <p>
+          parseFloat() sẽ chuyển đổi kiểu của một <code>string</code> về kiểu
+          <code>number</code> nhưng ở dạng float (số thực)
+        </p>
+        <p>parseFloat() cũng gần giống như parseInt(). Cùng xét ví dụ sau:</p>
+      </li>
+    </ul>
+    <pre
+      class="language-js"
+      data-filename
+    ><code class="language-js"><span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token function">parseInt</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// NaN</span>
+<span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token function">parseFloat</span><span class="token punctuation">(</span><span class="token string">"10"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 10</span>
+<span class="token keyword">var</span> b <span class="token operator">=</span> <span class="token function">parseFloat</span><span class="token punctuation">(</span><span class="token string">"10.00"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 10</span>
+<span class="token keyword">var</span> c <span class="token operator">=</span> <span class="token function">parseFloat</span><span class="token punctuation">(</span><span class="token string">"10.33"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 10.33</span>
+<span class="token keyword">var</span> d <span class="token operator">=</span> <span class="token function">parseFloat</span><span class="token punctuation">(</span><span class="token string">"34 45 66"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 34</span>
+<span class="token keyword">var</span> e <span class="token operator">=</span> <span class="token function">parseFloat</span><span class="token punctuation">(</span><span class="token string">"   60   "</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 60</span>
+<span class="token keyword">var</span> f <span class="token operator">=</span> <span class="token function">parseFloat</span><span class="token punctuation">(</span><span class="token string">"40 years"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 40</span>
+<span class="token keyword">var</span> g <span class="token operator">=</span> <span class="token function">parseFloat</span><span class="token punctuation">(</span><span class="token string">"He was 40"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// NaN</span>
+</code></pre>
+    <h4>3. Sử dụng toán tử "+"</h4>
+    <p>
+      Tại sao vừa rồi ở trên chúng ta nói đến việc sử dụng <code>+</code> để
+      chuyển kiểu về <code>string</code> mà dưới đây chúng ta lại dùng nó để
+      chuyển kiểu về <code>number</code>. Chúng ta cùng xem ví dụ dưới đây:
+    </p>
+    <pre
+      class="language-js"
+      data-filename
+    ><code class="language-js"><span class="token keyword">var</span> x <span class="token operator">=</span> <span class="token string">"15"</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> y <span class="token operator">=</span> <span class="token operator">+</span>x<span class="token punctuation">;</span>
+<span class="token function">alert</span><span class="token punctuation">(</span>y<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 15</span>
+<span class="token function">alert</span><span class="token punctuation">(</span><span class="token keyword">typeof</span><span class="token punctuation">(</span>y<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// number</span>
+</code></pre>
+    <p>
+      Khi chúng ta thêm <code>+</code> và trước giá trị thì nó sẽ chuyển đổi về
+      kiểu <code>number</code> không giống như khi chúng ta sử dụng
+      <code>+</code> trong một phép toán.
+    </p>
+    <p>
+      Và nó cũng trả về các kết quả giống như sử dụng
+      <code>Number()</code> trong các trường hợp cụ thể:
+    </p>
+    <pre
+      class="language-js"
+      data-filename
+    ><code class="language-js"><span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token operator">+</span><span class="token boolean">false</span><span class="token punctuation">;</span> <span class="token comment">// 0 === +"", +[], +null</span>
+<span class="token keyword">var</span> b <span class="token operator">=</span> <span class="token operator">+</span><span class="token boolean">true</span><span class="token punctuation">;</span> <span class="token comment">// 1</span>
+<span class="token keyword">var</span> c <span class="token operator">=</span> <span class="token operator">+</span><span class="token string">"123"</span><span class="token punctuation">;</span> <span class="token comment">// 123</span>
+<span class="token keyword">var</span> d <span class="token operator">=</span> <span class="token operator">+</span><span class="token string">"abc"</span><span class="token punctuation">;</span> <span class="token comment">// NaN</span>
+<span class="token keyword">var</span> e <span class="token operator">=</span> <span class="token operator">+</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment">// 1 === +["1"]</span>
+<span class="token keyword">var</span> f <span class="token operator">=</span> <span class="token operator">+</span><span class="token punctuation">[</span><span class="token string">"a"</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment">// NaN</span>
+<span class="token keyword">var</span> g <span class="token operator">=</span> <span class="token operator">+</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span> <span class="token comment">// NaN</span>
+</code></pre>
+    <p>
+      Ngoài ra, khi chúng ta tính toán sử dụng các toán tử
+      <code>-, *, /, %, **</code> thì Javascript cũng sẽ cố gắng chuyển đổi kiểu
+      các toàn hạng về <code>number</code>.
+    </p>
+    <h2>Boolean Conversion</h2>
+    <p>
+      Thường khi viết code Javascript chúng ta ít khi ép kiểu các giá trị về
+      kiểu <code>Boolean</code> mà thường để tự Javascript ngầm ép kiểu, ví dụ
+      như sau:
+    </p>
+    <pre
+      class="language-js"
+      data-filename
+    ><code class="language-js"><span class="token keyword">var</span> x <span class="token operator">=</span> <span class="token string">"string"</span><span class="token punctuation">;</span>
+<span class="token keyword">if</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">alert</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    <span class="token function">alert</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">//KQ: true</span>
+</code></pre>
+    <p>
+      Ở đoạn code trên, chúng ta có thể thấy Javascript đã tự động ngầm ép kiểu
+      của <code>x</code> trong <code>if</code> về <code>Boolean</code> để chạy
+      câu lệnh <code>if</code>.
+    </p>
+    <p>
+      Tuy nhiên, nhiều trường hợp chúng ta muốn lấy giá trị kiểu
+      <code>Boolean</code> của nó để có thể <strong>strict equal</strong> hoặc
+      cần hàm trả về <code>true</code> hoặc <code>false</code> thì chúng ta sẽ
+      sử dụng <code>Boolean()</code>:
+    </p>
+    <pre
+      class="language-js"
+      data-filename
+    ><code class="language-js"><span class="token keyword">var</span> x <span class="token operator">=</span> <span class="token function">Boolean</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">alert</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// true</span>
+</code></pre>
+    <p>
+      Các giá trị khi ép kiểu sang <code>Boolean</code> trả về
+      <code>false</code>: <code>0, '', false, null, undefined, NaN</code>. Các
+      giá trị này cũng được gọi là các <strong>falsy value</strong> trong
+      Javascript.
+    </p>
+    <p>
+      Ngoài các giá trị ở trên thì các giá trị còn lại đều trả về
+      <code>true</code>.
+    </p>
+    <h2>Object Conversion</h2>
+    <p>
+      Như chúng ta đã tìm hiểu ở trên thì khi chuyển đổi kiểu từ
+      <code>object</code> sang các kiểu khác như:
+    </p>
+    <ul>
+      <li><code>string</code>: <code>[object Object]</code></li>
+      <li><code>number</code>: <code>NaN</code></li>
+      <li><code>boolean</code>: <code>true</code></li>
+    </ul>
+    <p>
+      Vậy chúng ta phải làm thế nào để chuyển đổi kiểu từ
+      <code>object</code> sang các kiểu dữ liệu nguyên thủy theo cách mà chúng
+      ta mong muốn nhất.
+    </p>
+    <p>
+      Khi chúng ta ép kiểu một object về <code>string</code> hoặc
+      <code>number</code> thì Javascript sẽ cố gắng tìm và gọi 3 object methods
+      như sau:
+    </p>
+    <ol>
+      <li>
+        Gọi <code>obj[Symbol.toPrimitive](hint)</code> - với key tượng trưng là
+        <code>Symbol.toPrimitive</code>, nếu method này tồn tại.
+      </li>
+      <li>
+        Dựa vào <em>hint</em> , nếu là <strong>string</strong> thì nó sẽ cố gọi
+        đến method <code>obj.toString()</code> trước và
+        <code>obj.valueOf()</code> sau nếu <code>obj.toString()</code> không tồn
+        tại.
+      </li>
+      <li>
+        Nếu <em>hint</em> là <strong>number</strong> thì nó sẽ cố gọi đến
+        <code>obj.valueOf()</code> trước và <code>obj.toString()</code> sau.
+      </li>
+    </ol>
+    <h4>Symbol.toPrimitive</h4>
+    <p>Hãy cùng xét ví dụ:</p>
+    <pre
+      class="language-js"
+      data-filename
+    ><code class="language-js"><span class="token keyword">var</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span>
+  name<span class="token operator">:</span> <span class="token string">'John Doe'</span><span class="token punctuation">,</span>
+  age<span class="token operator">:</span> <span class="token number">53</span><span class="token punctuation">,</span>
+  
+  <span class="token punctuation">[</span>Symbol<span class="token punctuation">.</span>toPrimitive<span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token parameter">hint</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> hint <span class="token operator">==</span> <span class="token string">"string"</span> <span class="token operator">?</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token keyword">this</span><span class="token punctuation">.</span>name<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span> <span class="token operator">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span>age<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token function">alert</span><span class="token punctuation">(</span><span class="token function">String</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// "John Doe"</span>
+<span class="token function">alert</span><span class="token punctuation">(</span><span class="token function">Number</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 53</span>
+</code></pre>
+    <p>
+      <code>Symbol.toPrimitive</code> sẽ cho phép chúng ta quy định giá trị trả
+      về thông qua <em>hint</em>.
+    </p>
+    <div class="embed-responsive embed-responsive-16by9">
+      <iframe
+        class="embed-responsive-item"
+        type="text/html"
+        src="https://viblo.asia/embed?url=https://codepen.io/numberboo/pen/bGNvPab&amp;provider=null"
+        frameborder="0"
+        webkitallowfullscreen
+        mozallowfullscreen
+        allowfullscreen
+      ></iframe>
+    </div>
+    <p></p>
+    <h4>toString/valueOf</h4>
+    <p>
+      Methods <code>toString</code> và <code>valueOf</code> là 2 method cũ, nếu
+      không tìm thấy <code>Symbol.toPrimitive</code> thì Javascript sẽ cố gắng
+      gọi đến chúng theo thứ tự:
+    </p>
+    <ul>
+      <li>
+        <code>toString</code> rồi đến <code>valueOf</code> nếu <em>hint</em> là
+        <strong>string</strong>
+      </li>
+      <li>
+        <code>valueOf</code> rồi đên <code>toString</code> nếu
+        <em>hint</em> khác <strong>string</strong>
+      </li>
+    </ul>
+    <p>Theo mặc định, đối với một object đơn giản:</p>
+    <ul>
+      <li>
+        <code>toString</code> method trả về một string:
+        <code>"[object Object]"</code>.
+      </li>
+      <li><code>valueOf</code> method trả về chính object đó.</li>
+    </ul>
+
+    <hr />
+    <h1>Cách khai báo biến trong JS</h1>
+    <p>
+      Các biến là phần thiết yếu của mọi ngôn ngữ lập trình. Vì vậy, bạn phải
+      hiểu những điều cơ bản của biến trước khi bạn đi sâu vào ứng dụng. Nên hôm
+      nay mình xin trình bày đôi nét về biến Javascript.
+    </p>
+    <h1>1. Biến là gì ?</h1>
+    <p>
+      Giống như nhiều ngôn ngữ lập trình khác, JavaScript có các biến. Các biến
+      có thể được coi là các thùng chứa có tên. Bạn có thể đặt dữ liệu vào các
+      vùng chứa này và sau đó tham khảo dữ liệu chỉ bằng cách đặt tên vùng chứa.
+    </p>
+    <h1>2. Biến JavaScrip được lưu ở đâu.</h1>
+    <p>
+      Các biến JavaScript được lưu trữ trong bộ nhớ của browser process ( tiến
+      trình trình duyệt) hiểu nôm na 1 cách đơn giản là biến được lưu trong phần
+      Ram mà trình duyệt đang sử dụng.
+    </p>
+    <h1>3. Khai báo biến</h1>
+    <p>Để khai báo một biến ta sử dụng từ khóa <code>const, let, var</code>.</p>
+    <p>
+      <em><strong>const</strong></em> được sử dụng để khai báo 1 hằng số, và giá
+      trị của nó không thay đổi trong suốt chương trình.
+    </p>
+    <p>
+      <em><strong>let</strong></em> khai báo biến chỉ có thể truy cập được trong
+      block bao quanh nó được xác định bằng cặp {}.
+    </p>
+    <p>
+      <em><strong>var</strong></em> khai báo biến có thể truy cập ở phạm vi hàm
+      số hoặc bên ngoài hàm số, toàn cục.
+      <br />
+      <br />
+      Giống như ngôn ngữ khác, cách đặt tên biến của JS cũng phải tuân theo 1 số
+      quy tắc sau :
+    </p>
+    <ul>
+      <li>
+        Tên biến phải là các chữ không dấu viết hoa hoặc viết thường, các chữ số
+        từ 0-9 và dấu gạch dưới () và kí hiệu $.
+      </li>
+      <li>
+        Tên biến bắt đầu phải là chữ hoặc dấu gạch dưới (_), nếu bắt đầu bằng số
+        là sai.
+      </li>
+      <li>
+        Không thể sử dụng các từ dành riêng (như từ khóa JavaScript) làm tên.
+      </li>
+      <li>Các tên có phân biệt chữ hoa chữ thường</li>
+    </ul>
+    <p>một số ví dụ về khai báo biến</p>
+    <pre
+      class="language-javascript"
+      data-filename
+    ><code class="language-javascript">
+<span class="token operator">*</span><span class="token comment">// Đúng*</span>
+
+<span class="token keyword">var</span> person<span class="token punctuation">;</span>
+ 
+<span class="token operator">*</span><span class="token comment">// Đúng*</span>
+
+<span class="token keyword">var</span> _person<span class="token punctuation">;</span>
+ 
+<span class="token operator">*</span><span class="token comment">// Đúng*</span>
+
+<span class="token keyword">var</span> __person<span class="token punctuation">;</span>
+ 
+<span class="token operator">*</span><span class="token comment">// Đúng*</span>
+
+<span class="token keyword">var</span> person1<span class="token punctuation">;</span>
+ 
+<span class="token operator">*</span><span class="token comment">// SAI*</span>
+
+<span class="token keyword">var</span> <span class="token number">10</span>persion<span class="token punctuation">;</span>
+</code></pre>
+    <h1>4. Kiểu dữ liệu của biến</h1>
+    <p>
+      Khi khai báo biến ta không cần phải khai báo kiểu của biến đó trước khi
+      dùng. Kiểu sẽ được tự động xác định trong lúc chương trình được thực thi.
+      Điều đó cũng có nghĩa là một biến có thể chứa giá trị của các kiểu dữ liệu
+      khác nhau.
+    </p>
+    <pre
+      class="language-javascript"
+      data-filename
+    ><code class="language-javascript"><span class="token keyword">var</span> test <span class="token operator">=</span> <span class="token number">123</span> <span class="token punctuation">;</span> <span class="token comment">// test là một số</span>
+
+<span class="token keyword">var</span> test <span class="token operator">=</span> <span class="token string">"variable of js "</span><span class="token punctuation">;</span> <span class="token comment">//test là một chuỗi</span>
+
+<span class="token keyword">var</span> test <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>  <span class="token comment">// test là một boolean</span>
+</code></pre>
+    <p>Theo tiêu chuẩn ECMAScript xác định bảy kiểu dữ liệu như sau :</p>
+    <blockquote>
+      <p>Kiểu boolean</p>
+      <p>Kiểu null</p>
+      <p>Kiểu undefined</p>
+      <p>Kiểu số</p>
+      <p>Kiểu chuỗi</p>
+      <p>Kiểu Symbol (mới trong ECMAScript 6)</p>
+      <p>Kiểu đối tượng</p>
+    </blockquote>
+    <h1>5. Phạm vi của biến</h1>
+    <p>
+      Có hai loại phạm vi trong JavaScript.
+      <code>biến cục bộ (local scope)</code> và
+      <code>biến toàn cục (global scope)</code>. Biến toàn cục được khai báo
+      ngoài hàm , trong khi đó biến cục bộ được lưu khai báo bên trong một
+      hàm.(Nên với cùng một tên biến, ta có thể khai báo ở những hàm khác nhau).
+      <br />
+      <br />
+      Một biến toàn cục có thể được truy cập từ bên ngoài của hàm cũng như bên
+      trong của hàm nhưng, một biến cục bộ chỉ có thể được truy cập bên trong
+      hàm. Nếu truy cập từ bên ngoài của hàm, bạn sẽ nhận được lỗi 'undefined
+      variable' (biến không xác định).
+    </p>
+    <p>ví dụ đơn giản :</p>
+    <pre
+      class="language-javascript"
+      data-filename
+    ><code class="language-javascript"><span class="token keyword">var</span> foo <span class="token operator">=</span> <span class="token number">50</span><span class="token punctuation">;</span>  <span class="token comment">//&lt;= biến toàn cục </span>
+
+<span class="token keyword">function</span> <span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">var</span> bar <span class="token operator">=</span> <span class="token number">100</span><span class="token punctuation">;</span> <span class="token comment">//&lt;= biến cục bộ </span>
+<span class="token punctuation">}</span>
+</code></pre>
+    <p>Ví dụ nâng cao :</p>
+    <pre
+      class="language-javascript"
+      data-filename
+    ><code class="language-javascript"> <span class="token keyword">function</span> <span class="token function">sum</span><span class="token punctuation">(</span><span class="token parameter">a<span class="token punctuation">,</span> b</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+     <span class="token keyword">var</span> sum <span class="token operator">=</span> <span class="token punctuation">(</span>a <span class="token operator">+</span> b<span class="token punctuation">)</span> <span class="token punctuation">;</span> <span class="token comment">// sum là biến cục bố</span>
+     <span class="token keyword">return</span> sum<span class="token punctuation">;</span>
+ <span class="token punctuation">}</span>
+  
+ <span class="token keyword">var</span> result  <span class="token operator">=</span> <span class="token function">sum</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//result là biến toàn cục</span>
+  
+  <span class="token comment">//và chúng ta có thể sử dụng biến result ở khắp nơi</span>
+ <span class="token keyword">function</span> <span class="token function">showResult</span><span class="token punctuation">(</span><span class="token parameter">result</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+     <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">'sum is: '</span> <span class="token operator">+</span> result<span class="token punctuation">)</span><span class="token punctuation">;</span>
+ <span class="token punctuation">}</span>
+  
+ <span class="token function">showResult</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+    <p>
+      Trước hết, hàm sum được gọi là truyền hai biến trả về giá trị tổng của
+      biến được truyền. Sau đó, giá trị trả về được lưu trữ trong biến result là
+      biến toàn cục . Sau đó, hàm showResult () được gọi để hiển thị giá trị
+      được lưu trữ trong biến toàn cục.
+    </p>
+    <h1>6. Một số vấn đề hay gặp phải khi làm việc với biến.</h1>
+    <p>
+      <em
+        ><strong
+          >1. Sử dụng toán tử gán (=), thay vì toán tử so sánh (==) trong câu
+          lệnh if.</strong
+        ></em
+      >
+    </p>
+    <pre
+      class="language-javascript"
+      data-filename
+    ><code class="language-javascript"><span class="token keyword">var</span> x <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span>x <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">)</span>
+câu lệnh này sẽ trả về giá trị <span class="token boolean">true</span> vì <span class="token number">10</span> là <span class="token boolean">true</span>
+</code></pre>
+    <pre
+      class="language-javascript"
+      data-filename
+    ><code class="language-javascript"><span class="token keyword">var</span> x <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span>x <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">)</span> 
+câu lệnh này sẽ trả về giá trị <span class="token boolean">false</span> vì <span class="token number">0</span> là <span class="token boolean">false</span>
+</code></pre>
+    <pre
+      class="language-javascript"
+      data-filename
+    ><code class="language-javascript">để so sánh chính xác chúng ta phải sử dụng như sau
+<span class="token keyword">var</span> x <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span>x <span class="token operator">==</span> <span class="token number">10</span><span class="token punctuation">)</span>
+</code></pre>
+    <p><strong>2. Nhầm lẫn giữa việc bổ sung và thêm số</strong></p>
+    <pre
+      class="language-javascript"
+      data-filename
+    ><code class="language-javascript"><span class="token constant">C</span>ả <span class="token number">2</span> phép  tính toán trên đều sử dụng toán tử cộng giống nhau<span class="token punctuation">.</span>
+
+<span class="token keyword">var</span> x <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> y <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> z <span class="token operator">=</span> x <span class="token operator">+</span> y<span class="token punctuation">;</span>           <span class="token comment">// kết quả của z là  15.</span>
+
+<span class="token keyword">var</span> x <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> y <span class="token operator">=</span> <span class="token string">"5"</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> z <span class="token operator">=</span> x <span class="token operator">+</span> y<span class="token punctuation">;</span>           <span class="token comment">// kết quả của z là "105".</span>
+</code></pre>
+    <p><strong>3. Phá vỡ chuỗi JavaScript</strong></p>
+    <p>
+      javascript cho phép chúng ta chia chuỗi thành 2 dòng nhưng nếu khai báo
+      như :
+    </p>
+    <pre
+      class="language-javascript"
+      data-filename
+    ><code class="language-javascript"><span class="token keyword">var</span> x <span class="token operator">=</span> "Hello
+World<span class="token operator">!</span>"<span class="token punctuation">;</span>
+biến sẽ không hoạt động<span class="token punctuation">.</span>
+</code></pre>
+    <p>để biến họat động chúng ta cần khai báo như sau :</p>
+    <pre
+      class="language-javascript"
+      data-filename
+    ><code class="language-javascript"> <span class="token keyword">var</span> x <span class="token operator">=</span> <span class="token string">"Hello \
+World!"</span><span class="token punctuation">;</span>
+</code></pre>
+    <h1>Kết thúc</h1>
+  </body>
 </html>
