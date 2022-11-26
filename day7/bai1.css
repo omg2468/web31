@@ -5,7 +5,7 @@
 }
 
 .box {
-    width: 40%;
+    width:35%;
     border: 1px solid rgba(0, 0, 0, 0.32);
     margin: 20px;
     border-radius: 15px;
@@ -63,6 +63,7 @@ label {
 .date-form select {
     width: 100%;
 }
+
 
 .sex-form .sex {
     width: auto;
