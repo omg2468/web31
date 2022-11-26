@@ -5,7 +5,7 @@
 }
 
 .box {
-    width: 30%;
+    width: 40%;
     border: 1px solid rgba(0, 0, 0, 0.32);
     margin: 20px;
     border-radius: 15px;
@@ -64,6 +64,32 @@ label {
     width: 100%;
 }
 
+.sex-form .sex {
+    width: auto;
+    margin-left: 10px;
+}
 
+.rule {
+    margin: 10px
+}
 
+.button {
+    text-align: center;
+    width: 30%;
+    background-color: green;
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+    padding:  0 5px;
+    border-radius: 10px;
+}
 
+.footer p {
+    text-align: center;
+    width: 100%;
+}
+
+a:link { text-decoration: none; }
+a:hover {
+    text-decoration: underline;
+}

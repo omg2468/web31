@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tìm hiểu kiến thức</title>
+  </head>
+  <body>
+    <h1>Cấu trúc điều khiển trong javascript</h1>
+    <p>
+      Các cấu trúc điều khiển trong JavaScript cho phép luồng chương trình thay
+      đổi trong một đơn vị mã hoặc chức năng. Các câu lệnh này có thể xác định
+      liệu các câu lệnh đã cho có được thực thi hay không - và cung cấp cơ sở
+      cho việc thực thi lặp lại một khối mã. Hầu hết các câu lệnh được liệt kê
+      dưới đây được gọi là câu lệnh điều kiện có thể hoạt động trên một câu lệnh
+      hoặc trên một khối mã được đặt trong dấu ngoặc nhọn ( { và } ). Cấu trúc
+      được cung cấp bởi việc sử dụng các câu lệnh có điều kiện sử dụng Booleans
+      để xác định xem một khối có được thực thi hay không. Trong cách sử dụng
+      Booleans này, bất kỳ biến được xác định nào không phải là số 0 cũng như
+      chuỗi rỗng sẽ được đánh giá là đúng.
+    </p>
+    <table class="table table-bordered">
+      <tr>
+        <th>Sr.No.</th>
+        <th>Statement</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>1.</td>
+        <td>switch case</td>
+        <td>
+          Một khối các câu lệnh trong đó việc thực thi mã phụ thuộc vào các
+          trường hợp khác nhau. Trình thông dịch kiểm tra từng trường hợp với
+          giá trị của biểu thức cho đến khi tìm thấy kết quả khớp. Nếu không có
+          gì phù hợp, một điều kiện <b>mặc định</b> sẽ được sử dụng.
+        </td>
+      </tr>
+      <tr>
+        <td>2.</td>
+        <td>If else</td>
+        <td>
+          Câu lệnh <b>if</b> là câu lệnh điều khiển cơ bản mà cho phép
+          JavaScript đưa ra quyết định và thực thi các câu lệnh có điều kiện.
+        </td>
+      </tr>
+      <tr>
+        <td>3.</td>
+        <td>While</td>
+        <td>
+          Mục đích của vòng lặp while là để thực thi một câu lệnh hoặc khối mã
+          lặp đi lặp lại miễn là biểu thức là đúng. Một khi biểu thức trở thành
+          sai, vòng lặp sẽ bị thoát.
+        </td>
+      </tr>
+      <tr>
+        <td>4.</td>
+        <td>do while</td>
+        <td>
+          Khối câu lệnh được thực hiện ít nhất một lần và tiếp tục được thực
+          hiện trong khi điều kiện là đúng.
+        </td>
+      </tr>
+      <tr>
+        <td>5.</td>
+        <td>for</td>
+        <td>
+          Tương tự như while nhưng khởi tạo, điều kiện và tăng/giảm là thực hiện
+          trong cùng một dòng.
+        </td>
+      </tr>
+      <tr>
+        <td>6.</td>
+        <td>for in</td>
+        <td>
+          Vòng lặp này được sử dụng để lặp qua các thuộc tính của đối tượng.
+        </td>
+      </tr>
+      <tr>
+        <td>7.</td>
+        <td>continue</td>
+        <td>
+          Câu lệnh continue yêu cầu trình thông dịch bắt đầu ngay lập tức lần
+          lặp tiếp theo của vòng lặp và bỏ qua khối mã còn lại.
+        </td>
+      </tr>
+      <tr>
+        <td>8.</td>
+        <td>break</td>
+        <td>
+          Câu lệnh break được sử dụng để thoát khỏi vòng lặp sớm, thoát ra khỏi
+          vòng lặp kèm theo dấu ngoặc nhọn.
+        </td>
+      </tr>
+      <tr>
+        <td>9.</td>
+        <td>function</td>
+        <td>
+          Hàm là một nhóm mã có thể tái sử dụng có thể được gọi ở bất kỳ đâu
+          trong chương trình của bạn. Từ khóa function dùng để khai báo một hàm.
+        </td>
+      </tr>
+      <tr>
+        <td>10.</td>
+        <td>return</td>
+        <td>Câu lệnh return được sử dụng để trả về một giá trị từ một hàm.</td>
+      </tr>
+      <tr>
+        <td>11.</td>
+        <td>var</td>
+        <td>Dùng để khai báo một biến.</td>
+      </tr>
+      <tr>
+        <td>12.</td>
+        <td>try</td>
+        <td>Một khối các câu lệnh mà xử lý lỗi được thực hiện.</td>
+      </tr>
+      <tr>
+        <td>13.</td>
+        <td>catch</td>
+        <td>Một khối câu lệnh được thực thi khi xảy ra lỗi.</td>
+      </tr>
+      <tr>
+        <td>14.</td>
+        <td>throw</td>
+        <td>Được sử dụng để ném một lỗi.</td>
+      </tr>
+    </table>
+    <hr />
+    <h1>Câu lệnh điều kiện if else</h1>
+    <h2 class="has-vivid-cyan-blue-color has-text-color">
+      Lệnh if else trong javascript
+    </h2>
+
+    <p>
+      Lệnh if else trong javascript là cách để thực thi một đoạn code khi
+      <strong>điềukiện</strong> đúng và thực thi một đoạn code khác khi
+      <strong>điềukiện </strong>là sai.
+    </p>
+
+    <pre class="wp-block-preformatted">
+if (điềukiện){
+  mã lệnh chạy khi điều kiện đúng
+} else {
+  mã lệnh chạy khi điều kiện sai
+}</pre
+    >
+
+    <p>Ví dụ sử dụng lệnh if else trong javascript:</p>
+
+    <pre class="wp-block-preformatted">
+        &lt;script&gt;
+        &nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;p&nbsp;=&nbsp;prompt("Nhập&nbsp;phái&nbsp;(nam/nu)&nbsp;");
+        &nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(p=='nu'){
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;phucap=200000;
+        &nbsp;&nbsp;&nbsp;&nbsp;}
+        &nbsp;&nbsp;&nbsp;&nbsp;else&nbsp;{
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;phucap=100000;
+        &nbsp;&nbsp;&nbsp;&nbsp;}
+        &nbsp;&nbsp;&nbsp;&nbsp;alert("Phụ&nbsp;cấp&nbsp;là&nbsp;"&nbsp;+&nbsp;phucap);
+        &lt;/script&gt;</pre
+    >
+    <h2 class="has-vivid-cyan-blue-color has-text-color">Lệnh switch</h2>
+
+    <p>
+      Lệnh switch trong javascript giúp bạn diễn tả nhiều giá trị của điềukiện
+      để thực thi các mã lệnh khác nhau. Cú pháp như sau:
+    </p>
+
+    <pre class="wp-block-preformatted"><strong>switch</strong> ( biểuthức) {
+        <strong>case</strong> giatri1:
+        &nbsp;&nbsp;   mã lệnh chạy khi biểuthức = giatri1
+        &nbsp;&nbsp;   <strong>break</strong>;
+        <strong>case</strong> giatri2:
+        &nbsp;&nbsp;   mã lệnh chạy khi biểuthức = giatri2
+        &nbsp;&nbsp;   <strong>break</strong>;
+        <strong>default</strong>:
+        &nbsp;&nbsp; mã lệnh chạy mặc định
+        } </pre>
+
+    <p>
+      Trong khối lệnh swirch, sử dụng lệnh <strong>break</strong> để thoát khỏi
+      lệnh switch, nếu không thì trình duyệt sẽ thực hiện tiếp tục các lệnh
+      trong phần case tiếp theo.
+    </p>
+
+    <p>Ví dụ sử dụng lệnh switch trong javascript::</p>
+
+    <pre class="wp-block-preformatted">
+        &lt;script&gt;
+        var diem = prompt("Hãy nhập điểm:")
+        switch ( diem ) {
+        case "A":
+        &nbsp;&nbsp;&nbsp; alert("Tuyệt vời!");
+        &nbsp;&nbsp;&nbsp; break;
+        case "B":
+        case "C":
+        &nbsp;&nbsp;&nbsp; alert("Khá!");
+        &nbsp;&nbsp;&nbsp; break;
+        case "D":
+        case "E":
+        case "F":
+        &nbsp;&nbsp;&nbsp; alert("Bạn cần cố gắng hơn!");
+        &nbsp;&nbsp;&nbsp; break;
+        default:
+        &nbsp;&nbsp;&nbsp; alert("Giá trị bạn nhập vào không hợp lệ.");
+        }//switch
+        &lt;/script&gt; </pre
+    >
+    <h2 class="has-vivid-cyan-blue-color has-text-color">Lệnh lặp while</h2>
+
+    <p>
+      Lệnh lặp while trong javascript dùng để thực hiện lặp đi lặp lại đoạn code
+      khi <strong>điềukiện </strong>là còn đúng, lệnh while sẽ dừng khi
+      <strong>điềukiện </strong>là sai. Điềukiện được kiểm tra trước khi đoạn
+      code được thực hiện.
+    </p>
+    <!-- A generated by theme -->
+
+    <script
+      async
+      src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+    ></script>
+    <div
+      class="td-g-rec td-g-rec-id-content_inline td_uid_1_638177a744cb0_rand td_block_template_5"
+    >
+      <script type="text/javascript">
+        var td_screen_width = window.innerWidth;
+
+        if (td_screen_width >= 1140) {
+          /* large monitors */
+          document.write(
+            '<span class="td-adspot-title">Quảng cáo</span><ins class="adsbygoogle" style="display:inline-block;width:468px;height:60px" data-ad-client="ca-pub-2588354744761166" data-ad-slot="5640694902"></ins>'
+          );
+          (adsbygoogle = window.adsbygoogle || []).push({});
+        }
+
+        if (td_screen_width >= 1019 && td_screen_width < 1140) {
+          /* landscape tablets */
+          document.write(
+            '<span class="td-adspot-title">Quảng cáo</span><ins class="adsbygoogle" style="display:inline-block;width:468px;height:60px" data-ad-client="ca-pub-2588354744761166" data-ad-slot="5640694902"></ins>'
+          );
+          (adsbygoogle = window.adsbygoogle || []).push({});
+        }
+
+        if (td_screen_width >= 768 && td_screen_width < 1019) {
+          /* portrait tablets */
+          document.write(
+            '<span class="td-adspot-title">Quảng cáo</span><ins class="adsbygoogle" style="display:inline-block;width:468px;height:60px" data-ad-client="ca-pub-2588354744761166" data-ad-slot="5640694902"></ins>'
+          );
+          (adsbygoogle = window.adsbygoogle || []).push({});
+        }
+
+        if (td_screen_width < 768) {
+          /* Phones */
+          document.write(
+            '<span class="td-adspot-title">Quảng cáo</span><ins class="adsbygoogle" style="display:inline-block;width:320px;height:50px" data-ad-client="ca-pub-2588354744761166" data-ad-slot="5640694902"></ins>'
+          );
+          (adsbygoogle = window.adsbygoogle || []).push({});
+        }
+      </script>
+    </div>
+
+    <!-- end A -->
+
+    <pre class="wp-block-preformatted"><strong>while</strong> (điềukiện ) {
+&nbsp;&nbsp;&nbsp; //Code thực hiện lặp lại khi điềukiện là đúng
+}</pre>
+
+    <p>Ví dụ lệnh lặp <strong>while </strong>trong javascript:</p>
+
+    <pre class="wp-block-preformatted">
+&lt;script&gt;
+var n = 1;
+while ( n &lt;= 31) {
+&nbsp;&nbsp;&nbsp; document.write(n + " ");
+&nbsp;&nbsp;&nbsp; n++; //thay đổi giá trị của n để đến 1 lúc điều kiện sẽ sai
+}
+&lt;/script&gt;</pre
+    >
+
+    <p>
+      Chú ý: phải tính toán để điều kiện sẽ đến lúc sai, nếu không sẽ bị lỗi lặp
+      vô hạn.
+    </p>
+
+    <p>Ví dụ khác</p>
+
+    <pre class="wp-block-preformatted">
+&lt;select id="ngay"&gt;
+&lt;script&gt;
+var n = 1;
+while ( n &lt;= 31) {
+&nbsp;&nbsp;&nbsp; document.write("&lt;option&gt;Ngày " + n + "&lt;/option&gt;");
+&nbsp;&nbsp;&nbsp; n++; 
+}
+&lt;/script&gt;
+&lt;/select&gt;</pre
+    >
+
+    <h2 class="has-vivid-cyan-blue-color has-text-color">
+      Lệnh lặp do … while
+    </h2>
+
+    <p>
+      Lệnh lặp do while trong javascript dùng để diễn tả quá trình lặp đoạn code
+      trong khi <strong>điềukiện </strong>là còn đúng, do while sẽ dừng khi
+      <strong>điềukiện </strong>là sai. <br />Code thực thi trước rồi mới kiểm
+      tra <strong>điềukiện</strong>, nếu điềukiện đúng sẽ vòng lên và lặp tiếp,
+      nếu điềukiện là sai thì không lặp nữa.
+    </p>
+
+    <pre class="wp-block-preformatted"><strong>do</strong> {
+&nbsp;&nbsp; mã lệnh thực hiện lặp lại
+} <strong>while</strong> ( điềukiện )</pre>
+
+    <p>Ví dụ lệnh lặp <strong>do whil</strong>e trong javascript:</p>
+
+    <pre class="wp-block-preformatted">
+&lt;script&gt;
+var t = 1;
+do {
+&nbsp;&nbsp;&nbsp; document.write( t + "&lt;br&gt;");
+&nbsp;&nbsp;&nbsp; t++;
+}
+while (t &lt;= 12);
+&lt;/script&gt;</pre
+    >
+
+    <p>
+      Chú ý: phải tính toán để điều kiện sẽ đến lúc sai, nếu không sẽ bị lỗi lặp
+      vô hạn.
+    </p>
+
+    <h2 class="has-vivid-cyan-blue-color has-text-color">
+      Lệnh lặp for trong javascript
+    </h2>
+
+    <p>
+      Một trong những cấu trúc điều khiển trong javascript thường hay dùng là
+      lệnh lặp for. Lệnh này dùng để lặp một đoạn code với số lần lặp
+      <strong>xác định</strong>. Cú pháp lệnh lặp for như sau:
+    </p>
+
+    <pre class="wp-block-preformatted">
+for (khởitạo ; điềukiện ; bướctăng) {
+&nbsp;&nbsp;&nbsp; //thực hiện
+}</pre
+    >
+
+    <p>Ví dụ lệnh lặp for trong javascript:</p>
+
+    <pre class="wp-block-preformatted">
+&lt;script&gt;
+for (let t = 0; t &lt;= 12; t++) {
+&nbsp;&nbsp; document.write('Tháng ' + t + '&lt;br&gt;');
+}
+&lt;/script&gt;</pre
+    >
+
+    <p>Lệnh for có thể dùng để duyệt qua một mảng:</p>
+
+    <pre class="wp-block-preformatted">
+&lt;div&nbsp;class="ductinh"&gt;
+&lt;script&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;document.write(&nbsp;"&lt;h4&gt;CÁC&nbsp;ĐỨC&nbsp;TÍNH&nbsp;CAO&nbsp;QUÝ&nbsp;CỦA&nbsp;CON&nbsp;NGƯỜI&lt;/h4&gt;");
+&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;qt&nbsp;=&nbsp;["Nhân",&nbsp;"Lễ",&nbsp;"Nghĩa","Trí","Tín" ];
+&nbsp;&nbsp;&nbsp;&nbsp;for&nbsp;(var&nbsp;i&nbsp;=&nbsp;0;&nbsp;i&nbsp;&lt;&nbsp;qt.length;&nbsp;i++)&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;document.write(&nbsp;"&lt;p&gt;"&nbsp;+&nbsp;qt[i]&nbsp;+&nbsp;"&lt;/p&gt;");
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;document.write("&lt;hr&gt;");
+&lt;/script&gt;
+&lt;/div&gt;</pre
+    >
+    <hr />
+
+    <h1>1. Cách sử dụng Try Catch trong Javascript</h1>
+    <p>
+      Try - Catch là cấu trúc không còn xa lạ gì trong các ngôn ngữ lập trình
+      như C#, và trong Javascript cũng cung cấp cho chúng ta cú pháp này để xử
+      lý và xuất ra thông báo lỗi.
+    </p>
+    <pre class="language-none" data-filename><code class="language-none">try {
+    // Quăng lỗi ra
+        throw("Noi dung loi");  
+    } catch (e){
+    // Đón nhận lỗi và in ra
+    // Vị trí này chỉ chạy khi ở try có quăng lỗi hoặc ở try 
+    // sử dụng sai cú pháp ...
+    console.log(e.message);
+} finally{
+    // Cuối cùng chạy cái này
+    // Luôn luôn chạy sau cùng
+    console.log('End of try cache');
+}
+</code></pre>
+    <p>
+      Câu lệnh try chứa một khối try, chứa một hay nhiều câu lệnh ({} phải luôn
+      được sử dụng, cũng cho các câu lệnh đơn), và ít nhất một mệnh đề catch
+      hoặc mệnh đề cuối cùng, hoặc cả hai. Nghĩa là, có ba dạng của câu lệnh
+      try: 1. try...catch 2. try...finally 3. try...catch...finally Mệnh đề
+      catch chứa các câu lệnh xác định phải làm gì nếu một ngoại lệ bị ném trong
+      khối try. Đó là, bạn muốn thử khối để thành công, và nếu nó không thành
+      công và bạn muốn kiểm soát để vượt qua đến khối catch. Nếu bất kỳ câu lệnh
+      nào trong khối try (hoặc trong một hàm được gọi là từ bên trong khối try)
+      sẽ ném ra một ngoại lệ, điều khiển ngay lập tức chuyển sang mệnh đề catch.
+      Nếu không có ngoại lệ được ném vào khối try, mệnh đề catch được bỏ qua.
+    </p>
+    <p>
+      Mệnh đề finally thực hiện sau khi khối try và catch clause (s) thực hiện
+      nhưng trước các câu lệnh sau câu try. Nó luôn luôn thực hiện, bất kể một
+      ngoại lệ đã được ném ra hay bị bắt.
+    </p>
+    <p>
+      Bạn có thể xếp một hoặc nhiều câu lệnh try. Nếu một khối try bên trong
+      không có một điều khoản bắt, mệnh đề catch câu lệnh đóng của câu lệnh đã
+      được nhập.
+    </p>
+    <p>
+      Như vậy vị trí finally sẽ luôn luôn được thực thi và sẽ thực thi cuối
+      cùng. Với finally bạn có thể sử dụng hoặc không đều được. Riêng trong
+      catch sẽ có một tham số truyền vào và tham số này sẽ chứa thông tin của
+      lỗi và ta sử dụng biến này để lấy message.
+    </p>
+    <p>
+      Ví dụ: Sử dụng biến chưa định nghĩa, nếu bình thường thì chương trình bị
+      dừng nhưng do ta sử dụng try - catch nên chương trình vẫn hoạt động bình
+      thường.
+    </p>
+    <pre
+      class="language-none"
+      data-filename
+    ><code class="language-none">    try {
+        // Sử dụng biến message chưa được định nghĩa
+        console.log(message);  
+    } catch (e){
+        console.log(e.message);
+    }
+</code></pre>
+    <p>
+      Nếu chạy đoạn code này lên thì sẽ nhận được thông báo là biến message chưa
+      được định nghĩa (message is not defined). Ví dụ: Sử dụng sai cú pháp nhưng
+      chương trình vẫn chạy
+    </p>
+    <pre
+      class="language-none"
+      data-filename
+    ><code class="language-none">    try {
+        fadsfas
+        fasdfas
+        fsda
+    } catch (e){
+        console.log(e.message);
+    } finally{
+        console.log('End');
+    }
+</code></pre>
+    <p>
+      Chương trình này nếu chạy lên thì xuất hiện dòng chữ 'fadsfas is not
+      defined' và đoạn code trong finally vẫn hoạt động bình thường, điều này
+      chứng tỏ chương trình không bị dừng.
+    </p>
+
+    <script src="bai2.js"></script>
+  </body>
+</html>
