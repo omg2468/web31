@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="entry-title">Function trong JavaScript</h1>		</header>
+		<div class="page-content">
+				<div data-elementor-type="wp-post" data-elementor-id="1374" class="elementor elementor-1374">
+									<section class="elementor-section elementor-top-section elementor-element elementor-element-bdd011b elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="bdd011b" data-element_type="section" data-settings="{&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-0112858" data-id="0112858" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-8366367 elementor-widget elementor-widget-text-editor" data-id="8366367" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+			<style>/*! elementor - v3.7.5 - 14-09-2022 */
+.elementor-widget-text-editor.elementor-drop-cap-view-stacked .elementor-drop-cap{background-color:#818a91;color:#fff}.elementor-widget-text-editor.elementor-drop-cap-view-framed .elementor-drop-cap{color:#818a91;border:3px solid;background-color:transparent}.elementor-widget-text-editor:not(.elementor-drop-cap-view-default) .elementor-drop-cap{margin-top:8px}.elementor-widget-text-editor:not(.elementor-drop-cap-view-default) .elementor-drop-cap-letter{width:1em;height:1em}.elementor-widget-text-editor .elementor-drop-cap{float:left;text-align:center;line-height:1;font-size:50px}.elementor-widget-text-editor .elementor-drop-cap-letter{display:inline-block}</style>				<p>Chắc hẳn nhiều bạn từng học qua các ngôn ngữ lập trình khác cũng đã biết về khái niệm function là gì rồi, với các bạn mới tiếp cận với lập trình và chọn ngôn ngữ JavaScript này thì sao? Đừng quá lo lắng, trong bài viết này chúng ta cùng nhau tìm hiểu những khái niệm cơ bản về function nhé 😉.</p><h2 id="i-function-l%C3%A0-g%C3%AC">I. Function là gì?</h2><h3 id="1-kh%C3%A1i-ni%E1%BB%87m">1. Khái niệm</h3><p>Function hay còn gọi là hàm, bản chất nó là một đoạn code được dùng để thực thi một nhiệm vụ nào đó. Các đoạn code bên trong một function được gọi là <strong>function body</strong>, các đoạn code này sẽ không được biên dịch cho đến khi nào function đó được gọi.</p><h3 id="2-%C6%B0u-%C4%91i%E1%BB%83m-c%E1%BB%A7a-function">2. Ưu điểm của function</h3><p>Cùng một chức năng nhưng được sử dụng ở nhiều nơi thì không lẽ bạn code đi code lại chức năng đó ở từng nơi một ư 🤔? Không, ở đây chúng ta không làm như thế khi đã có function 😉.</p><p>Cùng một chức năng, ta chỉ cần code vào trong một function, khi nào cần nó chỉ cần gọi function đó ra là xong rồi. Code một lần và sử dụng ở mọi nơi, đó là ưu điểm khi sử dụng function. Nhờ có function mà code trở nên gọn gàng, dễ đọc và dễ bảo trì hơn.</p><h2 id="iic%C3%A1c-lo%E1%BA%A1i-function-trong-javascript">II.Các loại function trong JavaScript</h2><h3 id="1-function-c%C6%A1-b%E1%BA%A3n">1. Function cơ bản</h3><p><strong>Khai báo một function</strong></p><p>Trong JavaScript, ta sử dụng từ khóa <code>function</code> để khai báo một function, việc khai báo kiểu này được gọi là <strong>Function Declaration/ Statement</strong>, cú pháp như sau:</p>						</div>
+				</div>
+					</div>
+		</div>
+							</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-c91c03b elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="c91c03b" data-element_type="section" data-settings="{&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-54fc2c1" data-id="54fc2c1" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-18bf890 elementor-widget elementor-widget-code-highlight" data-id="18bf890" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="code-highlight.default">
+				<div class="elementor-widget-container">
+					<div class="prismjs-tomorrow copy-to-clipboard ">
+			<pre data-line="" class="highlight-height language-javascript ">
+				<code readonly="true" class="language-javascript">
+					<xmp>function nameFunction() {
+	//code ở đây
+}</xmp>
+				</code>
+			</pre>
+		</div>
+				</div>
+				</div>
+					</div>
+		</div>
+							</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-1eace25 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="1eace25" data-element_type="section" data-settings="{&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-5b45d8d" data-id="5b45d8d" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-231468c elementor-widget elementor-widget-text-editor" data-id="231468c" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+							<p><code>nameFunction</code>: Tên của function, tên một function nên đặt tên bằng tiếng anh và theo quy tắc nhé, ở đây mình đặt tên mẫu theo quy tắc lạc đà, bạn nên đặt tên theo chức năng của function mà bạn viết và thêm tiền tố là động từ ở phía trước là được.</p><p>Ví dụ:</p>						</div>
+				</div>
+					</div>
+		</div>
+							</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-3ee849d elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="3ee849d" data-element_type="section" data-settings="{&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-96cd5eb" data-id="96cd5eb" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-20fa871 elementor-widget elementor-widget-code-highlight" data-id="20fa871" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="code-highlight.default">
+				<div class="elementor-widget-container">
+					<div class="prismjs-tomorrow copy-to-clipboard ">
+			<pre data-line="" class="highlight-height language-javascript ">
+				<code readonly="true" class="language-javascript">
+					<xmp>function showName() {
+	console.log('Welcome to 200lab');
+}</xmp>
+				</code>
+			</pre>
+		</div>
+				</div>
+				</div>
+					</div>
+		</div>
+							</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-709ab65 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="709ab65" data-element_type="section" data-settings="{&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-7a7c80e" data-id="7a7c80e" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-1b2bba2 elementor-widget elementor-widget-text-editor" data-id="1b2bba2" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+							<p><strong>Function có tham số (parameter)</strong></p><p>Tùy thuộc vào mục đích của function mà nó có thể có parameter truyền vào hay không. Một function có parameter truyền vào có cú pháp như sau:</p>						</div>
+				</div>
+					</div>
+		</div>
+							</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-b64654f elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="b64654f" data-element_type="section" data-settings="{&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-2f69f29" data-id="2f69f29" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-540df79 elementor-widget elementor-widget-code-highlight" data-id="540df79" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="code-highlight.default">
+				<div class="elementor-widget-container">
+					<div class="prismjs-tomorrow copy-to-clipboard ">
+			<pre data-line="" class="highlight-height language-javascript ">
+				<code readonly="true" class="language-javascript">
+					<xmp>function nameFunction(param_1, param_2, ...) {
+	//code ở đây
+}</xmp>
+				</code>
+			</pre>
+		</div>
+				</div>
+				</div>
+					</div>
+		</div>
+							</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-5baebe1 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="5baebe1" data-element_type="section" data-settings="{&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-d8df5b0" data-id="d8df5b0" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-3da5017 elementor-widget elementor-widget-text-editor" data-id="3da5017" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+							<p>Ví dụ:</p>						</div>
+				</div>
+					</div>
+		</div>
+							</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-075b2cd elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="075b2cd" data-element_type="section" data-settings="{&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-5762880" data-id="5762880" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-25177ee elementor-widget elementor-widget-code-highlight" data-id="25177ee" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="code-highlight.default">
+				<div class="elementor-widget-container">
+					<div class="prismjs-tomorrow copy-to-clipboard ">
+			<pre data-line="" class="highlight-height language-javascript ">
+				<code readonly="true" class="language-javascript">
+					<xmp>function getFullName(firstName, lastName) {
+	console.log(firstName + ' ' + lastName);
+}</xmp>
+				</code>
+			</pre>
+		</div>
+				</div>
+				</div>
+					</div>
+		</div>
+							</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-a6095fa elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="a6095fa" data-element_type="section" data-settings="{&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-7651eb0" data-id="7651eb0" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-ea4a107 elementor-widget elementor-widget-text-editor" data-id="ea4a107" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+							<p id="2-%C4%91%E1%BB%8Bnh-d%E1%BA%A1ng-long-date">Ngoài ra, ta cũng có thể gán giá trị mặc định cho parameter truyền vào như sau:</p>						</div>
+				</div>
+					</div>
+		</div>
+							</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-5276d6d elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="5276d6d" data-element_type="section" data-settings="{&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-cb22969" data-id="cb22969" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-eb3a9ac elementor-widget elementor-widget-code-highlight" data-id="eb3a9ac" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="code-highlight.default">
+				<div class="elementor-widget-container">
+					<div class="prismjs-tomorrow copy-to-clipboard ">
+			<pre data-line="" class="highlight-height language-javascript ">
+				<code readonly="true" class="language-javascript">
+					<xmp>function getSum(a = 1, b = 1) {
+	console.log(a + b);
+}</xmp>
+				</code>
+			</pre>
+		</div>
+				</div>
+				</div>
+					</div>
+		</div>
+							</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-677e0a0 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="677e0a0" data-element_type="section" data-settings="{&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-cdb3304" data-id="cdb3304" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-77e723b elementor-widget elementor-widget-text-editor" data-id="77e723b" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+							<p><strong>Rest parameter</strong></p><p>Rest parameter hay dịch nôm na là tham số còn lại, với tính năng này bạn có thể khai báo một hàm với số lượng tham số vô hạn, đây là một tính năng mới được bổ sung trong ES6 khiến cho JavaScript dần trở nên mạnh mẽ hơn.</p><p>Cú pháp như sau:</p>						</div>
+				</div>
+					</div>
+		</div>
+							</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-9f1b8f3 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="9f1b8f3" data-element_type="section" data-settings="{&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-112198a" data-id="112198a" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-db818b6 elementor-widget elementor-widget-code-highlight" data-id="db818b6" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="code-highlight.default">
+				<div class="elementor-widget-container">
+					<div class="prismjs-tomorrow copy-to-clipboard ">
+			<pre data-line="" class="highlight-height language-javascript ">
+				<code readonly="true" class="language-javascript">
+					<xmp>function nameFunction(...params) {
+	//code ở đây
+}</xmp>
+				</code>
+			</pre>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-0cb1b10 elementor-widget elementor-widget-text-editor" data-id="0cb1b10" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+							<p>Ví dụ:</p>						</div>
+				</div>
+					</div>
+		</div>
+							</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-05ab8a1 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="05ab8a1" data-element_type="section" data-settings="{&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-dcb62fb" data-id="dcb62fb" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-8afd90a elementor-widget elementor-widget-code-highlight" data-id="8afd90a" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="code-highlight.default">
+				<div class="elementor-widget-container">
+					<div class="prismjs-tomorrow copy-to-clipboard ">
+			<pre data-line="" class="highlight-height language-javascript ">
+				<code readonly="true" class="language-javascript">
+					<xmp>function getSum(...params) {
+	console.log(params);
+}
+console.log(getSum([1, 2, 3, 4]));
+//-->output:  1, 2, 3, 4</xmp>
+				</code>
+			</pre>
+		</div>
+				</div>
+				</div>
+					</div>
+		</div>
+							</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-e4e2662 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="e4e2662" data-element_type="section" data-settings="{&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-1b3efb0" data-id="1b3efb0" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-0986d3e elementor-widget elementor-widget-text-editor" data-id="0986d3e" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+							<p>Không nhất thiết phải đặt tên là <code>params</code> đâu nhé, bạn có thể đặt tên khác tùy thích nhưng nên theo chuẩn và đặt sao cho người đọc code cũng dễ hiểu là được.</p><p><strong>Function có trả về</strong></p><p>Có 2 loại function là có trả về và không có trả về. Các ví dụ trên là các function không có trả về còn đối với một function có trả về thì sẽ sử dụng từ khóa <code>return</code> để trả về một kết quả nào đó.</p>						</div>
+				</div>
+					</div>
+		</div>
+							</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-707dbe5 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="707dbe5" data-element_type="section" data-settings="{&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-575614e" data-id="575614e" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-bcad8f3 elementor-widget elementor-widget-code-highlight" data-id="bcad8f3" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="code-highlight.default">
+				<div class="elementor-widget-container">
+					<div class="prismjs-tomorrow copy-to-clipboard ">
+			<pre data-line="" class="highlight-height language-javascript ">
+				<code readonly="true" class="language-javascript">
+					<xmp>function getSum(a, b) {
+	return a + b;
+}</xmp>
+				</code>
+			</pre>
+		</div>
+				</div>
+				</div>
+					</div>
+		</div>
+							</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-09d0b1a elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="09d0b1a" data-element_type="section" data-settings="{&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-40e2a65" data-id="40e2a65" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-461b081 elementor-widget elementor-widget-text-editor" data-id="461b081" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+							<p><strong>Gọi một function</strong></p><p>Cách gọi một function cũng đơn giản thôi, chỉ cần ghi lại tên của function đó và truyền parameter vào nếu có là được.</p><p>Ví dụ với hàm có parameter truyền vào nhé 😉</p>						</div>
+				</div>
+					</div>
+		</div>
+							</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-b7553af elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="b7553af" data-element_type="section" data-settings="{&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-727e5a9" data-id="727e5a9" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-36b25be elementor-widget elementor-widget-code-highlight" data-id="36b25be" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="code-highlight.default">
+				<div class="elementor-widget-container">
+					<div class="prismjs-tomorrow copy-to-clipboard ">
+			<pre data-line="" class="highlight-height language-javascript ">
+				<code readonly="true" class="language-javascript">
+					<xmp>function getSum(a, b) {
+	return a + b;
+}
+
+getSum(5, 10);
+//--> output: 15</xmp>
+				</code>
+			</pre>
+		</div>
+				</div>
+				</div>
+					</div>
+		</div>
+							</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-7aa2c23 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="7aa2c23" data-element_type="section" data-settings="{&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-fe7cf1a" data-id="fe7cf1a" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-7f0993f elementor-widget elementor-widget-text-editor" data-id="7f0993f" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+							<p id="2-nh%C3%B3m-set-date"><strong>Lưu ý:</strong> Việc ta khai báo function theo kiểu thông thường như vậy thì được JavaScript <strong>hoisting</strong>. Do đó mà ta có thể gọi một function trước khi function đó được khai báo, kiểu như thế này:</p>						</div>
+				</div>
+					</div>
+		</div>
+							</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-168c1d4 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="168c1d4" data-element_type="section" data-settings="{&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-b1189cd" data-id="b1189cd" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-fb2564b elementor-widget elementor-widget-code-highlight" data-id="fb2564b" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="code-highlight.default">
+				<div class="elementor-widget-container">
+					<div class="prismjs-tomorrow copy-to-clipboard ">
+			<pre data-line="" class="highlight-height language-javascript ">
+				<code readonly="true" class="language-javascript">
+					<xmp>jsHoisting(); //-->Output: "Hoisted!"
+function jsHoisting() {
+  console.log('Hoisted!');
+};</xmp>
+				</code>
+			</pre>
+		</div>
+				</div>
+				</div>
+					</div>
+		</div>
+							</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-daf9561 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="daf9561" data-element_type="section" data-settings="{&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-7f28451" data-id="7f28451" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-5ddf87f elementor-widget elementor-widget-text-editor" data-id="5ddf87f" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+							<h3 id="2-ph%E1%BA%A1m-vi-c%E1%BB%A7a-m%E1%BB%99t-function">2. Phạm vi của một function</h3><p>Cùng ôn lại phạm vi của một function một chút nào .</p><p>Các biến được khai báo trong một function thì sẽ có <strong>function scope</strong>, do đó ta không thể truy cập đến các biến này được. Một function có thể truy cập tới bất kỳ các biến hoặc thậm chí các hàm trong cùng phạm vi mà nó được định nghĩa.</p><p>Giải thích một cách đơn giản là một function được khai báo ở <strong>global scope</strong> thì có thể truy cập đến các biến được khai báo ở <strong>global scope</strong></p><p>Một function được định nghĩa bên trong một function khác thì có thể truy cập đến các biến được khai báo bên trong function cha chứa nó, đồng thời nó cũng có thể truy cập đến tất cả các biến mà function cha chứa nó có thể truy cập đến.</p><p>Tuy đây nhìn có vẻ không quan trọng nhưng nó quan trọng không tưởng đấy nhé . Các bạn cố gắng ghi nhớ cũng như hiểu rõ vấn đề này nè </p><h3 id="3-ph%C3%A2n-bi%E1%BB%87t-tham-s%E1%BB%91-parameter-v%C3%A0-%C4%91%E1%BB%91i-s%E1%BB%91-argument">3. Phân biệt tham số (parameter) và đối số (argument )</h3><p>Tham số và đối số cũng là hai khái niệm khó hấp thu đối với những bạn mới học lập trình nói chung và JavaScript nói riêng.</p><p>Dưới đây là định nghĩa và ví dụ giải thích đơn giản dễ hiểu dành cho bạn.</p><ul><li><strong>Tham số</strong> hay <strong>parameter</strong> là các <strong>tên</strong> mà được liệt kê trong dấu ngoặc <code>()</code> lúc ta định nghĩa một function.</li><li><strong>Đối số</strong> hay <strong>argument</strong> là <strong>các giá trị thực</strong> mà ta truyền vào function lúc ta gọi function nó.</li></ul><p>Ví dụ đơn giản cho dễ hiểu hơn nè </p>						</div>
+				</div>
+					</div>
+		</div>
+							</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-b9f22f3 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="b9f22f3" data-element_type="section" data-settings="{&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-9d91776" data-id="9d91776" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-7ff3ceb elementor-widget elementor-widget-code-highlight" data-id="7ff3ceb" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="code-highlight.default">
+				<div class="elementor-widget-container">
+					<div class="prismjs-tomorrow copy-to-clipboard ">
+			<pre data-line="" class="highlight-height language-javascript ">
+				<code readonly="true" class="language-javascript">
+					<xmp>// a và b là tham số
+function getSum(a, b) {
+  return a + b;
+}
+// 1 và 2 là đối số
+sum(1, 2)</xmp>
+				</code>
+			</pre>
+		</div>
+				</div>
+				</div>
+					</div>
+		</div>
+							</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-31d3f66 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="31d3f66" data-element_type="section" data-settings="{&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-338f5ff" data-id="338f5ff" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-25700e4 elementor-widget elementor-widget-text-editor" data-id="25700e4" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+							<h3 id="4-bi%E1%BB%83u-th%E1%BB%A9c-h%C3%A0m-l%C3%A0-g%C3%AC">4. Biểu thức hàm là gì?</h3><p>Biểu thức hàm hay function expression, đơn giản là function được định nghĩa và lưu trữ trong một biến như một giá trị, kiểu như này:</p>						</div>
+				</div>
+					</div>
+		</div>
+							</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-3a0c600 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="3a0c600" data-element_type="section" data-settings="{&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-9a32940" data-id="9a32940" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-326c3f2 elementor-widget elementor-widget-code-highlight" data-id="326c3f2" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="code-highlight.default">
+				<div class="elementor-widget-container">
+					<div class="prismjs-tomorrow copy-to-clipboard ">
+			<pre data-line="" class="highlight-height language-javascript ">
+				<code readonly="true" class="language-javascript">
+					<xmp>let alt = function() {
+	alert('Hello!');
+}
+alt(); //--> Gọi hàm như thông thường</xmp>
+				</code>
+			</pre>
+		</div>
+				</div>
+				</div>
+					</div>
+		</div>
+							</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-6b2305f elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="6b2305f" data-element_type="section" data-settings="{&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-98c1a28" data-id="98c1a28" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-e6a78a2 elementor-widget elementor-widget-text-editor" data-id="e6a78a2" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+							<p>Ví dụ:</p>						</div>
+				</div>
+					</div>
+		</div>
+							</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-4b4d735 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="4b4d735" data-element_type="section" data-settings="{&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-49fda5a" data-id="49fda5a" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-3c65aa7 elementor-widget elementor-widget-code-highlight" data-id="3c65aa7" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="code-highlight.default">
+				<div class="elementor-widget-container">
+					<div class="prismjs-tomorrow copy-to-clipboard ">
+			<pre data-line="" class="highlight-height language-javascript ">
+				<code readonly="true" class="language-javascript">
+					<xmp>funExpression();
+var funExpression = function() {
+  console.log('Will this work?');
+};
+//--> output: TypeError: funExpression is not a function</xmp>
+				</code>
+			</pre>
+		</div>
+				</div>
+				</div>
+					</div>
+		</div>
+							</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-2948694 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="2948694" data-element_type="section" data-settings="{&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-7481746" data-id="7481746" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-9f6cb38 elementor-widget elementor-widget-text-editor" data-id="9f6cb38" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+							<p>Giải thích tại sao lại báo lỗi nè 😄, biến <code>funExpression</code> về bản chất thì nó vẫn được <strong>hoisting</strong> nhé 😉 do đó nó sẽ được đẩy lên trên đầu của <strong>scope</strong> để thực thi trước. Tuy nhiên đó cũng chỉ là được khai báo mà thôi, do đó biến <code>funExpression</code> nó không được gán bất kỳ giá trị nào nên dẫn đến báo lỗi thôi 😁.</p><h3 id="5-iife-immediately-invoked-function-expression">5. IIFE (Immediately invoked function expression)</h3><p>Bản chất thì nó cũng là một biểu thức hàm, tuy nhiên nó hơi khác một chút đó là hàm này sẽ được thực thi ngay sau khi ta định nghĩa xong 😄.</p><p>Cú pháp của nó như sau:</p>						</div>
+				</div>
+					</div>
+		</div>
+							</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-58475a2 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="58475a2" data-element_type="section" data-settings="{&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-985d635" data-id="985d635" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-02cbed8 elementor-widget elementor-widget-code-highlight" data-id="02cbed8" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="code-highlight.default">
+				<div class="elementor-widget-container">
+					<div class="prismjs-tomorrow copy-to-clipboard ">
+			<pre data-line="" class="highlight-height language-javascript ">
+				<code readonly="true" class="language-javascript">
+					<xmp>//IIFE style 1
+(function() {})();
+
+//IIFE style 2
+(function() {}());
+
+//IIFE style 3: kiểu arrow function
+(()=> {})();</xmp>
+				</code>
+			</pre>
+		</div>
+				</div>
+				</div>
+					</div>
+		</div>
+							</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-284910f elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="284910f" data-element_type="section" data-settings="{&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-b1025ea" data-id="b1025ea" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-fcfecac elementor-widget elementor-widget-text-editor" data-id="fcfecac" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+							<p>Khuyến khích các bạn nếu có sử dụng IIFE thì nên sử dụng theo style 1, vì kiểu này thường được sử dụng hơn, phổ biến hơn.</p><p>IIFE ta vẫn có thể truyền tham số và sử dụng như bình thường thôi nhé 😉, ví dụ:</p>						</div>
+				</div>
+					</div>
+		</div>
+							</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-6d14279 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="6d14279" data-element_type="section" data-settings="{&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-f5053df" data-id="f5053df" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-7e660dc elementor-widget elementor-widget-code-highlight" data-id="7e660dc" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="code-highlight.default">
+				<div class="elementor-widget-container">
+					<div class="prismjs-tomorrow copy-to-clipboard ">
+			<pre data-line="" class="highlight-height language-javascript ">
+				<code readonly="true" class="language-javascript">
+					<xmp>(function(firstName, lastName){
+	console.log('Hello '+ firstName + ' ' + lastName);
+})('Alice', 'Zuberg');
+//--> Output: Hello Alice Zuberg</xmp>
+				</code>
+			</pre>
+		</div>
+				</div>
+				</div>
+					</div>
+		</div>
+							</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-b020d1f elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="b020d1f" data-element_type="section" data-settings="{&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-d7f74da" data-id="d7f74da" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-f87d053 elementor-widget elementor-widget-text-editor" data-id="f87d053" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+							<p>Một số trường hợp sử dụng IIFE:</p><ul><li>Xử lý logic mà chỉ chạy đúng một lần duy nhất như: init game, init element, bind event, &#8230;</li><li>Tránh các trường hợp sử dụng các biến global, dễ dẫn đến conflict.</li><li>Tạo các biến hoặc các phương thức private.</li></ul><h3 id="6-arrow-function">6. Arrow function</h3><p>Đây là một cách viết function mới, được ra mắt trong ES6 giúp tiết kiệm thời gian code cũng như đơn giản hóa phạm vi của function.</p><p>Với <strong>arrow function</strong>, nó ngắn hơn một biểu thức hàm (function Expression) và cũng không phụ thuộc vào từ khóa <code>this</code> . Ta có thể áp dụng nó cho hàm ẩn danh hay anonymous function, tuy nhiên nó không thể dùng làm hàm khởi tạo được.</p><p>Cú pháp như sau:</p>						</div>
+				</div>
+					</div>
+		</div>
+							</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-2eee7ee elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="2eee7ee" data-element_type="section" data-settings="{&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-2bea7ed" data-id="2bea7ed" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-ea89a7d elementor-widget elementor-widget-code-highlight" data-id="ea89a7d" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="code-highlight.default">
+				<div class="elementor-widget-container">
+					<div class="prismjs-tomorrow copy-to-clipboard ">
+			<pre data-line="" class="highlight-height language-javascript ">
+				<code readonly="true" class="language-javascript">
+					<xmp>const nameFunction = () => {
+	//code ở đây
+}</xmp>
+				</code>
+			</pre>
+		</div>
+				</div>
+				</div>
+					</div>
+		</div>
+							</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-9638629 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="9638629" data-element_type="section" data-settings="{&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-d9f95cd" data-id="d9f95cd" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-83ceb99 elementor-widget elementor-widget-text-editor" data-id="83ceb99" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+							<p id="2-ph%E1%BA%A1m-vi-c%E1%BB%A7a-m%E1%BB%99t-function">Ví dụ:</p>						</div>
+				</div>
+					</div>
+		</div>
+							</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-265fa07 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="265fa07" data-element_type="section" data-settings="{&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-1ea3d1d" data-id="1ea3d1d" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-d18313d elementor-widget elementor-widget-code-highlight" data-id="d18313d" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="code-highlight.default">
+				<div class="elementor-widget-container">
+					<div class="prismjs-tomorrow copy-to-clipboard ">
+			<pre data-line="" class="highlight-height language-javascript ">
+				<code readonly="true" class="language-javascript">
+					<xmp>//Function expression
+var multiply = function(a, b) {
+	return a * b;
+};
+
+//Arrow function
+var multiply = (a, b) => {return a * b};
+
+//Arrow function rút gọn hơn
+var multiply = (a, b) => a * b;</xmp>
+				</code>
+			</pre>
+		</div>
+				</div>
+				</div>
+					</div>
+		</div>
+							</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-a9cf03e elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="a9cf03e" data-element_type="section" data-settings="{&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-5c533e5" data-id="5c533e5" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-0de6abf elementor-widget elementor-widget-text-editor" data-id="0de6abf" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+							<h3 id="7-anonymous-function">7. Anonymous function</h3><p>Anonymous function hay hàm ẩn danh hay nôm na là hàm không tên. Nghe tên nó ngầu vậy thôi chứ thật ra nếu bạn để ý thì ở function expression, vế bên phải dấu bằng là một anonymous function đó 😉 hoặc IIFE nó cũng là một anonymous function.</p><p>Ví dụ:</p>						</div>
+				</div>
+					</div>
+		</div>
+							</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-4bf52c5 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="4bf52c5" data-element_type="section" data-settings="{&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-c1ddc47" data-id="c1ddc47" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-8c488e0 elementor-widget elementor-widget-code-highlight" data-id="8c488e0" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="code-highlight.default">
+				<div class="elementor-widget-container">
+					<div class="prismjs-tomorrow copy-to-clipboard ">
+			<pre data-line="" class="highlight-height language-javascript ">
+				<code readonly="true" class="language-javascript">
+					<xmp>setTimeout(function(){
+	console.log('Được 1s rồi!')
+} ,1000);</xmp>
+				</code>
+			</pre>
+		</div>
+				</div>
+				</div>
+					</div>
+		</div>
+							</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-f0124b2 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="f0124b2" data-element_type="section" data-settings="{&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-ef9e18e" data-id="ef9e18e" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-49c4dca elementor-widget elementor-widget-text-editor" data-id="49c4dca" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+							<h3 id="8-closures">8. Closures</h3><p><strong>Closures</strong> là một feature khá hay trong JavaScript, nó cho phép ta lồng các function vào nhau. Các function con có thể truy cập đến các biến cũng như các function được định nghĩa bên trong function cha chứa nó.</p><p>Mặc khác function cha lại không thể truy cập đến các biến hay function mà được định nghĩa bên trong function con được 😅. Tuy nhiên điều này giúp bảo mật cho các biến bên trong function con.</p><p>Do function con có thể truy cập đến các biến hay function được định nghĩa bên trong function cha nên dù function cha có thực thi xong thì các biến hay function được định nghĩa bên trong function cha vẫn tồn tại, nếu function con vẫn còn thời gian sống lâu hơn function cha.</p><p>Ví dụ cho dễ hiểu hơn nè</p>						</div>
+				</div>
+					</div>
+		</div>
+							</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-4f74143 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="4f74143" data-element_type="section" data-settings="{&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-df36a29" data-id="df36a29" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-7f4bcbd elementor-widget elementor-widget-code-highlight" data-id="7f4bcbd" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="code-highlight.default">
+				<div class="elementor-widget-container">
+					<div class="prismjs-tomorrow copy-to-clipboard ">
+			<pre data-line="" class="highlight-height language-javascript ">
+				<code readonly="true" class="language-javascript">
+					<xmp>function autoGeneratorNumber() {
+  let num = 0;
+  function checkNumber() {
+    console.log(num);
+  }
+  num++;
+  return checkNumber;
+}
+
+var number = autoGeneratorNumber();
+number();
+//-->output: 1</xmp>
+				</code>
+			</pre>
+		</div>
+				</div>
+				</div>
+					</div>
+		</div>
+							</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-1c7ed13 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="1c7ed13" data-element_type="section" data-settings="{&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-ac3618f" data-id="ac3618f" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-14264d4 elementor-widget elementor-widget-text-editor" data-id="14264d4" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+							<p>function <code>autoGeneratorNumber()</code> có một biến <code>num</code> là <strong>biến local</strong> và một function con là <code>checkNumber()</code>. Như hình thì ta xác định được <code>autoGeneratorNumber()</code> là một <strong>closures</strong>, do đó function con là <code>checkNumber()</code> có thể truy cập đến biến <code>num</code> và log ra console được.</p><h3 id="9-callback-function">9. Callback function</h3><p><strong>Callback function</strong> là hàm nhận hàm khác làm đối số. Ví dụ như ta có function A và B, ta truyền function A vào function B, tới một thời điểm nào đó function A được function B gọi lại thì được gọi là<strong> callback</strong>.</p><p>Ví dụ cho dễ hiểu tý nhé </p>						</div>
+				</div>
+					</div>
+		</div>
+							</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-c7acee5 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="c7acee5" data-element_type="section" data-settings="{&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-a8c2371" data-id="a8c2371" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-27fd629 elementor-widget elementor-widget-code-highlight" data-id="27fd629" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="code-highlight.default">
+				<div class="elementor-widget-container">
+					<div class="prismjs-tomorrow copy-to-clipboard ">
+			<pre data-line="" class="highlight-height language-javascript ">
+				<code readonly="true" class="language-javascript">
+					<xmp>function result(values) {
+    console.log(values);
+ }
+
+ function getSum(a, b, callback) {
+   let total = a + b;
+   callback(total);
+ }
+
+getSum(5, 10, result);
+//-->Output: 15</xmp>
+				</code>
+			</pre>
+		</div>
+				</div>
+				</div>
+					</div>
+		</div>
+							</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-14b13f9 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="14b13f9" data-element_type="section" data-settings="{&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-4d52fd2" data-id="4d52fd2" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-a6df15f elementor-widget elementor-widget-text-editor" data-id="a6df15f" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+							<p>Đơn giản phải không nào 😁, Vậy khi nào ta dùng callback function?</p><p>Callback function được dùng trong các trường hợp như:</p><ul><li>Xử lý bất đồng bộ. Bản thân JavaScript là ngôn ngữ lập trình hướng sự kiện và bất đồng bộ, do đó callback ra đời nhằm giải quyết vấn đề này.</li><li>Tạo event, ta sẽ truyền một callback vào để khi người dùng click chuột hoặc hover thì sẽ thực thi hàm xử lý event đó.</li></ul><h2 id="iii-t%E1%BB%95ng-k%E1%BA%BFt">III. Tổng kết</h2><p>Bài hôm nay tuy hơi dài nhưng đã khái quát những kiến thức cần nhớ và cần phải lưu ý khi sử dụng function trong JavaScript, hy vọng các bạn khi đọc cần lưu ý những điều đó và cố gắng thực hành càng nhiều càng tốt. Cảm ơn các bạn đã đọc </p>						</div>
+				</div>
+					</div>
+		</div>
+							</div>
+		</section>
+							</div>
+				<div class="post-tags">
+					</div>
+			</div>
+
+	<section id="comments" class="comments-area">
+
+	
+
+	<div id="respond" class="comment-respond">
+		<h2 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/function-trong-javascript/#respond" style="display:none;">Cancel reply</a></small></h2>			<form action="https://nodemy.vn/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate>
+				<p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> Required fields are marked <span class="required">*</span></p><p class="comment-form-comment"><label for="comment">Comment</label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required="required"></textarea></p><p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" required='required' /></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="email" value="" size="30" maxlength="100" aria-describedby="email-notes" required='required' /></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="url" value="" size="30" maxlength="200" /></p>
+<p class="comment-form-cookies-consent"><input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes" /><label for="wp-comment-cookies-consent">Save my name, email, and website in this browser for the next time I comment.</label></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Post Comment" /> <input type='hidden' name='comment_post_ID' value='1374' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+</p>			</form>
+			</div><!-- #respond -->
+	
+</section><!-- .comments-area -->
+</main>
+
+	<div class="ekit-template-content-markup ekit-template-content-footer ekit-template-content-theme-support">
+		<div data-elementor-type="wp-post" data-elementor-id="276" class="elementor elementor-276">
+									<section class="elementor-section elementor-top-section elementor-element elementor-element-3f3434c5 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="3f3434c5" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-6dda7ab" data-id="6dda7ab" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-2a723ed8 elementor-widget elementor-widget-theme-site-logo elementor-widget-image" data-id="2a723ed8" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="theme-site-logo.default">
+				<div class="elementor-widget-container">
+																<a href="https://nodemy.vn">
+							<img decoding=async  width="3287" height="1849" src="https://mlcumuvdzi0w.i.optimole.com/cb:UbYe.da8/w:2000/h:1125/q:mauto/f:avif/https://nodemy.vn/wp-content/uploads/2022/09/Logo-Nodemy.png" class="attachment-full size-full" alt="Logo Nodemy" />								</a>
+															</div>
+				</div>
+				<div class="elementor-element elementor-element-8678e4a elementor-widget elementor-widget-heading" data-id="8678e4a" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<style>/*! elementor - v3.7.5 - 14-09-2022 */
+.elementor-heading-title{padding:0;margin:0;line-height:1}.elementor-widget-heading .elementor-heading-title[class*=elementor-size-]>a{color:inherit;font-size:inherit;line-height:inherit}.elementor-widget-heading .elementor-heading-title.elementor-size-small{font-size:15px}.elementor-widget-heading .elementor-heading-title.elementor-size-medium{font-size:19px}.elementor-widget-heading .elementor-heading-title.elementor-size-large{font-size:29px}.elementor-widget-heading .elementor-heading-title.elementor-size-xl{font-size:39px}.elementor-widget-heading .elementor-heading-title.elementor-size-xxl{font-size:59px}</style><h6 class="elementor-heading-title elementor-size-default">Liên Hệ</h6>		</div>
+				</div>
+				<div class="elementor-element elementor-element-2a7172d elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="2a7172d" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="icon-list.default">
+				<div class="elementor-widget-container">
+			<link rel="stylesheet" href="https://mlcumuvdzi0w.i.optimole.com/f:css/q:mauto/m:1/https://nodemy.vn/wp-content/plugins/elementor/assets/css/widget-icon-list.min.css">		<ul class="elementor-icon-list-items">
+							<li class="elementor-icon-list-item">
+											<a href="#">
+
+											<span class="elementor-icon-list-text">Email: info@nodemy.vn</span>
+											</a>
+									</li>
+								<li class="elementor-icon-list-item">
+											<a href="#">
+
+											<span class="elementor-icon-list-text">Phone: 0866633805</span>
+											</a>
+									</li>
+						</ul>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-1a656a4d elementor-shape-circle e-grid-align-left elementor-grid-0 elementor-widget elementor-widget-social-icons" data-id="1a656a4d" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="social-icons.default">
+				<div class="elementor-widget-container">
+			<style>/*! elementor - v3.7.5 - 14-09-2022 */
+.elementor-widget-social-icons.elementor-grid-0 .elementor-widget-container,.elementor-widget-social-icons.elementor-grid-mobile-0 .elementor-widget-container,.elementor-widget-social-icons.elementor-grid-tablet-0 .elementor-widget-container{line-height:1;font-size:0}.elementor-widget-social-icons:not(.elementor-grid-0):not(.elementor-grid-tablet-0):not(.elementor-grid-mobile-0) .elementor-grid{display:inline-grid}.elementor-widget-social-icons .elementor-grid{grid-column-gap:var(--grid-column-gap,5px);grid-row-gap:var(--grid-row-gap,5px);grid-template-columns:var(--grid-template-columns);-webkit-box-pack:var(--justify-content,center);-ms-flex-pack:var(--justify-content,center);justify-content:var(--justify-content,center);justify-items:var(--justify-content,center)}.elementor-icon.elementor-social-icon{font-size:var(--icon-size,25px);line-height:var(--icon-size,25px);width:calc(var(--icon-size, 25px) + (2 * var(--icon-padding, .5em)));height:calc(var(--icon-size, 25px) + (2 * var(--icon-padding, .5em)))}.elementor-social-icon{--e-social-icon-icon-color:#fff;display:-webkit-inline-box;display:-ms-inline-flexbox;display:inline-flex;background-color:#818a91;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;text-align:center;cursor:pointer}.elementor-social-icon i{color:var(--e-social-icon-icon-color)}.elementor-social-icon svg{fill:var(--e-social-icon-icon-color)}.elementor-social-icon:last-child{margin:0}.elementor-social-icon:hover{opacity:.9;color:#fff}.elementor-social-icon-android{background-color:#a4c639}.elementor-social-icon-apple{background-color:#999}.elementor-social-icon-behance{background-color:#1769ff}.elementor-social-icon-bitbucket{background-color:#205081}.elementor-social-icon-codepen{background-color:#000}.elementor-social-icon-delicious{background-color:#39f}.elementor-social-icon-deviantart{background-color:#05cc47}.elementor-social-icon-digg{background-color:#005be2}.elementor-social-icon-dribbble{background-color:#ea4c89}.elementor-social-icon-elementor{background-color:#d30c5c}.elementor-social-icon-envelope{background-color:#ea4335}.elementor-social-icon-facebook,.elementor-social-icon-facebook-f{background-color:#3b5998}.elementor-social-icon-flickr{background-color:#0063dc}.elementor-social-icon-foursquare{background-color:#2d5be3}.elementor-social-icon-free-code-camp,.elementor-social-icon-freecodecamp{background-color:#006400}.elementor-social-icon-github{background-color:#333}.elementor-social-icon-gitlab{background-color:#e24329}.elementor-social-icon-globe{background-color:#818a91}.elementor-social-icon-google-plus,.elementor-social-icon-google-plus-g{background-color:#dd4b39}.elementor-social-icon-houzz{background-color:#7ac142}.elementor-social-icon-instagram{background-color:#262626}.elementor-social-icon-jsfiddle{background-color:#487aa2}.elementor-social-icon-link{background-color:#818a91}.elementor-social-icon-linkedin,.elementor-social-icon-linkedin-in{background-color:#0077b5}.elementor-social-icon-medium{background-color:#00ab6b}.elementor-social-icon-meetup{background-color:#ec1c40}.elementor-social-icon-mixcloud{background-color:#273a4b}.elementor-social-icon-odnoklassniki{background-color:#f4731c}.elementor-social-icon-pinterest{background-color:#bd081c}.elementor-social-icon-product-hunt{background-color:#da552f}.elementor-social-icon-reddit{background-color:#ff4500}.elementor-social-icon-rss{background-color:#f26522}.elementor-social-icon-shopping-cart{background-color:#4caf50}.elementor-social-icon-skype{background-color:#00aff0}.elementor-social-icon-slideshare{background-color:#0077b5}.elementor-social-icon-snapchat{background-color:#fffc00}.elementor-social-icon-soundcloud{background-color:#f80}.elementor-social-icon-spotify{background-color:#2ebd59}.elementor-social-icon-stack-overflow{background-color:#fe7a15}.elementor-social-icon-steam{background-color:#00adee}.elementor-social-icon-stumbleupon{background-color:#eb4924}.elementor-social-icon-telegram{background-color:#2ca5e0}.elementor-social-icon-thumb-tack{background-color:#1aa1d8}.elementor-social-icon-tripadvisor{background-color:#589442}.elementor-social-icon-tumblr{background-color:#35465c}.elementor-social-icon-twitch{background-color:#6441a5}.elementor-social-icon-twitter{background-color:#1da1f2}.elementor-social-icon-viber{background-color:#665cac}.elementor-social-icon-vimeo{background-color:#1ab7ea}.elementor-social-icon-vk{background-color:#45668e}.elementor-social-icon-weibo{background-color:#dd2430}.elementor-social-icon-weixin{background-color:#31a918}.elementor-social-icon-whatsapp{background-color:#25d366}.elementor-social-icon-wordpress{background-color:#21759b}.elementor-social-icon-xing{background-color:#026466}.elementor-social-icon-yelp{background-color:#af0606}.elementor-social-icon-youtube{background-color:#cd201f}.elementor-social-icon-500px{background-color:#0099e5}.elementor-shape-rounded .elementor-icon.elementor-social-icon{border-radius:10%}.elementor-shape-circle .elementor-icon.elementor-social-icon{border-radius:50%}</style>		<div class="elementor-social-icons-wrapper elementor-grid">
+							<span class="elementor-grid-item">
+					<a class="elementor-icon elementor-social-icon elementor-social-icon- elementor-animation-grow elementor-repeater-item-45236a2" href="https://www.facebook.com/nodemy.vn" target="_blank">
+						<span class="elementor-screen-only"></span>
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="96px" height="96px"><linearGradient id="awSgIinfw5_FS5MLHI~A9a" x1="6.228" x2="42.077" y1="4.896" y2="43.432" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#0d61a9"></stop><stop offset="1" stop-color="#16528c"></stop></linearGradient><path fill="url(#awSgIinfw5_FS5MLHI~A9a)" d="M42,40c0,1.105-0.895,2-2,2H8c-1.105,0-2-0.895-2-2V8c0-1.105,0.895-2,2-2h32 c1.105,0,2,0.895,2,2V40z"></path><path d="M25,38V27h-4v-6h4v-2.138c0-5.042,2.666-7.818,7.505-7.818c1.995,0,3.077,0.14,3.598,0.208 l0.858,0.111L37,12.224L37,17h-3.635C32.237,17,32,18.378,32,19.535V21h4.723l-0.928,6H32v11H25z" opacity=".05"></path><path d="M25.5,37.5v-11h-4v-5h4v-2.638c0-4.788,2.422-7.318,7.005-7.318c1.971,0,3.03,0.138,3.54,0.204 l0.436,0.057l0.02,0.442V16.5h-3.135c-1.623,0-1.865,1.901-1.865,3.035V21.5h4.64l-0.773,5H31.5v11H25.5z" opacity=".07"></path><path fill="#fff" d="M33.365,16H36v-3.754c-0.492-0.064-1.531-0.203-3.495-0.203c-4.101,0-6.505,2.08-6.505,6.819V22h-4v4 h4v11h5V26h3.938l0.618-4H31v-2.465C31,17.661,31.612,16,33.365,16z"></path></svg>					</a>
+				</span>
+							<span class="elementor-grid-item">
+					<a class="elementor-icon elementor-social-icon elementor-social-icon- elementor-animation-grow elementor-repeater-item-e2dfd06" href="https://www.youtube.com/channel/UCMfiIOjAzHZ9vyoqNdcPvNA" target="_blank">
+						<span class="elementor-screen-only"></span>
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="144px" height="144px"><linearGradient id="PgB_UHa29h0TpFV_moJI9a" x1="9.816" x2="41.246" y1="9.871" y2="41.301" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#f44f5a"></stop><stop offset=".443" stop-color="#ee3d4a"></stop><stop offset="1" stop-color="#e52030"></stop></linearGradient><path fill="url(#PgB_UHa29h0TpFV_moJI9a)" d="M45.012,34.56c-0.439,2.24-2.304,3.947-4.608,4.267C36.783,39.36,30.748,40,23.945,40 c-6.693,0-12.728-0.64-16.459-1.173c-2.304-0.32-4.17-2.027-4.608-4.267C2.439,32.107,2,28.48,2,24s0.439-8.107,0.878-10.56 c0.439-2.24,2.304-3.947,4.608-4.267C11.107,8.64,17.142,8,23.945,8s12.728,0.64,16.459,1.173c2.304,0.32,4.17,2.027,4.608,4.267 C45.451,15.893,46,19.52,46,24C45.89,28.48,45.451,32.107,45.012,34.56z"></path><path d="M32.352,22.44l-11.436-7.624c-0.577-0.385-1.314-0.421-1.925-0.093C18.38,15.05,18,15.683,18,16.376 v15.248c0,0.693,0.38,1.327,0.991,1.654c0.278,0.149,0.581,0.222,0.884,0.222c0.364,0,0.726-0.106,1.04-0.315l11.436-7.624 c0.523-0.349,0.835-0.932,0.835-1.56C33.187,23.372,32.874,22.789,32.352,22.44z" opacity=".05"></path><path d="M20.681,15.237l10.79,7.194c0.689,0.495,1.153,0.938,1.153,1.513c0,0.575-0.224,0.976-0.715,1.334 c-0.371,0.27-11.045,7.364-11.045,7.364c-0.901,0.604-2.364,0.476-2.364-1.499V16.744C18.5,14.739,20.084,14.839,20.681,15.237z" opacity=".07"></path><path fill="#fff" d="M19,31.568V16.433c0-0.743,0.828-1.187,1.447-0.774l11.352,7.568c0.553,0.368,0.553,1.18,0,1.549 l-11.352,7.568C19.828,32.755,19,32.312,19,31.568z"></path></svg>					</a>
+				</span>
+					</div>
+				</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-4391785e" data-id="4391785e" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-6f4e30e1 elementor-widget elementor-widget-heading" data-id="6f4e30e1" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h6 class="elementor-heading-title elementor-size-default">Liên Kết</h6>		</div>
+				</div>
+				<div class="elementor-element elementor-element-2e4fa77c elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="2e4fa77c" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="icon-list.default">
+				<div class="elementor-widget-container">
+					<ul class="elementor-icon-list-items">
+							<li class="elementor-icon-list-item">
+											<a href="https://www.facebook.com/nodemy.vn">
+
+											<span class="elementor-icon-list-text">Fanpage Nodemy</span>
+											</a>
+									</li>
+								<li class="elementor-icon-list-item">
+											<a href="https://www.facebook.com/groups/congdong.nodejs.vietnam">
+
+											<span class="elementor-icon-list-text">Group NodeJS Việt Nam</span>
+											</a>
+									</li>
+								<li class="elementor-icon-list-item">
+											<a href="https://nodejs.vn/">
+
+											<span class="elementor-icon-list-text">Diễn đàn NodeJS Việt Nam</span>
+											</a>
+									</li>
+								<li class="elementor-icon-list-item">
+											<a href="#">
+
+											<span class="elementor-icon-list-text">Về chúng tôi</span>
+											</a>
+									</li>
+						</ul>
+				</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-665d0b47" data-id="665d0b47" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-20f3f8c elementor-widget elementor-widget-google_maps" data-id="20f3f8c" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="google_maps.default">
+				<div class="elementor-widget-container">
+			<style>/*! elementor - v3.7.5 - 14-09-2022 */
+.elementor-widget-google_maps .elementor-widget-container{overflow:hidden}.elementor-widget-google_maps iframe{height:300px}</style>		<div class="elementor-custom-embed">
+			<iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+					 src="about:blank" data-opt-src="https://maps.google.com/maps?q=Nodemy&#038;t=m&#038;z=14&#038;output=embed&#038;iwloc=near"
+					title="Nodemy"
+					aria-label="Nodemy"
+			></iframe><noscript><iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+					src="https://maps.google.com/maps?q=Nodemy&#038;t=m&#038;z=14&#038;output=embed&#038;iwloc=near"
+					title="Nodemy"
+					aria-label="Nodemy"
+			></iframe></noscript>
+		</div>
+				</div>
+				</div>
+					</div>
+		</div>
+							</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-79495ec1 elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="79495ec1" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-30aa6832" data-id="30aa6832" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-46e2089d elementor-widget elementor-widget-text-editor" data-id="46e2089d" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+							<p><br />Công ty THNN Công Nghệ Nodemy Việt Nam &#8211; MST: 0109350228<br />Đ/c: Biệt Thự BT3, Ô AIV, khu đô thị mới Hạ Đình, Xã Tân Triều, Huyện Thanh Trì, Thành phố Hà Nội, Việt Nam</p>						</div>
+				</div>
+					</div>
+		</div>
+							</div>
+		</section>
+							</div>
+		</div>
+		<div data-elementor-type="popup" data-elementor-id="1030" class="elementor elementor-1030 elementor-location-popup" data-elementor-settings="{&quot;entrance_animation&quot;:&quot;slideInUp&quot;,&quot;entrance_animation_mobile&quot;:&quot;slideInDown&quot;,&quot;exit_animation_mobile&quot;:&quot;slideInUp&quot;,&quot;entrance_animation_duration&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1.2,&quot;sizes&quot;:[]},&quot;timing&quot;:[]}">
+								<section class="elementor-section elementor-top-section elementor-element elementor-element-5a0dada elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="5a0dada" data-element_type="section" id="form-dang-ky" data-settings="{&quot;animation&quot;:&quot;none&quot;,&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-48d45e9a" data-id="48d45e9a" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-563d5a5e elementor-widget elementor-widget-elementskit-heading" data-id="563d5a5e" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="elementskit-heading.default">
+				<div class="elementor-widget-container">
+			<div class="ekit-wid-con" ><div class="ekit-heading elementskit-section-title-wraper text_left   ekit_heading_tablet-   ekit_heading_mobile-"><h2 class="ekit-heading--title elementskit-section-title ">
+					Đăng ký nhận tư vấn
+				</h2><div class="ekit_heading_separetor_wraper ekit_heading_elementskit-border-divider"><div class="elementskit-border-divider"></div></div>				<div class='ekit-heading__description'>
+					<p>Tham gia học thử miễn phí, cơ hội nhận học bổng 5.000.000đ ngay hôm nay</p>
+				</div>
+			</div></div>		</div>
+				</div>
+				<div class="elementor-element elementor-element-763e088 elementor-button-align-end elementor-widget elementor-widget-form" data-id="763e088" data-element_type="widget" data-settings="{&quot;step_next_label&quot;:&quot;Next&quot;,&quot;step_previous_label&quot;:&quot;Previous&quot;,&quot;button_width&quot;:&quot;100&quot;,&quot;step_type&quot;:&quot;number_text&quot;,&quot;step_icon_shape&quot;:&quot;circle&quot;,&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="form.default">
+				<div class="elementor-widget-container">
+			<style>/*! elementor-pro - v3.7.6 - 14-09-2022 */
+.elementor-button.elementor-hidden,.elementor-hidden{display:none}.e-form__step{width:100%}.e-form__step:not(.elementor-hidden){display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap}.e-form__buttons{-ms-flex-wrap:wrap;flex-wrap:wrap}.e-form__buttons,.e-form__buttons__wrapper{display:-webkit-box;display:-ms-flexbox;display:flex}.e-form__indicators{-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-ms-flex-wrap:nowrap;flex-wrap:nowrap;font-size:13px;margin-bottom:var(--e-form-steps-indicators-spacing)}.e-form__indicators,.e-form__indicators__indicator{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.e-form__indicators__indicator{-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-ms-flex-preferred-size:0;flex-basis:0;padding:0 var(--e-form-steps-divider-gap)}.e-form__indicators__indicator__progress{width:100%;position:relative;background-color:var(--e-form-steps-indicator-progress-background-color);border-radius:var(--e-form-steps-indicator-progress-border-radius);overflow:hidden}.e-form__indicators__indicator__progress__meter{width:var(--e-form-steps-indicator-progress-meter-width,0);height:var(--e-form-steps-indicator-progress-height);line-height:var(--e-form-steps-indicator-progress-height);padding-right:15px;border-radius:var(--e-form-steps-indicator-progress-border-radius);background-color:var(--e-form-steps-indicator-progress-color);color:var(--e-form-steps-indicator-progress-meter-color);text-align:right;-webkit-transition:width .1s linear;-o-transition:width .1s linear;transition:width .1s linear}.e-form__indicators__indicator:first-child{padding-left:0}.e-form__indicators__indicator:last-child{padding-right:0}.e-form__indicators__indicator--state-inactive{color:var(--e-form-steps-indicator-inactive-primary-color,#c2cbd2)}.e-form__indicators__indicator--state-inactive [class*=indicator--shape-]:not(.e-form__indicators__indicator--shape-none){background-color:var(--e-form-steps-indicator-inactive-secondary-color,#fff)}.e-form__indicators__indicator--state-inactive object,.e-form__indicators__indicator--state-inactive svg{fill:var(--e-form-steps-indicator-inactive-primary-color,#c2cbd2)}.e-form__indicators__indicator--state-active{color:var(--e-form-steps-indicator-active-primary-color,#39b54a);border-color:var(--e-form-steps-indicator-active-secondary-color,#fff)}.e-form__indicators__indicator--state-active [class*=indicator--shape-]:not(.e-form__indicators__indicator--shape-none){background-color:var(--e-form-steps-indicator-active-secondary-color,#fff)}.e-form__indicators__indicator--state-active object,.e-form__indicators__indicator--state-active svg{fill:var(--e-form-steps-indicator-active-primary-color,#39b54a)}.e-form__indicators__indicator--state-completed{color:var(--e-form-steps-indicator-completed-secondary-color,#fff)}.e-form__indicators__indicator--state-completed [class*=indicator--shape-]:not(.e-form__indicators__indicator--shape-none){background-color:var(--e-form-steps-indicator-completed-primary-color,#39b54a)}.e-form__indicators__indicator--state-completed .e-form__indicators__indicator__label{color:var(--e-form-steps-indicator-completed-primary-color,#39b54a)}.e-form__indicators__indicator--state-completed .e-form__indicators__indicator--shape-none{color:var(--e-form-steps-indicator-completed-primary-color,#39b54a);background-color:initial}.e-form__indicators__indicator--state-completed object,.e-form__indicators__indicator--state-completed svg{fill:var(--e-form-steps-indicator-completed-secondary-color,#fff)}.e-form__indicators__indicator__icon{width:var(--e-form-steps-indicator-padding,30px);height:var(--e-form-steps-indicator-padding,30px);font-size:var(--e-form-steps-indicator-icon-size);border-width:1px;border-style:solid;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;overflow:hidden;margin-bottom:10px}.e-form__indicators__indicator__icon img,.e-form__indicators__indicator__icon object,.e-form__indicators__indicator__icon svg{width:var(--e-form-steps-indicator-icon-size);height:auto}.e-form__indicators__indicator__icon .e-font-icon-svg{height:1em}.e-form__indicators__indicator__number{width:var(--e-form-steps-indicator-padding,30px);height:var(--e-form-steps-indicator-padding,30px);border-width:1px;border-style:solid;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;margin-bottom:10px}.e-form__indicators__indicator--shape-circle{border-radius:50%}.e-form__indicators__indicator--shape-square{border-radius:0}.e-form__indicators__indicator--shape-rounded{border-radius:5px}.e-form__indicators__indicator--shape-none{border:0}.e-form__indicators__indicator__label{text-align:center}.e-form__indicators__indicator__separator{width:100%;height:var(--e-form-steps-divider-width);background-color:#c2cbd2}.e-form__indicators--type-icon,.e-form__indicators--type-icon_text,.e-form__indicators--type-number,.e-form__indicators--type-number_text{-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start}.e-form__indicators--type-icon .e-form__indicators__indicator__separator,.e-form__indicators--type-icon_text .e-form__indicators__indicator__separator,.e-form__indicators--type-number .e-form__indicators__indicator__separator,.e-form__indicators--type-number_text .e-form__indicators__indicator__separator{margin-top:calc(var(--e-form-steps-indicator-padding, 30px) / 2 - var(--e-form-steps-divider-width, 1px) / 2)}.elementor-field-type-hidden{display:none}.elementor-field-type-html{display:inline-block}.elementor-login .elementor-lost-password,.elementor-login .elementor-remember-me{font-size:.85em}.elementor-field-type-recaptcha_v3 .elementor-field-label{display:none}.elementor-field-type-recaptcha_v3 .grecaptcha-badge{z-index:1}.elementor-button .elementor-form-spinner{-webkit-box-ordinal-group:4;-ms-flex-order:3;order:3}.elementor-form .elementor-button>span{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.elementor-form .elementor-button .elementor-button-text{white-space:normal;-webkit-box-flex:0;-ms-flex-positive:0;flex-grow:0}.elementor-form .elementor-button svg{height:auto}.elementor-form .elementor-button .e-font-icon-svg{height:1em}.elementor-select-wrapper .select-caret-down-wrapper{position:absolute;top:50%;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%);inset-inline-end:10px;pointer-events:none;font-size:11px}.elementor-select-wrapper .select-caret-down-wrapper svg{display:unset;width:1em;aspect-ratio:unset;fill:currentColor}.elementor-select-wrapper .select-caret-down-wrapper i{font-size:19px;line-height:2}.elementor-select-wrapper.remove-before:before{content:""!important}</style>		<form class="elementor-form" method="post" id="popup_form_home" name="Nhận tư vấn khoá học từ chuyên gia - HOME">
+			<input type="hidden" name="post_id" value="1030"/>
+			<input type="hidden" name="form_id" value="763e088"/>
+			<input type="hidden" name="referer_title" value="Function trong JavaScript" />
+
+							<input type="hidden" name="queried_id" value="1374"/>
+			
+			<div class="elementor-form-fields-wrapper elementor-labels-above">
+								<div class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-name elementor-col-100 elementor-field-required elementor-mark-required">
+												<label for="form-field-name" class="elementor-field-label">
+								Họ Tên							</label>
+														<input size="1" type="text" name="form_fields[name]" id="form-field-name" class="elementor-field elementor-size-xs  elementor-field-textual" required="required" aria-required="true">
+											</div>
+								<div class="elementor-field-type-tel elementor-field-group elementor-column elementor-field-group-phone elementor-col-100 elementor-field-required elementor-mark-required">
+												<label for="form-field-phone" class="elementor-field-label">
+								Số điện thoại							</label>
+								<input size="1" type="tel" name="form_fields[phone]" id="form-field-phone" class="elementor-field elementor-size-xs  elementor-field-textual" required="required" aria-required="true" pattern="[0-9()#&amp;+*-=.]+" title="Only numbers and phone characters (#, -, *, etc) are accepted.">
+
+						</div>
+								<div class="elementor-field-type-email elementor-field-group elementor-column elementor-field-group-email elementor-col-100">
+												<label for="form-field-email" class="elementor-field-label">
+								Email							</label>
+														<input size="1" type="email" name="form_fields[email]" id="form-field-email" class="elementor-field elementor-size-xs  elementor-field-textual">
+											</div>
+								<div class="elementor-field-type-textarea elementor-field-group elementor-column elementor-field-group-message elementor-col-100">
+												<label for="form-field-message" class="elementor-field-label">
+								Câu hỏi cho chuyên gia							</label>
+						<textarea class="elementor-field-textual elementor-field  elementor-size-xs" name="form_fields[message]" id="form-field-message" rows="4" placeholder="Bạn đang thắc mắc điều gì"></textarea>				</div>
+								<div class="elementor-field-group elementor-column elementor-field-type-submit elementor-col-100 e-form__buttons">
+					<button type="submit" class="elementor-button elementor-size-sm">
+						<span >
+															<span class=" elementor-button-icon">
+																										</span>
+																						<span class="elementor-button-text">Đăng Ký</span>
+													</span>
+					</button>
+				</div>
+			</div>
+		</form>
+				</div>
+				</div>
+					</div>
+		</div>
+							</div>
+		</section>
+						</div>
+</body>
+</html>

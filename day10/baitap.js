@@ -161,10 +161,11 @@ function printEvenNumbers() {}
 function sumOfNumbers(n) {
     let a = 0;
     for(let x = 1; x < n; x++) {
-        console.log(a = a + x)
+        (a = a + x)
     }
+    return console.log(a)
 }
-sumOfNumbers(4)
+sumOfNumbers(10)
 
 
 /**
@@ -172,7 +173,18 @@ sumOfNumbers(4)
  *
  * @returns {number} Tổng các số lẻ
  */
-function sumOfOddNumbers(start, end) {}
+function sumOfOddNumbers(start, end) {
+  let a = 0;
+  let b;
+  if (start%2 === 0) {b = start + 1} else b = start;
+  for (b ; b <= end; b = b + 2){
+    (a = a + b)
+  }
+  return a
+}
+
+console.log(sumOfOddNumbers(4,11));
+
 
 /**
  * Tìm các ước số của một số bất kỳ
@@ -181,7 +193,18 @@ function sumOfOddNumbers(start, end) {}
  *
  * @returns {number[]} Mảng chứa các ước số *[v1, v2, ...]*
  */
-function divisor(number) {}
+function divisor(number) {
+  let arr = [];
+  for (let b = 0; b <= number; b++){
+    if (Number.isInteger(number / b)) {arr.push(b)}
+}
+if (number > 0) return arr ;
+else return `nhập sai số rồi anh zai`
+}
+
+console.log(divisor(-8))
+
+
 
 /**
  * Tính số lần gấp 1 tờ giấy có độ mỏng 0.1mm để đạt được độ dày mong muốn
@@ -190,7 +213,15 @@ function divisor(number) {}
  *
  * @return {number} Số lần gấp giấy để đạt được độ dày yêu cầu
  */
-function countFolding(thickness) {}
+
+function countFolding(thickness) {
+  let c = 0;
+  for (let a = 0.1; a <= thickness; a * 2) {
+    c++;
+  }
+return console.log(c)}
+
+countFolding(1)
 
 /**
  * Tính xem sau bao nhiêu năm nữa thì tuổi cha gấp 2 lần tuổi con
@@ -205,3 +236,4 @@ function countFolding(thickness) {}
 function countYears(dad, son) {}
 
 function countLegs() {}
+

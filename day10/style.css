@@ -1,0 +1,18 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    background: rgb(2,0,36);
+    background: linear-gradient(104deg, rgba(2,0,36,1) 0%, rgba(49,49,164,1) 49%, rgba(0,212,255,1) 100%);
+    transition: all 1s ;
+}
+
+.box:hover {
+    transform: rotate(20deg);
+    width: 500px;
+}
