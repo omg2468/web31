@@ -1,0 +1,55 @@
+.parent {
+    background-color: black;
+    width: 500px;
+    height: 500px;
+    
+}
+
+img {
+    width: 50%;
+    height: 50%;
+}
+
+.child {
+    width: 50%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    }
+
+
+.parent:hover .child {
+    background-color: green;
+ 
+}
+
+.parent:hover img {
+    transform: scale(1.5) translate(100px);
+       animation: around 6s 0.5s ease-in-out infinite;
+}
+
+@keyframes around {
+    0% {
+        transform: translateX(0px);
+    }
+
+    33% {
+        transform: translateX(100px) translateY(100px);
+        
+    }
+
+    66% {
+        transform: translateX(50px);
+    }
+
+    80%{
+transform: translateX(200px) translateY(200px);
+    }
+
+    100% {
+        transform: translateX(0) translateY(0);
+    }
+}
+

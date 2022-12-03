@@ -71,10 +71,16 @@ function fibonacci(n) {
  *
  * @return {number} Giai thừa của `n`
  */
+
+function factorial(n) {
+  if (n == 0 || n == 1) return 1;
+  else return n * factorial(n - 1);
+}
+
 function factorial(n) {
     let x = 1;
-    for (let i = 2; i < n; i++){
-        x = i*(i+1)
+    for (let i = 2; i <= n; i++){
+        x = x*=i
     }
     return x
 }
@@ -92,4 +98,15 @@ console.log(factorial(5));
  *
  * @return {boolean} Số `n` có phải là số Strong hay không
  */
-function isStrong(n) {}
+function isStrong(n) {
+  let temp = n;
+  let total = 0;
+  while(temp != 0){
+    let reminder = temp % 10;
+    total += factorial(reminder);
+    temp = (temp -reminder)/10;
+  }
+  return total == n;
+}
+
+console.log(isStrong(146))

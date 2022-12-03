@@ -1,0 +1,134 @@
+element.style {
+}
+@media (hover: hover) and (pointer: fine)
+pre[class*=language-] {
+    scrollbar-color: hsla(0,0%,100%,.3) var(--code-background-color);
+    scrollbar-width: thin;
+}
+pre[class*=language-] {
+    background: var(--code-background-color);
+    border: 1px solid var(--black);
+    font-family: Menlo,monospace;
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+    overflow-x: auto;
+    overflow-y: initial;
+    padding: 1rem;
+}
+code[class*=language-], pre[class*=language-] {
+    word-wrap: normal;
+    color: var(--code-font-color);
+    font-family: var(--code-font-family);
+    font-size: 1.6rem;
+    -webkit-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+    line-height: 1.5;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    text-align: left;
+    white-space: pre;
+    word-break: normal;
+    word-spacing: normal;
+}
+pre {
+    margin: 0 0 2rem;
+    overflow: auto;
+    padding: 1.2rem 1.6rem;
+    -moz-tab-size: 2;
+    -o-tab-size: 2;
+    tab-size: 2;
+}
+:not(pre)>code, pre {
+    background-color: rgba(27,31,35,.08);
+    border-radius: 0.3rem;
+}
+pre {
+    font-family: monospace,monospace;
+    font-size: 1em;
+}
+*, :after, :before {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+}
+pre {
+    display: block;
+    font-family: monospace;
+    white-space: pre;
+    margin: 1em 0px;
+}
+.main-container {
+    --sidebar-desktop-width-right: 315px;
+    --sidebar-desktop-width-left: 315px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+body {
+    background-color: #fff;
+    color: #222;
+    font: normal normal normal 1.7rem/1.7 -apple-system,BlinkMacSystemFont,Nunito Sans,Helvetica,Arial,sans-serif;
+    padding: 0;
+}
+:root {
+    --code-primary: #7578f8;
+    --code-font-family: Consolas,Monaco,"Andale Mono","Ubuntu Mono",monospace;
+    --code-font-color: #b3b9c5;
+    --code-background-color: #2a373a;
+    --string: #92d192;
+    --variable: #f2777a;
+    --property: #abb2bf;
+    --number: #fca369;
+    --operator: #ac8d58;
+    --punctuation: #d5d8df;
+    --comment: #848991;
+    --function: #62cfcf;
+    --keyword: #ffeead;
+    --attribute: #ffd479;
+    --class: #e1a6f2;
+    --tag: #6ab0f3;
+    --error: #f2777a;
+    --terminal-color: var(--code-primary);
+}
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+html {
+    -webkit-text-size-adjust: 100%;
+    line-height: 1.15;
+}
+*, :after, :before {
+    box-sizing: inherit;
+}
+*, :after, :before {
+    box-sizing: inherit;
+}
+@media (hover: hover) and (pointer: fine)
+pre[class*=language-]::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+@media (hover: hover) and (pointer: fine)
+pre[class*=language-]::-webkit-scrollbar-corner, pre[class*=language-]::-webkit-scrollbar-track {
+    background-color: var(--code-background-color);
+}
+@media (hover: hover) and (pointer: fine)
+pre[class*=language-]::-webkit-scrollbar-thumb {
+    background-color: hsla(0,0%,100%,.3);
+}
+@media (hover: hover) and (pointer: fine)
+pre[class*=language-]::-webkit-scrollbar-corner, pre[class*=language-]::-webkit-scrollbar-track {
+    background-color: var(--code-background-color);
+}
+code[class*=language-] ::selection, pre[class*=language-]::selection {
+    background: hsla(0,0%,59%,.3)!important;
+    color: inherit;
+    text-shadow: none;
+}
+code::selection, pre::selection {
+    background: hsla(0,0%,59%,.3)!important;
+    color: inherit;
+    text-shadow: none;
+}

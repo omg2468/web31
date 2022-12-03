@@ -235,5 +235,3 @@ countFolding(1)
  */
 function countYears(dad, son) {}
 
-function countLegs() {}
-

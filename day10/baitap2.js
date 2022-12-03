@@ -157,3 +157,14 @@ console.log(calcTaxiFee(39));
  * @return {number | [number, number] | null} Nghiệm phương trình
  */
 function solveEquation(a, b, c) {}
+
+let x = 1;
+
+function ai(){
+  let x =10;
+}
+
+ai()
+
+
+console.log(x)
