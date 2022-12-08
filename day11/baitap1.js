@@ -61,7 +61,9 @@ const myFamily = {
 function age(n) {
   let newAge = {};
   for (let key in myFamily) {
-    newAge[key] = myFamily[key] + n; 
+    newAge = {
+      [key] : myFamily[key]
+    }
   }
   console.log(newAge);
 }
