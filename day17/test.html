@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>JavaScript</h2>
+    <p class="ok">Hello World!</p>
+    <p>Lập Trình Từ Đầu!</p>
+    <p id="demo"></p>
+    <button onclick="myfunction()" >Try it</button>
+<script>
+    var a = document.getElementsByTagName('p')
+    document.getElementById('demo').innerHTML = `sửa đi ${a[1].innerHTML}`
+    let myfunction = function(){
+       const a =  document.getElementsByTagName('p')
+       for (let i = 0; i < a.length; i++){
+        a[i].style.color = 'red'
+       }
+    }
+    const elems = document.getElementsByTagName('p');
+// lặp lại bằng cách sử dụng vòng lặp for ... of
+for (const p of elems) {
+    document.write(p.innerText);
+}
+</script>
+  </body>
+</html>

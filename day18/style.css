@@ -1,0 +1,16 @@
+*{box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    width: 500px;
+    height: 70%;
+}
+
+.box {
+    display: block;
+    width: 500px;
+    height: 600px;
+    margin: 10px;
+}

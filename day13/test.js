@@ -71,11 +71,37 @@ biểu thị thời gian tương ứng sau n giây*
 * calcTime('20:15:45', 15); // '20:16:00'
 * calcTime('20:15:45', -46); // '20:14:59'
 */
+
+// bước 1: tách các giá trị giờ phút giây
+// bước 2: cộng số giây với n
+// bước 3: Chia tổng số s cho 60
+// bước 4: Kiểm tra:
+// - Nếu phần dư == 0 thì tăng số giây, ghép chuỗi và trả về
+// - Nếu phần dư > 0 thì, nếu số phút lớn hơn 0 lặp lại quy trình tính số phút,... giờ
+function calcTime1(time, n){
+    let timeArr = time.split(":").map(Number);
+    let s = timeArr[2] + n;
+    let m = Math.floor(s/60);
+    timeArr[2] = s%60;
+    if(m === 0){
+        return timeArr.join(":")
+    }
+    m = timeArr[1] + m;
+    let h = Math.floor(m/60);
+    timeArr[1] = m%60;
+    if(h === 0) return timeArr.join(":");
+    h = (timeArr[0] + h)%24;
+    return timeArr.join(":")
+}
+
+
+
+
 function calcTime(time, n) {
  let a = new Date("2020-10-10 " + time)
  let b = a.getSeconds();
 a.setSeconds(b - (-n))
- console.log(`${a.getHours()}:${a.getMinutes()}:${a.getMilliseconds()}`)
+ console.log(`${String(a.getHours()).padEnd(2, "0")}:${String(a.getMinutes()).padEnd(2, "0")}:${String(a.getMilliseconds()).padEnd(2, "0")}`)
 }
 
 calcTime("20:15:45", 15);
@@ -95,21 +121,11 @@ dấu cách)
 * @example
 * isPalindrome('Race car'); // true, vì Race car = racecar = racecar
 */
-// function isPalindrome(str) {
-//     let a = new Array[]
-//     a =  str.toLowerCase;
-//     let b = a.split('')
-//     for(let i = 0; i < b.length; i++){
-//         if (b[i] === " "){b.splice(i,1);} 
-//     }
-//     let c = b;
-//     b.reverse();
-//     for(let x = 0;x < b.length;x++){
-//         if (b[i] !== c[i]) return false
-//     }
-//     return true
-// }
-// isPalindrome("Race car");
+function isPalindrome(str) {
+   let a = str.toLowerCase().replaceAll(" ",""); //loại bỏ khoảng trắng;
+   return a === a.split("").reverse().join("");
+}
+console.log(isPalindrome("Race car"));
 
 
 /**
@@ -126,7 +142,7 @@ dấu cách)
 * snail(10, 3, 1); // 5
 */
 function snail(h, x, y) {
-    if (x >= h) {console.log('leo trong ngày đầu tiên')}
+    if (x >= h) {return 1}
     let n = h/(x-y);
     if (n%1 === 0) {return (n-1)}
     else {return Math.floor(n)}
@@ -154,7 +170,8 @@ function sortNumber(n) {
             b[i] = 0;  
         }
     }
-    return console.log(b)
+    let c = b.join("")
+    console.log(c)
 }
 
 sortNumber(5307510);
@@ -175,7 +192,29 @@ trị trong mảng và value là số lần xuất hiện trong mảng
 * @example
 * let result = countElement(['Ba', 'Béo', 'Ba']);
 * console.log(result); // {ba: 2, béo: 1}
-*/function countElement(arr) {}
+*/function countElement(arr) {
+    let result = {};
+    for (let value of arr){
+        let key = String(value).toLowerCase();
+        if(key in result){
+            result[key] += 1;
+        } else {
+            result[key] = 1;
+        }
+        }
+        return result;
+    }
+
+function count(arr){
+    return arr.reduce((result, item) => {
+        let key = String(item).toLowerCase();
+        result[key] = result[key] + 1 || 1;
+        return result;
+    }, {})
+}
+
+    console.log(countElement([1,2,3,4,2,1,1,2,3,"ba","ba","Ba","béo"]));
+
 /**
 * Object chứa thông tin về sinh viên
 *
@@ -236,3 +275,25 @@ ngày sinh tăng dần
 * ]
 */
 function sortStudents(students) {}
+
+var twoSum = function (nums, target) {
+  let result = [];
+  for (let i = 0; i < nums.length; i++) {
+    for (let x = 0; x < nums.length; x++) {
+      if ((x !== i) && (nums[i] + nums[x] == target)) result.push(x, i);
+    }
+  }
+  return result
+}
+
+console.log(twoSum([[3, 2, 4]], 6));
+
+var isPalindrome = function (x) {
+  if (x < 0) return false;
+  if (x%10 == 0) return false;
+  let a = x.toString().split("");
+  let c = a;
+  return c.join('') === a.reverse().join('')
+};
+
+console.log(isPalindrome(10));

@@ -1,0 +1,8 @@
+môi trường thực thi mã js trong trình duyệt cung cấp cho mình một số API(các đối tượng BOM, DOM) để làm việc thao tác với cửa sổ trình duyệt, với nội dung hiển thị
+
+cấu trục phân cấp đối tượng:
+- Node: Tất cả mọi thứ đều là Node
+- document cũng là một Node
+- Element: Chỉ bao gồm các Node là thẻ HTMl(<h1>,...)
+Mỗi thẻ HTMl thì có một interface riêng, mô tả các thuộc tính và phương thức riêng của nó, ví dụ nư HTMlTableElement, HTMLImageElement,.....
+Nodelist và HTMLCOleection(kết quả trả về của một số thuộc tính/ phương tức tìm kiếm phần tử) không phải là mảng, chỉ có thể duyệt qua bằng vòng lặp for, hoặc chuyển thành mảng thông qua Array.from
