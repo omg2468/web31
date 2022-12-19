@@ -17,11 +17,16 @@
 
 <script>
 let option = document.getElementById("mySelect")
-option.addEventListener('change',myFunction )
-function myFunction() {
+option.addEventListener('change', myFunction )
+function myFunction(e) {
+  console.log(e)
   var x = option.value;
   document.getElementById("demo").innerHTML = "You selected: " + x;
 }
+
+document.addEventListener("keydown", function (event) {
+    console.log(event.key);
+});
 </script>
 
 </body>
