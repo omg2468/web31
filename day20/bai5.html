@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="./style1.css" />
+    </head>
+
+    <body>
+        <div class="main-container">
+            <h1 class="title">Đếm số</h1>
+            <h1 id="counter" style="color: #333333">0</h1>
+            <div class="btn-container">
+                <button class="btn counterBtn prevBtn">Trừ</button>
+                <button class="btn counterBtn nextBtn">Cộng</button>
+            </div>
+        </div>
+
+        <script>
+            let counter = document.querySelector('#counter')
+            let add = document.querySelector('.nextBtn')
+            let subtract = document.querySelector('.prevBtn')
+            function addCounter(){
+                counter.innerHTML -= -1
+            }
+
+            function subtractCounter(){
+                counter.innerHTML -= 1
+            }
+
+            add.addEventListener('click', addCounter)
+            subtract.addEventListener('click', subtractCounter)
+        </script>
+    </body>
+</html>

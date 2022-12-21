@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Practice</title>
+  </head>
+  <body>
+    <h1>Thực hành DOM</h1>
+    <p>
+      Hey, you're not permitted in there. It's restricted. You'll be deactivated
+      for sure.. Don't call me a mindless philosopher, you overweight glob of
+      grease! Now come out before somebody sees you. Secret mission? What plans?
+      What are you talking about? I'm not getting in there! I'm going to regret
+      this. There goes another one. Hold your fire. There are no life forms. It
+      must have been short-circuited. That's funny, the damage doesn't look as
+      bad from out here. Are you sure this things safe? What a piece of junk.
+      She'll make point five beyond the speed of light. She may not look like
+      much, but she's got it where it counts, kid. I've added some special
+      modifications myself. We're a little rushed, so if you'll hurry aboard
+      we'll get out of here. Hello, sir. Which way? All right, men. Load your
+      weapons! Stop that ship! Blast 'em! Chewie, get us out of here! Oh, my.
+      I'd forgotten how much I hate space travel. Run, Luke! Run!
+    </p>
+    <script>
+        let para = document.querySelector('p')
+        let content = para.innerText.split(" ").map(e => e.length >= 8 ? `<span style='background-color:yellow'>${e}</span>` : e).join(" ")
+        para.innerHTML = content
+
+        let facebook = document.createElement('a')
+        facebook.href = 'https://www.facebook.com/'
+        facebook.target = '_blank'
+        facebook.innerHTML = 'facebook'
+        para.append(facebook)
+        console.log(facebook)
+       para.innerHTML = para.innerHTML.replace(/\!/g,'🤔')
+        console.log(para.innerText.replace(/\!/g,'🤔'))
+        para.innerHTML = para.innerHTML.replace(/\?/g,'😲')
+    </script>
+  </body>
+</html>
