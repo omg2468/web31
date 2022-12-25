@@ -226,7 +226,12 @@
         let a = 'javascript'
         let b = 'ja'
         console.log(a.includes(b))
-
+        let button = document.getElementById('show-all')
+        console.log(button)
+        button.addEventListener('click', function(){
+          search.value = ''
+          Array.from(jobList).forEach(card => card.style.display = 'block')
+        })
 
     </script>
   </body>

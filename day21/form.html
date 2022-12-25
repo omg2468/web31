@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      h1 {
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 24px;
+        margin-bottom: 2rem;
+      }
+
+      .container {
+        width: 400px;
+        background-color: #f4f4f4;
+        padding: 20px;
+      }
+
+      .form-input {
+        margin-bottom: 1rem;
+        position: relative;
+      }
+
+      .form-input button {
+        content: "";
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        border: none;
+        background-color: transparent;
+      }
+
+      .form-input button:hover {
+        text-decoration: underline;
+        color: #3171e5;
+      }
+
+      input {
+        border: 1px solid #ccc;
+        height: 36px;
+        line-height: 36px;
+        padding-left: 10px;
+        width: 100%;
+      }
+
+      #btn {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        background-color: #3171e5;
+        color: #fff;
+        border: none;
+        outline: none;
+        cursor: pointer;
+      }
+
+      .error {
+        display: inline-block;
+        color: orangered;
+      }
+
+      .success {
+        border: 1px solid green;
+        padding: 1rem;
+        margin-bottom: 1rem;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Registration Form</h1>
+      <form id="registrationForm">
+        <div class="form-input">
+          <input id="username" type="text" />
+        </div>
+        <div class="form-input">
+          <input id="password" type="password" />
+          <button>Hiện</button>
+        </div>
+        <div class="form-input">
+          <input id="confirmPassword" type="password" />
+          <button>Hiện</button>
+        </div>
+        <button type="submit" class="btn">Register</button>
+      </form>
+    </div>
+    <script>
+      let username = document.querySelector("#username");
+      let registration = document.createElement("label");
+      registration.htmlFor = "username";
+      registration.innerHTML = "User name";
+      username.before(registration);
+
+      let password = document.querySelector("#password");
+      let pass = document.createElement("label");
+
+      pass.innerHTML = "Password";
+      pass.htmlFor = "password";
+      password.before(pass);
+
+      let confrimpasss = document.querySelector("#confirmPassword");
+      let confirm = document.createElement("label");
+
+      confirm.innerHTML = "Confirm Password";
+      confirm.htmlFor = "confirmPassword";
+      confrimpasss.before(confirm);
+
+      // let form = document.querySelector("#registrationForm");
+      // console.log(
+      //   Array.from(form).map((value) => {
+      //     if (value.tagName === "INPUT") {
+      //       let label = document.createElement("label");
+      //       label.innerHTML = value.id;
+      //       label.htmlFor = value.id;
+      //       let input = document.getElementById(value.id);
+      //       input.before(label);
+      //     }
+      //   })
+      // );
+      function focus() {
+        if (password.value !== confrimpasss.value) {
+          console.log('sai rooif')
+        }
+      }
+
+      confrimpasss.addEventListener('keyup', focus)
+    </script>
+  </body>
+</html>
