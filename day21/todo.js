@@ -11,14 +11,17 @@ let todos = [
   {
     title: "Làm bài tập",
     status: true,
+    display: "",
   },
   {
     title: "Chơi với bạn bè",
     status: false,
+    display: "",
   },
   {
     title: "Sang nhà chị thăm người ốm",
     status: true,
+    display: "",
   },
 ];
 
@@ -29,7 +32,6 @@ function renderUI(arr) {
     return;
   }
   toDoList.innerHTML = "";
-
   for (let i = 0; i < arr.length; i++) {
     toDoList.innerHTML += `
         <div class="todo-item ${arr[i].status ? "active-todo" : ""}" id="${i}" style="display:${arr[i].display}">
@@ -120,27 +122,55 @@ let filterAll = document.getElementById('all')
 
 let to_do_item_total = document.querySelectorAll('.todo-item-title')
 
+filterActive.addEventListener("click", function () {
+  for (let i = 0; i < todos.length; i++) {
+    console.log(todos[i].status);
+    if ((todos[i].status == true)) {
+      todos[i].display = "";
+    } else todos[i].display = "none";
+  }
+  renderUI(todos)
+});
 
-filterAll.addEventListener('click', function(){
-  Array.from(to_do_item_total).map(function(b){
-    b.parentElement.style.display = ''
-  });
+filterUnactive.addEventListener('click', function(){
+  for(let i = 0; i < todos.length; i++){
+    if(todos[i].status == false){
+      todos[i].display = ''
+    } else todos[i].display = 'none'
+  }
+  renderUI(todos)
 })
 
-filterActive.addEventListener("click", function () {
-  Array.from(to_do_item_total).map(function (b) {
-    if (!b.querySelector("input").checked) {
-      b.parentElement.style.display = "none";
-    }
-    else b.parentElement.style.display = ''
-  });
-});
+filterAll.addEventListener('click', function(){
+  for(let i = 0; i < todos.length; i++){
+    todos[i].display = ''
+  }
+  renderUI(todos)
+} )
 
-filterUnactive.addEventListener("click", function () {
-  Array.from(to_do_item_total).map(function (b) {
-    if (b.querySelector("input").checked) {
-      b.parentElement.style.display = "none";
-    }
-    else b.parentElement.style.display = ''
-  });
-});
+
+// filterAll.addEventListener('click', function(){
+//   Array.from(to_do_item_total).map(function(b){
+//     b.parentElement.style.display = ''
+//   });
+// })
+
+// filterActive.addEventListener("click", function () {
+
+//   Array.from(to_do_item_total).map(function (b) {
+//     if (!b.querySelector("input").checked) {
+//       b.parentElement.style.display = "none";
+//     }
+//     else b.parentElement.style.display = ''
+//   });
+// });
+
+// filterUnactive.addEventListener("click", function () {
+
+//   Array.from(to_do_item_total).map(function (b) {
+//     if (b.querySelector("input").checked) {
+//       b.parentElement.style.display = "none";
+//     }
+//     else b.parentElement.style.display = ''
+//   });
+// });
