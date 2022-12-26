@@ -32,13 +32,15 @@ function renderUI(arr) {
 
   for (let i = 0; i < arr.length; i++) {
     toDoList.innerHTML += `
-        <div class="todo-item ${arr[i].status ? "active-todo" : ""}" id="${i}">
+        <div class="todo-item ${arr[i].status ? "active-todo" : ""}" id="${i}" style="display:${arr[i].display}">
         <div class="todo-item-title">
-              <input type="checkbox" ${arr[i].status ? "checked" : ""}/>
+              <input type="checkbox" ${
+                arr[i].status ? "checked" : ""
+              } onclick='toDo(${i})'/>
               <p>${arr[i].title}</p>
             </div>
             <div class="option">
-              <button class="btn btn-update">
+              <button class="btn btn-update" onclick='updateToDo(${i})'>
                 <img
                   src="https://buihien0109.github.io/HTML5-Games/DOM-project/todo/img/pencil.svg"
                   alt="icon"
@@ -64,10 +66,39 @@ function deleteTodo(id) {
   renderUI(todos);
 }
 
+function toDo(id) {
+  for (let i = 0; i < todos.length; i++) {
+    if (i === id) {
+      todos[i].status = !todos[i].status;
+    }
+  }
+  renderUI(todos);
+}
+
+function updateToDo(id) {
+  for (let i = 0; i < todos.length; i++) {
+    if (i === id) {
+      btnAdd.innerText = "Cap nhat";
+      input.value = todos[i].title;
+      todos[i].update = "yes";
+    }
+  }
+}
+
 btnAdd.addEventListener("click", function () {
   if (input.value == "") {
     alert(`hay nhap du lieu`);
     return;
+  }
+  for (let i = 0; i < todos.length; i++) {
+    if (todos[i].update == "yes") {
+      todos[i].title = input.value;
+      todos[i].update = "";
+      btnAdd.innerText = "Thêm";
+      input.value = "";
+      renderUI(todos);
+      return;
+    }
   }
   let newItem = {
     title: input.value,
@@ -75,7 +106,41 @@ btnAdd.addEventListener("click", function () {
   };
   todos.push(newItem);
   input.value = "";
+  console.log(todos);
   renderUI(todos);
 });
 
 renderUI(todos);
+
+let filterActive = document.getElementById('active')
+
+let filterUnactive = document.getElementById("unactive");
+
+let filterAll = document.getElementById('all')
+
+let to_do_item_total = document.querySelectorAll('.todo-item-title')
+
+
+filterAll.addEventListener('click', function(){
+  Array.from(to_do_item_total).map(function(b){
+    b.parentElement.style.display = ''
+  });
+})
+
+filterActive.addEventListener("click", function () {
+  Array.from(to_do_item_total).map(function (b) {
+    if (!b.querySelector("input").checked) {
+      b.parentElement.style.display = "none";
+    }
+    else b.parentElement.style.display = ''
+  });
+});
+
+filterUnactive.addEventListener("click", function () {
+  Array.from(to_do_item_total).map(function (b) {
+    if (b.querySelector("input").checked) {
+      b.parentElement.style.display = "none";
+    }
+    else b.parentElement.style.display = ''
+  });
+});
