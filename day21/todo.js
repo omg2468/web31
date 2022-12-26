@@ -83,6 +83,7 @@ function updateToDo(id) {
       btnAdd.innerText = "Cap nhat";
       input.value = todos[i].title;
       todos[i].update = "yes";
+      input.focus()
     }
   }
 }
