@@ -18,6 +18,13 @@ let products = [
     count: 2,
   },
 ];
+let subTotal = document.querySelector(".subtotal");
+let vat = document.querySelector(".vat");
+let discount = document.querySelector(".discount");
+let total = document.querySelector(".total");
+console.log(total)
+
+let discount_number = 0;
 
 let count = document.querySelector(".count");
 
@@ -72,7 +79,60 @@ function renderUI() {
       total += products[i].count;
     }
   count.textContent = total + " items in the bag";
+   updateTotalMoney(products);
 }
+
+let subTotalEl = document.querySelector(".subtotal span");
+let vatEl = document.querySelector(".vat span");
+let totalEle = document.querySelector(".total span");
+console.log(vatEl);
+
+// Cập nhật tổng tiền
+function updateTotalMoney(arr) {
+  // Tính tổng tiền cart
+  let totalMoney = 0;
+
+  for (let i = 0; i < arr.length; i++) {
+    const p = arr[i];
+    totalMoney += p.count * p.price;
+  }
+  // Cập nhật tiền lên trên giao diện
+  subTotalEl.innerText = totalMoney.toLocaleString("it-IT", {
+    style: "currency",
+    currency: "VND",
+  });
+  vatEl.innerText = (totalMoney * 0.05).toLocaleString('it-IT', {style : 'currency', currency : 'VND'});
+  totalEle.innerText = (totalMoney * (1.05- discount_number)).toLocaleString("it-IT", {
+    style: "currency",
+    currency: "VND",
+  });
+
+  
+}
+
+
+let code_discount = document.querySelector(".promotion #promo-code ");
+console.log(code_discount)
+
+let button_discount = document.querySelector(".promotion button");
+console.log(button_discount);
+
+button_discount.addEventListener("click", function (e) {
+  console.log(discount.className);
+  if(!code_discount.value){
+    discount.className = "discount hide";
+  }
+  else for(key in promotionCode) {
+    if(key == code_discount.value){
+      discount_number = promotionCode[key]/100;
+      discount.className = "discount";
+      discount.innerHTML = `Discount<span>${promotionCode[key]}%</span>`;
+    }
+  }
+  renderUI()
+});
+
+
 
 let removeItem = function (id) {
   for (let i = 0; i < products.length; i++) {
@@ -81,22 +141,25 @@ let removeItem = function (id) {
     }
   }
   renderUI();
-};
+}
 
 let changeNumber = function (id, event) {
   for (let i = 0; i < products.length; i++) {
     if (i == id) {
       console.log(event);
-    products[i].count = Number(event.target.value);
+      products[i].count = Number(event.target.value);
     }
   }
   renderUI();
+}
+
+let promotionCode = {
+  A: 10,
+  B: 20,
+  C: 30,
+  D: 40,
 };
 
-let subTotal = document.querySelector('.subtotal')
-let vat = document.querySelector('.vat')
-let discount = document.querySelector('.discount')
-let total = document.querySelector('.total')
-console.log(subTotal, vat, discount, total)
 
 renderUI();
+
