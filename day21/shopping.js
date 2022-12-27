@@ -114,6 +114,15 @@ function updateTotalMoney(arr) {
 let code_discount = document.querySelector(".promotion #promo-code ");
 console.log(code_discount)
 
+code_discount.addEventListener('change', function(e){
+  console.log(e)
+  if(!e.target.value){
+    discount.className = "discount hide";
+    discount_number = 0;
+  }
+  renderUI()
+})
+
 let button_discount = document.querySelector(".promotion button");
 console.log(button_discount);
 
@@ -121,6 +130,7 @@ button_discount.addEventListener("click", function (e) {
   console.log(discount.className);
   if(!code_discount.value){
     discount.className = "discount hide";
+    discount_number = 0;
   }
   else for(key in promotionCode) {
     if(key == code_discount.value){
