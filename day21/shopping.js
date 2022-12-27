@@ -154,12 +154,16 @@ let removeItem = function (id) {
 }
 
 let changeNumber = function (id, event) {
-  for (let i = 0; i < products.length; i++) {
-    if (i == id) {
-      console.log(event);
-      products[i].count = Number(event.target.value);
-    }
+  if (Number(event.target.value) % 1 != 0){
+    alert('hay nhap lai so')
+    event.target.value = 1
   }
+    for (let i = 0; i < products.length; i++) {
+      if (i == id) {
+        console.log(event);
+        products[i].count = Number(event.target.value);
+      }
+    }
   renderUI();
 }
 
