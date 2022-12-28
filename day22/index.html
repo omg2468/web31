@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="total">
+      <div class="img active" id="1"><p>Explore The World</p></div>
+      <div class="img" id="2"><p>Explore The World</p></div>
+      <div class="img" id="3"><p>Explore The World</p></div>
+      <div class="img" id="4"><p>Explore The World</p></div>
+      <div class="img" id="5"><p>Explore The World</p></div>
+    </div>
+    <script defer>
+const panels = document.querySelectorAll(".img");
+
+panels.forEach(img => {
+  img.addEventListener('click', () => {
+    remove();
+    img.classList.add('active')
+  })
+})
+
+let remove = function (){
+  panels.forEach(img => {
+    img.classList.remove('active')}
+  )}
+    </script>
+  </body>
+</html>
