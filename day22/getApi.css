@@ -1,0 +1,101 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: rgb(2, 0, 36);
+  background-image: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgb(43, 52, 66) 22%,
+    rgb(34, 75, 92) 77%,
+    rgb(28, 67, 72) 100%
+  );
+  background-repeat: no-repeat;
+}
+
+.container {
+  font-size: 50px;
+  font-weight: 200;
+  color: rgb(230, 239, 247);
+  text-align: center;
+}
+
+.header form {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0px;
+  color: white;
+}
+
+.total-item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.item {
+  width: 265px;
+  height: 260px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border: 0.1px solid black;
+  border-radius: 10px;
+  background-color: rgba(24, 25, 26, 0.344);
+  margin: 10px 0px;
+}
+
+.item:hover {
+  transform: scale(1.05);
+}
+
+img {
+  max-width: 100%;
+}
+
+.game-detail {
+  margin-top: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.title p {
+  font-size: large;
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+  font-family: sans-serif;
+  padding: 5px;
+  color: white;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.title .price {
+  color: white;
+  background-color: rgb(53, 79, 226);
+  padding: 5px;
+  border-radius: 10px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.game-detail .detail {
+  margin-top: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: white;
+}
+
+.game-detail .genre {
+  margin-top: 10px;
+  text-align: end;
+  color: white;
+}

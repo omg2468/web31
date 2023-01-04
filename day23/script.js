@@ -53,14 +53,21 @@
 // Đồng bộ dữ liệu với phía Server
 // Gọi API
 // Cú pháp: fetch(url, options)
-try{
- const response = await fetch("https://jsonplaceholder.typicode.com/todos/1")
-    const data = await response.json();
+// try{
+//  const response = await fetch("https://jsonplaceholder.typicode.com/todos/1")
+//     const data = await response.json();
 
-    console.log(data)
-} catch (err){
-    console.log('Không thể lấy dữ liệu:', err)
-}
+//     console.log(data)
+// } catch (err){
+//     console.log('Không thể lấy dữ liệu:', err)
+// }
+
+console.log("I’m learning about");
+setTimeout(() => {
+  console.log("Event Loop");
+}, 2000);
+console.log("the");
+
 
 
 
