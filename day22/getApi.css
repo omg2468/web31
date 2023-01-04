@@ -36,6 +36,10 @@ body {
   justify-content: space-around;
 }
 
+a {
+  text-decoration: none;
+}
+
 .item {
   width: 265px;
   height: 260px;

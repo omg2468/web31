@@ -27,7 +27,8 @@ const getGameDetail = function (id) {
 };
 
 const toGameCard = function (game) {
-  return `        <div class="item">
+  return `<a href="${game.game_url}">
+        <div class="item">
           <div class="img">
             <img
               src="${game.thumbnail}"
@@ -47,7 +48,8 @@ const toGameCard = function (game) {
             </div>
           </div>
         </div>
-      </div>`;
+      </div>
+      </a>`;
 };
 
 let gameList = document.querySelector(".total-item");
@@ -72,6 +74,6 @@ window.addEventListener("scroll", function () {
     a = a + 900;
     loading(b, c);
     b = b + 30;
-    c = c + 30;  
+    c = c + 30;
   }
 });
