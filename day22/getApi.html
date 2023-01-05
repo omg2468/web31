@@ -22,6 +22,9 @@
         <label for="genre"
           >Genre/Tag:
           <select name="genre" id="genre">
+            <option value="null" disabled="disabled" selected="selected">
+              All
+            </option>
             <option value="All">MMO</option>
             <option value="MMO">MMORPG</option>
             <option value="Shotter">Shotter</option>
@@ -36,8 +39,9 @@
           </select>
         </label>
       </form>
+
       <div class="total-item">
-          <!-- <div class="item">
+        <!-- <div class="item">
             <div class="img">
               <img
                 src="https://cdn.tgdd.vn/Files/2021/08/09/1374010/garenafreefire2_1280x720-800-resize.jpg"

@@ -82,6 +82,17 @@ img {
   overflow: hidden;
 }
 
+select{
+  font-size: large;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+select option:nth-of-type(even){
+  background-color: antiquewhite;
+}
+
 .title .price {
   color: white;
   background-color: rgb(53, 79, 226);

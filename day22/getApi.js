@@ -27,7 +27,7 @@ const getGameDetail = function (id) {
 };
 
 const toGameCard = function (game) {
-  return `<a href="${game.game_url}">
+  return `<a href="detail.html?game=${game.id}">
         <div class="item">
           <div class="img">
             <img
