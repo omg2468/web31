@@ -1,0 +1,16 @@
+{
+  "name": "todolist",
+  "version": "1.0.0",
+  "description": "Thuc hanh REST API voi JSON",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "Duc Anh",
+  "license": "ISC",
+  "dependencies": {
+    "json-server": "^0.17.1"
+  }
+}

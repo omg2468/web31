@@ -1,5 +1,7 @@
 let boxes = document.querySelectorAll(".box");
-console.log(boxes);
+
+
+
 
 window.addEventListener('scroll', scrollShow)
 

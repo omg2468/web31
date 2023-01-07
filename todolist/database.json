@@ -1,0 +1,16 @@
+{
+  "user": [
+  ],
+  "todos": [
+    {
+      "id": 1,
+      "title": "Hello",
+      "status": true
+    },
+    {
+      "title": "Goodbye",
+      "status": true,
+      "id": 2
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/todolist.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Todo List</h1>
+
+      <!-- Box Nhập công việc -->
+      <div class="todo-input">
+        <input type="text" placeholder="Nhập công việc" id="todo-input" />
+        <button id="btn-add">Thêm</button>
+      </div>
+
+      <!-- Box chọn option (all - Hoàn thành - Chưa hoàn thành) -->
+      <div class="todo-option">
+        <div class="todo-option-item">
+          <input
+            type="radio"
+            name="todo-option-item"
+            id="all"
+            checked
+            value="1"
+          />
+          <label for="all">All</label>
+        </div>
+        <div class="todo-option-item">
+          <input type="radio" name="todo-option-item" id="unactive" value="2" />
+          <label for="unactive">Chưa hoàn thành</label>
+        </div>
+        <div class="todo-option-item">
+          <input type="radio" name="todo-option-item" id="active" value="3" />
+          <label for="active">Hoàn thành</label>
+        </div>
+      </div>
+
+      <!-- Danh sách todo -->
+      <div class="todo-container">
+        <div class="todo-list">
+          
+          
+     
+      </div>
+    </div>
+    <script src="js/todolist.js" defer></script>
+  </body>
+</html>
