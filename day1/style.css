@@ -1,14 +1,19 @@
-*{
-    margin-left: 5px;
+input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  background-color: #3CBC8D;
+  color: white;
 }
 
-blockquote {
-    background-color: antiquewhite;
-    padding: 10px;
-    border-left: 2px solid rgb(159, 96, 0);
+form{
+      width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  background-color: #3CBC8D;
+  color: white;
 }
-
-.date {
-    text-decoration: underline;
-}
-

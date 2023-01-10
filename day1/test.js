@@ -1,6 +1,12 @@
-const img = document.querySelector('.container');
+let a = 0
+let numb = () => {
+  let container = document.querySelector('.container');
+  a = a + 100;
+  container.innerHTML = a;
+  if(a == 12000){
+    clearInterval(b)
+  }
+}
 
-console.log(img)
-img.addEventListener("click",function(e){
-  console.log(img.childNodes)
-})
+let b = setInterval(numb, 20);
+
