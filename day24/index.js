@@ -46,7 +46,6 @@ const randomNumber = function(x){
     return Math.floor(Math.random()*x)
 }
 
-// const img = `https://dog.ceo/api/breed/hound/afghan/images`;
 
 
 

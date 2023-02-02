@@ -1,11 +1,23 @@
-input {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  box-sizing: border-box;
-  border: 1px solid rgb(170, 170, 239);
-  border-radius: 10px;
-  background-color: transparent;
-  color: rgb(3, 0, 0);
+#demo {
+  width: fit-content;
+  padding-right: 0px;
+}
+
+.demo:last-child {
+  color: red;
+  border-right: 1px solid;
+  border-color: black;
+  animation-name: example;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes example {
+  from {
+    border-color: black;
     
+  }
+  to {
+    border-color: transparent;
+  }
 }

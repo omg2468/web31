@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  text-align: center;
+}
+
+.container {
+  position: relative;
+  background-color: aqua;
+  display: flex;
+  justify-content: center;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.img {
+  margin: 0 auto;
+  padding: 0;
+  width: 40vw;
+}
+
+svg {
+  color: red;
+}
+
+.box {
+  position: relative;
+  background-color: red;
+  width: 40vw;
+}
+
+.heart {
+  position: absolute;
+  animation: bigger 1s linear;
+    transform: translate(-50%, -50%) scale(0);
+}
+
+@keyframes bigger {
+    to{
+        transform: translate(-50%, -50%) scale(10);
+        opacity: 0;
+    }
+}
