@@ -1,0 +1,42 @@
+* {
+  box-sizing: border-box;
+}
+
+img.round {
+  width: 6rem;
+}
+
+.nav-brand {
+  width: 6rem;
+}
+
+img.img-fluid {
+  width: 100%;
+  height: 100%;
+}
+
+.img-left {
+  height: 100vh;
+}
+
+.img-right {
+  height: 100vh;
+}
+
+.bamboo-left {
+  height: 100vh;
+}
+
+.bamboo-right {
+  height: 100%;
+}
+
+.person {
+  left: 10rem;
+  height: 50vh;
+}
+
+.bamboo-shape {
+  height: 22rem;
+background: linear-gradient(0deg, black 10%, transparent );
+}
