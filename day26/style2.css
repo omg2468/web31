@@ -35,6 +35,8 @@
   width: 100%;
   padding-right: 10px;
   text-align: end;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .result .result-calculator {
@@ -68,6 +70,7 @@
   font-weight: 700;
   font-size: 30px;
   line-height: 41px;
+  cursor: pointer;
 }
 
 .number {
