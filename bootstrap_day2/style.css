@@ -40,3 +40,18 @@ img.img-fluid {
   height: 22rem;
 background: linear-gradient(0deg, black 10%, transparent );
 }
+
+.carousel-inner {
+  
+}
+
+.carousel-item {
+  width: 70%
+}
+
+.carousel-item img {
+  position: relative;
+  left: 22%;
+  margin: 0 auto;
+  
+}
