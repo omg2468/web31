@@ -3,12 +3,10 @@ const result = document.querySelector(".result-calculator");
 const allButton = document.querySelectorAll(".button");
 const clearButton = document.querySelector(".button.clear");
 const equal = document.querySelector(".button.btn_result");
-const dot = document.querySelector('.button.dot')
-console.log(dot)
-
-console.log(result);
+const dot = document.querySelector(".button.dot");
 
 let obj = {
+  yang: true,
   finalResult: [],
   break: false,
   resultClick: false,
@@ -16,16 +14,15 @@ let obj = {
 
 // This is button number
 let buttonNumber = (e) => {
-  if(obj.resultClick == true){
+  if (obj.resultClick == true) {
     text.innerHTML = e.target.innerHTML;
-    result.innerHTML = '';
+    result.innerHTML = "";
     obj.resultClick = false;
-    obj.finalResult = []
-  }
- else if (obj.break == true) {
+    obj.finalResult = [];
+  } else if (obj.break == true) {
     text.innerHTML = e.target.innerHTML;
     obj.break = false;
-  } else if (text.innerHTML == 0 || text.innerHTML == 'ERROR!') {
+  } else if (text.innerHTML == 0 || text.innerHTML == "ERROR!") {
     text.innerHTML = e.target.innerHTML;
   } else {
     text.innerHTML += e.target.innerHTML;
@@ -39,30 +36,39 @@ allButton.forEach((button) => {
 });
 
 //This is dot button
-const dotButton = (e) => {
-  let b = text.innerHTML
-  if(b[b.length - 1] == '.' || b[0] == '.'){}
-  else buttonNumber(e);
+const hasDot = (dot) => {
+  for(let i = 0; i< dot.length;i++){
+    if(dot[i] == '.'){
+      return true
+    }
+  }
+  return false
 }
 
-dot.addEventListener('click', dotButton)
+const dotButton = (e) => {
+  let b = text.innerHTML;
+  if (hasDot(b)){
+    console.log('ok')
+  } else buttonNumber(e);
+};
+
+dot.addEventListener("click", dotButton);
 // This is all button else
 let buttonelse = (e) => {
-  console.log(obj)
-
   obj.break = true;
-  if (obj.resultClick == true) {
-    result.innerHTML = text.innerHTML + e.target.innerHTML;
-    obj.break = false;
-    obj.resultClick = false;
-  } else if (e.target.innerHTML == "+" || e.target.innerHTML == "-") {
-    result.innerHTML += text.innerHTML + e.target.innerHTML;
-    obj.finalResult.push(Number(e.target.innerHTML + text.innerHTML));
-  } else {
-    obj.finalResult.push(e.target.innerHTML, text.innerHTML);
-    result.innerHTML += text.innerHTML + e.target.innerHTML;
+  if (text.innerHTML == "ERROR!"){
+    return 'ok'
   }
-
+   else if (obj.resultClick == true) {
+      result.innerHTML = text.innerHTML + e.target.innerHTML;
+      obj.break = false;
+      obj.resultClick = false;
+      obj.finalResult.push(e.target.innerHTML);
+    } else {
+      result.innerHTML += text.innerHTML + e.target.innerHTML;
+      obj.finalResult.push(Number(text.innerHTML), e.target.innerHTML);
+    }
+  console.log(obj)
   text.innerHTML = 0;
 };
 
@@ -84,30 +90,49 @@ clearButton.addEventListener("click", clear);
 // This is equal sign
 let equalSign = () => {
   let a = obj.finalResult;
-  result.innerHTML += text.innerHTML
-    if (text.innerHTML != 0) {
-      a.push(Number(text.innerHTML));
-    }
-    
-  for (let i = 0; i < obj.finalResult.length; i++) {
+  console.log(a)
+  if(obj.resultClick == true){result.innerHTML = text.innerHTML;
+  return}
+ else if (a.length > 1) {
+    a.push(Number(text.innerHTML));
+  } else console.log(obj.finalResult)
+  result.innerHTML += text.innerHTML;
+  for (let i = 0; i < a.length; i++) {
     if (a[i] == "/") {
-      a[i + 1] = Number(a[i - 1]) / Number(a[i + 1]);
+      a[i + 1] = (a[i - 1]) / (a[i + 1]);
       a[i - 1] = 0;
       a[i] = 0;
+      console.log(a[i+1])
     } else if (a[i] == "*") {
-      a[i + 1] = Number(a[i - 1]) * Number(a[i + 1]);
+      a[i + 1] = (a[i - 1]) * (a[i + 1]);
       a[i - 1] = 0;
       a[i] = 0;
+      console.log(a[i+1])
     }
   }
-  obj.resultClick = true
+  console.log(obj)
+  for(let i = 0; i< a.length; i++){
+    if(a[i] == '+'){
+            a[i + 1] = a[i - 1] + a[i + 1];
+            a[i - 1] = 0;
+            a[i] = 0;
+    }
+    else if(a[i] == '-'){
+                  a[i + 1] = a[i - 1] - a[i + 1];
+                  a[i - 1] = 0;
+                  a[i] = 0;
+    }
+  }
+  obj.resultClick = true;
   text.innerHTML = a.reduce((a, b) => a + b);
   a = [text.innerHTML];
-  if(isNaN(text.innerHTML)){
+  console.log(a)
+  if (isNaN(text.innerHTML || text.innerHTML == "Infinity")) {
     clear();
-    text.innerHTML = 'ERROR!';
+    text.innerHTML = "ERROR!";
   }
-  console.log(a.length)
+  console.log(obj);
 };
 
 equal.addEventListener("click", equalSign);
+
