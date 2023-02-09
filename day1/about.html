@@ -5,14 +5,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="about.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css
+.css">
     <title>Document</title>
   </head>
   <body>
-    <div id="demo">
-      <span class="hello">A</span><span class="hello">B</span
-      ><span class="hello">C</span><span class="hello">D</span
-      ><span class="hello">E</span><span class="hello">F</span>
-    </div>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Chi phí development</th>
+      <th scope="col">Reuse</th>
+      <th scope="col">sự tự do và ràng buộc</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Cách 1 </th>
+      <td>Chi phí sẽ ít hơn, tốn ít dòng hơn</td>
+      <td>Có thể dễ dàng phát triển thêm nhiều class , sử dụng được nhiều lần mà không tốn sức</td>
+      <td>Sẽ có ràng buộc với class chính</td>
+    </tr>
+    <tr>
+      <th scope="row">Cách 2</th>
+      <td>Sẽ tốn nhiều chi phí hơn cách 1 </td>
+      <td>Không thể tái sử dụng như cách 1, mỗi lần tạo là phải lập 1 class mới hoàn toàn</td>
+      <td>Không có ràng buộc</td>
+    </tr>
+  </tbody>
+</table>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="test.js" defer></script>
   </body>
 </html>
