@@ -23,7 +23,12 @@ body {
   .container {
     max-width: 1264px;
   }
+  .section {
+    width: 70%;
+  }
 }
+
+/* Nav */
 
 .row {
   --bs-gutter-x: 0px;
@@ -53,13 +58,6 @@ body {
   line-height: 32.47px;
 }
 
-.logo {
-  width: 36px;
-  height: 21px;
-  padding: 0;
-  height: 100%;
-}
-
 .header-nav {
   height: 88px;
   display: flex;
@@ -80,6 +78,15 @@ nav.navbar {
   margin-left: 80px;
 }
 
+.collapse.navbar-collapse {
+  background-color: white;
+}
+
+.navbar-nav.me-auto {
+  margin: 0;
+  padding: 0;
+}
+
 .nav-link {
   font-style: normal;
   font-weight: 500;
@@ -89,6 +96,7 @@ nav.navbar {
   color: #000000;
 }
 
+/* compay work with */
 .container-fluid.header {
   height: 800px;
   width: 100%;
@@ -105,9 +113,8 @@ nav.navbar {
   /* or 140% */
 
   text-transform: capitalize;
-
+  word-spacing: 5px;
   color: #000000;
-  width: 498px;
 }
 
 .section {
@@ -121,7 +128,6 @@ nav.navbar {
 
   color: rgba(0, 0, 0, 0.6);
   margin-bottom: 52px;
-  width: 413px;
 }
 
 .email input {
@@ -242,7 +248,7 @@ nav.navbar {
   max-width: 1240px;
   height: 48px;
   display: flex;
-  gap: 156px;
+  justify-content: space-between;
   margin-bottom: 94px;
 }
 
@@ -250,7 +256,7 @@ nav.navbar {
   max-width: 1240px;
   height: 48px;
   display: flex;
-  gap: 141px;
+  justify-content: space-between;
 }
 
 .box-number {
@@ -303,9 +309,9 @@ nav.navbar {
   height: 776px;
 }
 
-.box_how_work {
+/* .box_how_work {
   margin: 0 20px;
-}
+} */
 
 .header_how_work {
   font-style: normal;
@@ -475,5 +481,20 @@ nav.navbar {
   /* identical to box height, or 125% */
 
   color: #000000;
-  margin-bottom: 48px
+  margin-bottom: 48px;
+}
+
+/* footer */
+
+.container-fluid.footer {
+  background-color: rgba(0, 0, 0, 0.8);
+  height: 119px;
+  color: white;
+  display: flex;
+}
+
+.container-fluid.footer .row {
+  padding: 0 100px;
+  width: 100%;
+  align-content: center;
 }

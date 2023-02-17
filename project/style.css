@@ -1,0 +1,39 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* navbar */
+.navbar.navbar-expand-lg {
+  width: 100%;
+}
+.logo {
+  font-family: "Babylonica", cursive;
+}
+
+.container-fluid.header {
+  height: 100vh;
+  overflow: hidden;
+}
+
+form {
+
+}
+
+.search .bi-search {
+  top: 5px;
+  right: 15px;
+  cursor: pointer;
+}
+
+.bi-cart4 {
+ font-size: 25px;
+}
+
+
+
+.container-fluid.header img{
+  top:0;
+  left: 0;
+}
