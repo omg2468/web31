@@ -7,16 +7,24 @@
 /* navbar */
 .navbar.navbar-expand-lg {
   width: 100%;
+  background-color: rgba(119, 124, 106, 0.258);
 }
-.logo {
-  font-family: "Babylonica", cursive;
+
+.shownav {
+  background-color: rgb(119, 124, 106);
 }
 
 .container-fluid.header {
-  height: 100vh;
   overflow: hidden;
 }
 
+.navbar-nav .nav-item {
+  margin: 0 20px;
+}
+
+.navbar-nav .nav-item .nav-link {
+  font-size: larger;
+}
 
 .search .bi-search {
   top: 5px;
@@ -25,12 +33,144 @@
 }
 
 .bi-cart4 {
- font-size: 36px;
+  font-size: 36px;
+  cursor: pointer;
 }
 
+/* header */
+.container-fluid.header img {
+  width: 100%;
+}
 
+/* about us */
+.container-fluid.about_us {
+  background-color: #f7f6f4;
+}
 
-.container-fluid.header img{
-  top:0;
-  left: 0;
+.art_cake {
+}
+
+.art_cake .header_art_cake h1 {
+  font-family: "Lora", serif;
+  font-weight: bold;
+  font-size: 60px;
+  margin-top: 50px;
+}
+
+.art_cake .subheader_art_cake {
+  color: #6e2c14;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+}
+
+.art_cake .text_art_cake {
+  margin: 0 15px 20px;
+}
+
+.art_cake .chef_cook {
+  font-family: "Lora", serif;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.info_cook .img_cooker {
+  width: 170px;
+}
+
+.info_cook .name_cook {
+  border-top: 0.5px solid rgb(0, 0, 0);
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.952);
+  padding: 10px 0px;
+}
+
+.blockquote_art_cake {
+  width: 80%;
+  margin: auto;
+  color: #6e2c14;
+  font-family: "Lora", serif;
+  font-size: larger;
+}
+
+.container_img {
+  width: 80%;
+  height: 80%;
+}
+
+.container_img {
+  border: 4px solid rgb(255, 255, 255);
+  flex-wrap: wrap;
+}
+
+.art_cake .box img {
+  transition: 0.2s linear;
+}
+
+.art_cake .box img:hover {
+  transform: scale(1.3);
+}
+
+.box_img {
+  width: 50%;
+  height: 50%;
+  transition: 0.2s linear;
+}
+
+.box_img:hover {
+  z-index: 1;
+  box-shadow: 0 0 20px grey;
+  transform: scale(1.2);
+}
+
+.box_img1 {
+  width: 100%;
+  height: 100%;
+}
+
+.box_center {
+  border: 2px solid white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 50%;
+  width: 50%;
+}
+
+/* best sell */
+.container-fluid.best_sell {
+  height: 600px;
+  background-image: url(./image/bacgkround_best.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.best_seller_text {
+  color: #050000
+;
+  background-color:#ffffff
+;
+  width: fit-content;
+  margin: auto;
+  border: 5px solid rgb(29, 1, 1);
+  padding: 0 10px;
+}
+
+.box_best_sell {
+  overflow: hidden;
+}
+
+.swiper-slide {
+  width: 600px;
+  height: 400px;
+  overflow: hidden;
+  border: 10px solid white;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 500px;
+}
+
+.swiper-slide-shadow-left,
+.swiper-slide-shadow-right {
+  display: none;
 }

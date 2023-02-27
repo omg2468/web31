@@ -4,46 +4,37 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="test.css" />
+    <title>Fody Slider</title>
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
     />
+    <link rel="stylesheet" href="test.css" />
   </head>
-  <body>
-    <div class="container">
-        <div class="row">
-            <div class="card" style="width:17rem">
-                <div class="img position-relative col">
-                    <img src="https://st.nettruyenup.com/data/comics/32/vo-luyen-dinh-phong.jpg" alt="">
-                    <div class="like position-absolute p-1 text-white" style="background-color:rgba(91, 99, 99,0.5)">hello</div>
-                </div>
-                <div class="card-body">
-                    <h5 class="card-title">Võ luyện đỉnh phong</h5>
-                    <div class="chap d-flex flex-column text-decoration-none text-dark" style="cursor:help">
-                        <a href="" class="text-decoration-none text-dark pointer-event">
-                            chap 111
-                        </a><a href="" class="text-decoration-none text-dark">
-                            chap 112
-                        </a><a href="" class="text-decoration-none text-dark">
-                            chap 113
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
+  <div class="swiper">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+      <!-- Slides -->
+      <div class="swiper-slide">Slide 1</div>
+      <div class="swiper-slide">Slide 2</div>
+      <div class="swiper-slide">Slide 3</div>
+ 
     </div>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
 
-</div>
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+
+    <!-- If we need scrollbar -->
+    <div class="swiper-scrollbar"></div>
+  </div>
+  <body>
     <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"
+      src="https://unpkg.com/swiper@8/swiper-bundle.min.js"
+      defer
     ></script>
-
-    <script src="test.js"></script>
+    <script src="test.js" defer></script>
   </body>
 </html>
