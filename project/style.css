@@ -141,6 +141,16 @@ h2 {
   color: #c71a1a;
   font-family: "Lora", serif;
   font-size: larger;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.blockquote_text {
+  padding: 0px 1px;
+}
+
+.blockquote_icon {
+  position: absolute;
 }
 
 .container_img {
