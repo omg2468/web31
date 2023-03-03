@@ -4,10 +4,34 @@
   padding: 0;
 }
 
+h2 {
+  border-bottom: 5px solid rgb(245, 16, 16);
+  width: fit-content;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 30px;
+}
+
 /* navbar */
+.navbar_container {
+  width: 100vw;
+  background-color: rgba(119, 124, 106, 0.258);
+}
+
 .navbar.navbar-expand-lg {
   width: 100%;
-  background-color: rgba(119, 124, 106, 0.258);
+}
+
+.navbar-toggler-icon.white {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.navbar-toggler-icon.black {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.navbar-toggler {
+  border-color: white;
 }
 
 .shownav {
@@ -24,6 +48,7 @@
 
 .navbar-nav .nav-item .nav-link {
   font-size: larger;
+  color: rgb(255, 255, 255);
 }
 
 .search .bi-search {
@@ -35,30 +60,57 @@
 .bi-cart4 {
   font-size: 36px;
   cursor: pointer;
+  color: white;
+}
+
+.navbar_container form {
+  margin-right: 20px;
+}
+
+.navbar_container form input {
+  padding-right: 30px;
 }
 
 /* header */
-.container-fluid.header img {
+.container-fluid.header .background {
+  z-index: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 768px) {
+  .container-fluid.header .background {
+    width: 250px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .container-fluid.header .background {
+    width: 200px;
+  }
+}
+
+.container-fluid.header .logo_header {
+  z-index: 1;
   width: 100%;
 }
 
 /* about us */
-.container-fluid.about_us {
-  background-color: #f7f6f4;
-}
-
-.art_cake {
-}
 
 .art_cake .header_art_cake h1 {
   font-family: "Lora", serif;
   font-weight: bold;
   font-size: 60px;
   margin-top: 50px;
+  width: fit-content;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .art_cake .subheader_art_cake {
-  color: #6e2c14;
+  color: #c81e1e;
   margin-bottom: 40px;
   text-transform: uppercase;
 }
@@ -86,7 +138,7 @@
 .blockquote_art_cake {
   width: 80%;
   margin: auto;
-  color: #6e2c14;
+  color: #c71a1a;
   font-family: "Lora", serif;
   font-size: larger;
 }
@@ -127,7 +179,7 @@
 }
 
 .box_center {
-  border: 2px solid white;
+  border: 2px solid rgba(203, 117, 117, 0.679);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -137,35 +189,40 @@
 
 /* best sell */
 .container-fluid.best_sell {
-  height: 600px;
-  background-image: url(./image/bacgkround_best.jpg);
+  height: 650px;
+  background-image: url(./image/old-black-background-grunge-texture-dark-wallpaper-blackboard-chalkboard-room-wall.jpg);
   background-size: cover;
   background-position: center;
 }
 
 .best_seller_text {
-  color: #050000
-;
-  background-color:#ffffff
-;
+  color: #050000;
   width: fit-content;
   margin: auto;
-  border: 5px solid rgb(29, 1, 1);
   padding: 0 10px;
 }
 
 .box_best_sell {
   overflow: hidden;
+  height: 80%;
 }
 
-.swiper-slide {
+.box_best_sell .best_seller_text h2 {
+  color: white;
+  margin-top: 0;
+  margin-bottom: 60px;
+}
+
+.swiper-slide.sell {
   width: 600px;
   height: 400px;
   overflow: hidden;
   border: 10px solid white;
+  animation: 1s linear;
+  border-radius: 10px;
 }
 
-.swiper-slide img {
+.swiper-slide.sell img {
   width: 100%;
   height: 500px;
 }
@@ -173,4 +230,159 @@
 .swiper-slide-shadow-left,
 .swiper-slide-shadow-right {
   display: none;
+}
+
+/* news */
+.container-fluid.news {
+  margin-bottom: 20px;
+}
+
+.news_header {
+  margin-bottom: 40px;
+}
+
+.container.news {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 10px;
+}
+
+.box_news {
+  max-width: 550px;
+  margin-bottom: 40px;
+  display: flex;
+  box-shadow: 20px 20px 50px rgba(20, 1, 1, 0.475);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.img_news,
+.info_news {
+  width: 50%;
+  overflow: hidden;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 768px) {
+  .box_news {
+    flex-wrap: wrap;
+  }
+  .img_news,
+  .info_news {
+    width: 100%;
+  }
+}
+
+.img_news img {
+  width: 100%;
+  height: 100%;
+  transition: 0.3s linear;
+}
+
+.img_news img:hover {
+  transform: scale(1.2);
+}
+
+.info_news {
+  margin-left: 10px;
+  padding: 10px;
+}
+
+.info_news .time_news span {
+  margin: 5px;
+}
+
+.text_news {
+  overflow: hidden;
+  height: 100px;
+  line-height: 1.5;
+  --max_lines: 4;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: var(--max_lines);
+  margin-bottom: 5px;
+}
+
+.more_details a {
+  text-decoration: none;
+  color: white;
+}
+
+.more_details button {
+  padding: 10px;
+  background-color: red;
+  border: none;
+  border-radius: 10px;
+}
+
+/* subscribe for more */
+.container-fluid.subscribe {
+  background-color: rgba(0, 0, 0, 0.852);
+  height: 300px;
+  flex-direction: column;
+}
+
+.box_sub {
+  width: 60%;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.container-fluid.subscribe .row {
+  width: 50%;
+}
+
+input {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+
+.container-fluid.subscribe .row input {
+  padding: 10px;
+}
+
+.container-fluid.subscribe .row .button {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(231, 21, 21);
+  padding: 10px 12px;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/* footer */
+.container_footer {
+  height: fit-content;
+  background-image: url(./image/old-black-background-grunge-texture-dark-wallpaper-blackboard-chalkboard-room-wall.jpg);
+  background-size: cover;
+  background-position: center;
+  color:white
+}
+
+.aboutus_footer .logo_footer img {
+  width: 200px;
+}
+
+.aboutus_footer .abouts_footer_text {
+}
+
+.container_footer a {
+  text-decoration: none;
+  color: white;
+}
+
+.container_footer a:hover {
+  color:rgb(139, 137, 137)
+}
+
+.social_footer a svg {
+  margin-right: 10px;
+}
+
+.social_footer a svg:hover {  
+ fill: red
 }
