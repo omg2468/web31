@@ -37,4 +37,8 @@ html {
     min-height: 450px;
 }
 
+div {
+  border: 5px solid black;
+  border-image: linear-gradient(to bottom, #000 0%, #000 50%, red 50%, transparent 100%) 1 100%;
+}
 
