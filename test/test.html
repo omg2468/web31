@@ -1,124 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fody Slider</title>
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
-    />
-    <link rel="stylesheet" href="test.css" />
-  </head>
-  <body>
-    <div class="form-1">
-      <div class="form-group">
-        <label for="name" class="form-label">name</label>
-        <input type="text" id="name" name="name" rules="required" /><br />
-        <span class="form-message"></span>
-      </div>
-      <div class="form-group">
-        <label for="gmail" class="form-label">Gmail</label>
-        <input
-          type="text"
-          id="gmail"
-          name="gmail"
-          rules="required|mail"
-        /><br />
-        <span class="form-message"></span>
-      </div>
-      <div class="form-group">
-        <label for="password" class="form-label">password</label>
-        <input
-          type="password"
-          id="password"
-          name="password"
-          rules="required|min:6"
-        /><br />
-        <span class="form-message"></span>
-      </div>
-    </div>
-
-    <ul>
-      <li>1</li>
-      <li>2</li>
-    </ul>
-
-    <script
-      src="https://unpkg.com/swiper@8/swiper-bundle.min.js"
-      defer
-    ></script>
-    <script src="test.js" defer></script>
-    <script defer>
-      let formRules = {};
-
-      /*
-      Quy ước tạo rule
-       */
-
-      let validatorRules = {
-        required: function (value) {
-          return value ? undefined : `Vui lòng nhập trường này`;
-        },
-        email: function (value) {
-          let regex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
-          return regex.test(value) ? undefined : `Vui lòng nhập email`;
-        },
-        min: function (min) {
-          return function (value) {
-            return value.length >= min
-              ? undefined
-              : `Vui lòng nhập ít nhất ${min} kí tự`;
-          };
-        },
-      };
-
-      // put everything in obj
-      let validator = (form) => {
-        let formElement = document.querySelector(form);
-        if (formElement) {
-          let inputs = formElement.querySelectorAll("[name][rules]");
-          for (let input of inputs) {
-            let rules = input.getAttribute("rules").split("|");
-
-            for (let rule of rules) {
-              if (rule.includes(":")) {
-                let ruleInfo = rule.split(":");
-
-                rule = ruleInfo[0];
-              }
-              if (Array.isArray(formRules[input.name])) {
-                formRules[input.name].push(validatorRules[rule]);
-              } else {
-                formRules[input.name] = validatorRules[rule];
-              }
-            }
-          }
-        }
-      };
-
-      validator(".form-1");
-      console.log(formRules);
-
-      let result = [];
-
-      let isHappy = function (n) {
-        let b = 0;
-        if (n == 1) return true;
-        let nString = n.toString();
-        for (let i = 0; i < result.length; i++) {
-          if (result[i] == n) return false;
-        }
-        for (let i = 0; i < nString.length; i++) {
-          b += Number(nString[i]) ** 2;
-          console.log(b);
-        }
-        result.push(b);
-        isHappy(b)
-      };
-
-      console.log(isHappy(2312));
-    </script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="test.css">
+</head>
+<body>
+  <div id="banner-popup">
+  <p>This is a banner popup!</p>
+  <button id="close-btn">Close</button>
+  <script src="test.js" defer></script>
+</div>
+</body>
 </html>

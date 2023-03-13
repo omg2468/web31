@@ -27,7 +27,7 @@
   <body>
     <!-- nav -->
     <div
-      class="navbar_container position-fixed top-0 z-2 d-flex justify-content-center align-items-start"
+      class="navbar_container d-flex justify-content-center align-items-start"
     >
       <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
@@ -53,10 +53,10 @@
                 <a class="nav-link" href="#">Thực đơn</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-danger" href="#">Tin tức</a>
+                <a class="nav-link" href="#">Tin tức</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Liên hệ</a>
+                <a class="nav-link text-danger" href="#">Liên hệ</a>
               </li>
             </ul>
           </div>
@@ -77,14 +77,68 @@
         </div>
       </form>
     </div>
-    <!-- header -->
-    <div class="container-fluid header p-0 position-relative">
-      <img src="../image/logo.png" alt="header" class="background" />
-      <img
-        src="../image/red-velvet-cake-dark-background-close-up-side-view-sweet-dessert-holiday.jpg"
-        alt="logo"
-        class="logo_header"
-      />
+
+    <!-- form -->
+    <div class="container form">
+      <div class="row">
+        <div class="col-lg-5 col-12">
+          <div class="contract_form">
+            <h2>Liên hệ</h2>
+            <div class="form-group">
+              <label for="name" class="form-label">Họ và tên*</label>
+              <input
+                type="name"
+                class="form-control"
+                id="name"
+                placeholder="NGUYỄN VĂN A"
+              />
+              <div class="form-message name"></div>
+            </div>
+            <div class="form-group">
+              <label for="phone" class="form-label">Số điện thoại*</label>
+              <input
+                type="number"
+                class="form-control"
+                id="phone"
+                placeholder="0123456789"
+              />
+              <div class="form-message phone"></div>
+            </div>
+            <div class="form-group">
+              <label for="email" class="form-label">Địa chỉ Email*</label>
+              <input
+                type="text"
+                class="form-control"
+                id="email"
+                placeholder="name@example.com"
+              />
+              <div class="form-message email"></div>
+            </div>
+            <div class="form-group">
+              <label for="exampleFormControlTextarea1" class="form-label"
+                >Lời nhắn</label
+              >
+              <textarea
+                class="form-control"
+                id="exampleFormControlTextarea1"
+                rows="3"
+              ></textarea>
+            </div>
+          </div>
+          <button type="button" class="btn btn-danger mt-3 button">Gửi tin</button>
+        </div>
+        <div class="col-lg-6 offset-lg-1 col-12">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d29791.154263129447!2d105.730271!3d21.0369156!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31345548f4a0dfef%3A0x5d71a9b35e6fe45a!2zVGnhu4dtIGLDoW5oIHNpbmggbmjhuq10IEtha2EgKEtha2EgQmFrZXJ5KQ!5e0!3m2!1svi!2s!4v1678590389521!5m2!1svi!2s"
+            width="100%"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
     </div>
     <!-- subscribe for more -->
     <div

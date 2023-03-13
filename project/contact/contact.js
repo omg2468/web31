@@ -1,33 +1,53 @@
-const navbar = document.querySelector(".navbar_container");
-const navBarToogle = document.querySelector(".navbar-toggler");
-const navBarToogleIcon = document.querySelector(".navbar-toggler-icon");
-const aboutUs = document.querySelector(".container-fluid.about_us");
-const navBarLink = document.querySelectorAll(".nav-item a");
-const btnNav = document.querySelector(".navbar .container-fluid button span");
-const cart = document.querySelector(".bi-cart4");
-// navbar
-const scrollNav = () => {
-  let aboutTop = aboutUs.getBoundingClientRect().top;
-  if (aboutTop <= 0) {
-    navbar.style.backgroundColor = "white";
-    navbar.style.color = "black";
-    navBarLink.forEach((link) => {
-      link.style.color = "black";
-    });
-    btnNav.style.color = "black";
-    cart.style.color = "black";
-    navBarToogle.style.borderColor = "black";
-    navBarToogleIcon.className = "navbar-toggler-icon black";
-  } else {
-    navbar.style.backgroundColor = "rgba(119, 124, 106, 0.258)";
-    navbar.style.color = "white";
-    navBarLink.forEach((link) => {
-      link.style.color = "white";
-    });
-    btnNav.style.color = "white";
-    cart.style.color = "white";
-    navBarToogle.style.borderColor = "white";
-    navBarToogleIcon.className = "navbar-toggler-icon white";
+const nameForm = document.getElementById("name");
+const phoneForm = document.getElementById("phone");
+const emailForm = document.getElementById("email");
+const sendForm = document.querySelector(".container.form button");
+console.log(sendForm);
+// name
+let inputName = () => {
+  nameForm.value = nameForm.value.toUpperCase();
+  if (!nameForm.value) {
+    document.querySelector(
+      ".form-message.name"
+    ).innerHTML = `<div class="text-danger">Vui lòng nhập tên</div>`;
+  } else document.querySelector(".form-message.name").innerHTML = "";
+};
+
+nameForm.addEventListener("focusout", inputName);
+// phone
+
+let inputPhone = () => {
+  if (!phoneForm.value) {
+    document.querySelector(
+      ".form-message.phone"
+    ).innerHTML = `<div class="text-danger">Vui lòng nhập số điện thoại</div>`;
+  } else document.querySelector(".form-message.phone").innerHTML = "";
+};
+
+phoneForm.addEventListener("focusout", inputPhone);
+
+//email
+
+let inputEmail = () => {
+  let emailText = document.querySelector(".form-message.email");
+  let regex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
+  let result = regex.test(emailForm.value);
+  if (!emailForm.value) {
+    emailText.innerHTML = `<div class="text-danger">Vui lòng nhập email</div>`;
+  } else if (!result) {
+    emailText.innerHTML = `<div class="text-danger">Xin hãy nhập lại email</div>`;
+  } else if (result) {
+    emailText.innerHTML = "";
   }
 };
-window.addEventListener("scroll", scrollNav);
+
+emailForm.addEventListener("focusout", inputEmail);
+
+// button send
+const allButton = document.querySelectorAll('.button')
+let loading = function(){
+  location.reload();
+}
+allButton.forEach(btn => {
+  btn.addEventListener("click", loading);
+})
