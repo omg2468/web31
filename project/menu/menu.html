@@ -75,9 +75,178 @@
     <!-- menu -->
     <div class="container menu">
       <div class="row">
-        <div class="col-lg-3"></div>
+        <div class="col-lg-3 position-relative">
+          <div class="menu_right position-sticky">
+            <div
+              class="filter_icon d-flex align-items-center justify-content-between"
+            >
+              <div class="header_filter">
+                <i class="bi bi-funnel-fill"></i> <span>Lọc</span>
+              </div>
+              <button class="btn btn-danger" type="button">Bỏ lọc</button>
+            </div>
+            <div class="accordion" id="accordionPanelsStayOpenExample">
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="panelsStayOpen-headingOne">
+                  <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#panelsStayOpen-collapseOne"
+                    aria-expanded="true"
+                    aria-controls="panelsStayOpen-collapseOne"
+                  >
+                    Loại bánh
+                  </button>
+                </h3>
+                <div
+                  id="panelsStayOpen-collapseOne"
+                  class="accordion-collapse collapse show"
+                  aria-labelledby="panelsStayOpen-headingOne"
+                >
+                  <div class="accordion-body">
+                    <form>
+                      <input
+                        type="checkbox"
+                        id="cake1"
+                        name="cake1"
+                        value="cake1"
+                      />
+                      <label for="cake1">Bánh ngọt</label><br />
+                      <input
+                        type="checkbox"
+                        id="cake2"
+                        name="cake2"
+                        value="cake2"
+                      />
+                      <label for="cake2">Bánh mặn</label><br />
+                      <input
+                        type="checkbox"
+                        id="cake3"
+                        name="cake3"
+                        value="cake3"
+                      />
+                      <label for="cake3">Bánh mì</label><br />
+                      <input
+                        type="checkbox"
+                        id="cake4"
+                        name="cake4"
+                        value="cake4"
+                      />
+                      <label for="cake4">Bánh kem</label> <br />
+                      <input
+                        type="checkbox"
+                        id="allcake"
+                        name="allcake"
+                        value="allcake"
+                      />
+                      <label for="allcake">Tất cả</label>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="panelsStayOpen-headingTwo">
+                  <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#panelsStayOpen-collapseTwo"
+                    aria-expanded="true"
+                    aria-controls="panelsStayOpen-collapseTwo"
+                  >
+                    Khuyến mại
+                  </button>
+                </h3>
+                <div
+                  id="panelsStayOpen-collapseTwo"
+                  class="accordion-collapse collapse show"
+                  aria-labelledby="panelsStayOpen-headingTwo"
+                >
+                  <div class="accordion-body">
+                    <form>
+                      <input
+                        type="checkbox"
+                        id="discount"
+                        name="discount"
+                        value="discount"
+                      />
+                      <label for="discount">Có khuyến mãi</label><br />
+                      <input
+                        type="checkbox"
+                        id="nodiscount"
+                        name="nodiscount"
+                        value="nodiscount"
+                      />
+                      <label for="nodiscount">Không có khuyến mãi</label>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="panelsStayOpen-headingThree">
+                  <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#panelsStayOpen-collapseThree"
+                    aria-expanded="false"
+                    aria-controls="panelsStayOpen-collapseThree"
+                  >
+                    Đánh giá
+                  </button>
+                </h3>
+                <div
+                  id="panelsStayOpen-collapseThree"
+                  class="accordion-collapse collapse show"
+                  aria-labelledby="panelsStayOpen-headingThree"
+                >
+                  <div class="accordion-body">
+                   <form>
+                  <form>
+                      <input
+                        type="checkbox"
+                        id="5"
+                        name="5"
+                        value="5"
+                      />
+                      <label for="5">5 <i class="bi bi-star-fill"></i></label><br />
+                      <input
+                        type="checkbox"
+                        id="4"
+                        name="4"
+                        value="4"
+                      />
+                      <label for="4">4 <i class="bi bi-star-fill"></i> - 4.5 <i class="bi bi-star-fill"></i></label><br />
+                       <input
+                        type="checkbox"
+                        id="3"
+                        name="3"
+                        value="3"
+                      />
+                      <label for="3">3 <i class="bi bi-star-fill"></i> - 3.5 <i class="bi bi-star-fill"></i></label><br />
+                      <input
+                        type="checkbox"
+                        id="allstar"
+                        name="allstar"
+                        value="allstar"
+                      />
+                      <label for="allstar">Tất cả</label>
+                   </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+                      <div class="filter_button text-center" >
+            <button class="btn btn-danger" type="button">
+              Áp dụng
+            </button>
+          </div>
+          </div>
+
+        </div>
         <div class="col-lg-9">
-          <div class="price_sort">
+          <div class="price_sort mb-3">
             <label for="price">Sắp xếp:</label>
             <select name="price" id="price">
               <option value="increase">Giá tăng dần</option>
@@ -85,10 +254,7 @@
             </select>
           </div>
           <div class="container_menu_items d-flex">
-            <div class="box_items">
-              <div class="img_item">img</div>
-
-            </div>
+            
           </div>
         </div>
       </div>

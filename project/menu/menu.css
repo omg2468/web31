@@ -18,7 +18,6 @@ h2 {
   background-color: rgb(0, 0, 0);
 }
 
-
 .navbar.navbar-expand-lg {
   width: 100%;
 }
@@ -73,13 +72,113 @@ h2 {
 }
 
 /* menu */
-.container.menu{
-  margin-top: 62px;
+
+.container.menu {
+  margin-top: 80px;
+}
+
+.container.menu .menu_right {
+  top: 80px;
+  margin-bottom: 10px;
+}
+
+.container.menu .filter_button button {
+  width: 50%;
+  margin-top: 10px;
 }
 
 .container.menu select {
   padding: 3px;
   border-radius: 5px;
+}
+
+.container_menu_items {
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.container_menu_items .discount {
+  top: 10px;
+  left: 10px;
+  width: 50px;
+  height: 50px;
+  background-color: red;
+  border-radius: 50%;
+  border: 1px solid #c2a7a7;
+  box-shadow: 5px 5px 5px #4d2e2e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.container_menu_items .name_item {
+  font-size: 27px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.container_menu_items .box_items {
+  width: 30%;
+  height: 450px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-right: 20px;
+}
+
+@media (max-width: 768px) {
+  .container_menu_items .box_items {
+    width: 45%;
+  }
+  .container_menu_items {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .container_menu_items .box_items {
+    width: 80%;
+    margin-right: 0;
+  }
+  .container_menu_items {
+    justify-content: center;
+  }
+}
+
+.container_menu_items .img_item {
+  height: 300px;
+  overflow: hidden;
+}
+
+.container_menu_items .box_items i {
+  color: rgb(255, 25, 0);
+  font-size: 25px;
+}
+
+.container_menu_items .box_items img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.container_menu_items .real_price {
+  font-style: italic;
+  text-decoration: line-through;
+  margin: 0 5px;
+}
+
+.container_menu_items .button_oder button:active {
+  color: red;
+  background-color: white;
+}
+
+.container.menu .accordion {
+  margin-top: 20px;
 }
 
 /* subscribe for more */
@@ -99,7 +198,7 @@ h2 {
   width: 50%;
 }
 
-input {
+.container-fluid.subscribe input {
   width: 100%;
   height: 100%;
   border-radius: 5px;
@@ -120,13 +219,19 @@ input {
   font-size: 20px;
 }
 
+.container-fluid.subscribe .row .button:active {
+  background-color: white;
+  color: red;
+  border: 1px solid red;
+}
+
 /* footer */
 .container_footer {
   height: fit-content;
   background-image: url(../image/old-black-background-grunge-texture-dark-wallpaper-blackboard-chalkboard-room-wall.jpg);
   background-size: cover;
   background-position: center;
-  color:white
+  color: white;
 }
 
 .aboutus_footer .logo_footer img {
@@ -142,13 +247,13 @@ input {
 }
 
 .container_footer a:hover {
-  color:rgb(139, 137, 137)
+  color: rgb(139, 137, 137);
 }
 
 .social_footer a svg {
   margin-right: 10px;
 }
 
-.social_footer a svg:hover {  
- fill: red;
+.social_footer a svg:hover {
+  fill: red;
 }

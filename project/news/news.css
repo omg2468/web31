@@ -197,6 +197,12 @@ input {
   font-size: 20px;
 }
 
+.container-fluid.subscribe .row .button:active {
+  background-color: white;
+  color: red;
+  border: 1px solid red;
+}
+
 /* footer */
 .container_footer {
   height: fit-content;
