@@ -202,29 +202,20 @@
                   aria-labelledby="panelsStayOpen-headingThree"
                 >
                   <div class="accordion-body">
-                   <form>
-                  <form>
-                      <input
-                        type="checkbox"
-                        id="5"
-                        name="5"
-                        value="5"
-                      />
-                      <label for="5">5 <i class="bi bi-star-fill"></i></label><br />
-                      <input
-                        type="checkbox"
-                        id="4"
-                        name="4"
-                        value="4"
-                      />
-                      <label for="4">4 <i class="bi bi-star-fill"></i> - 4.5 <i class="bi bi-star-fill"></i></label><br />
-                       <input
-                        type="checkbox"
-                        id="3"
-                        name="3"
-                        value="3"
-                      />
-                      <label for="3">3 <i class="bi bi-star-fill"></i> - 3.5 <i class="bi bi-star-fill"></i></label><br />
+                    <form>
+                      <input type="checkbox" id="5" name="5" value="5" />
+                      <label for="5">5 <i class="bi bi-star-fill"></i></label
+                      ><br />
+                      <input type="checkbox" id="4" name="4" value="4" />
+                      <label for="4"
+                        >4 <i class="bi bi-star-fill"></i> - 4.5
+                        <i class="bi bi-star-fill"></i></label
+                      ><br />
+                      <input type="checkbox" id="3" name="3" value="3" />
+                      <label for="3"
+                        >3 <i class="bi bi-star-fill"></i> - 3.5
+                        <i class="bi bi-star-fill"></i></label
+                      ><br />
                       <input
                         type="checkbox"
                         id="allstar"
@@ -232,20 +223,17 @@
                         value="allstar"
                       />
                       <label for="allstar">Tất cả</label>
-                   </form>
+                    </form>
                   </div>
                 </div>
               </div>
             </div>
-                      <div class="filter_button text-center" >
-            <button class="btn btn-danger" type="button">
-              Áp dụng
-            </button>
+            <div class="filter_button text-center">
+              <button class="btn btn-danger" type="button">Áp dụng</button>
+            </div>
           </div>
-          </div>
-
         </div>
-        <div class="col-lg-9">
+        <div class="col-lg-9 col-12">
           <div class="price_sort mb-3">
             <label for="price">Sắp xếp:</label>
             <select name="price" id="price">
@@ -253,8 +241,24 @@
               <option value="decrease">Giá giảm dần</option>
             </select>
           </div>
-          <div class="container_menu_items d-flex">
-            
+          <div class="container_menu_items">
+            <div class="menu_item d-flex"></div>
+            <nav aria-label="Page navigation example">
+              <ul class="pagination justify-content-center">
+                <li class="page-item">
+                  <a class="page-link disabled" href="#" aria-label="Previous" id="previous">
+                    <span aria-hidden="true">&laquo;</span>
+                  </a>
+                </li>
+                <li class="page-item"><a class="page-link active" id="one" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" id="two" href="#">2</a></li>
+                <li class="page-item">
+                  <a class="page-link" href="#" aria-label="Next" id="next">
+                    <span aria-hidden="false">&raquo;</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
           </div>
         </div>
       </div>

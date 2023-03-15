@@ -201,7 +201,20 @@ const product = [
   },
 ];
 
-const containerItem = document.querySelector(".container_menu_items");
+// filter Icon
+const filterIcon = document.querySelector(".header_filter");
+const accordion = document.querySelector(".accordion");
+console.log(accordion.style);
+filterIcon.addEventListener("click", function () {
+  if (accordion.style.display == "none") {
+    accordion.style.display = "block";
+  } else accordion.style.display = "none";
+});
+
+// function renderUI
+const containerItem = document.querySelector(
+  ".container_menu_items .menu_item"
+);
 
 let countStar = (star) => {
   let resultStart = "";
@@ -234,20 +247,21 @@ let change =
     currency: "VND",
   });
 
-
-for (let i = 0; i < 12; i++) {
-  let priceItem = product[i].price.toLocaleString("it-IT", {
-    style: "currency",
-    currency: "VND",
-  });
-  let disountItem = (
-    (product[i].price * (100 - product[i].discount)) /
-    100
-  ).toLocaleString("it-IT", {
-    style: "currency",
-    currency: "VND",
-  });
-  containerItem.innerHTML += `<div class="box_items position-relative">
+const renderUI = (first, last) => {
+  containerItem.innerHTML = "";
+  for (let i = first; i < last; i++) {
+    let priceItem = product[i].price.toLocaleString("it-IT", {
+      style: "currency",
+      currency: "VND",
+    });
+    let disountItem = (
+      (product[i].price * (100 - product[i].discount)) /
+      100
+    ).toLocaleString("it-IT", {
+      style: "currency",
+      currency: "VND",
+    });
+    containerItem.innerHTML += `<div class="box_items position-relative">
             ${
               product[i].discount
                 ? `<div class="discount position-absolute">${product[i].discount}%</div>`
@@ -274,4 +288,39 @@ for (let i = 0; i < 12; i++) {
                 <button type="button" class="btn btn-danger">Đặt hàng ngay</button>
               </div>
             </div>`;
+  }
+};
+
+// render UI firt time when loading page
+renderUI(0, 12);
+
+// pagination
+const pageOne = document.querySelector("#one");
+const pageTwo = document.querySelector("#two");
+const nextBtn = document.querySelector("#next");
+const previousBtn = document.querySelector("#previous");
+const allLink = document.querySelectorAll(".pagination li a");
+
+for (let i = 0; i < allLink.length; i++) {
+  allLink[i].addEventListener("click", function () {
+    if (
+      allLink[i].getAttribute("aria-label") == "Next" ||
+      allLink[i].innerHTML == 2
+    ) {
+      pageOne.className = "page-link";
+      pageTwo.className = "page-link active";
+      nextBtn.className = "page-link disabled";
+      previousBtn.className = "page-link";
+      renderUI(13, 20);
+    } else if (
+      allLink[i].getAttribute("aria-label") == "Previous" ||
+      allLink[i].innerHTML == 1
+    ) {
+      pageTwo.className = "page-link";
+      pageOne.className = "page-link active";
+      nextBtn.className = "page-link ";
+      previousBtn.className = "page-link disabled";
+      renderUI(0, 12);
+    }
+  });
 }

@@ -92,7 +92,7 @@ h2 {
   border-radius: 5px;
 }
 
-.container_menu_items {
+.container_menu_items .menu_item {
   flex-wrap: wrap;
   text-align: center;
 }
@@ -133,7 +133,7 @@ h2 {
 
 @media (max-width: 768px) {
   .container_menu_items .box_items {
-    width: 45%;
+    width: 46%;
   }
   .container_menu_items {
     justify-content: center;
@@ -142,7 +142,7 @@ h2 {
 
 @media (max-width: 576px) {
   .container_menu_items .box_items {
-    width: 80%;
+    width: 100%;
     margin-right: 0;
   }
   .container_menu_items {
@@ -178,8 +178,21 @@ h2 {
 }
 
 .container.menu .accordion {
+  display: block;
   margin-top: 20px;
+  transition: 0.5s linear;
 }
+
+.container.menu .pagination a {
+  color: red;
+  border: 1px solid red;
+}
+
+.container.menu .pagination a:active, .container.menu .pagination .active {
+  color: white;
+  background-color: red;
+}
+
 
 /* subscribe for more */
 .container-fluid.subscribe {
