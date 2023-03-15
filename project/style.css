@@ -5,7 +5,7 @@
 }
 
 h2 {
-  border-bottom: 5px solid rgb(245, 16, 16);
+  border-bottom: 2px solid rgb(245, 16, 16);
   width: fit-content;
   margin-right: auto;
   margin-left: auto;
@@ -16,6 +16,7 @@ h2 {
 .navbar_container {
   width: 100vw;
   background-color: rgba(119, 124, 106, 0.258);
+  box-shadow: 5px 2px 2px rgba(0, 0, 0, 0.2);
 }
 
 .navbar.navbar-expand-lg {
@@ -76,12 +77,14 @@ h2 {
   width: 200%;
   max-height: 460px;
   overflow-y: scroll;
+  border-radius: 10px;
 }
 
 #search .sreach_result .box_result {
   height: 150px;
   overflow: hidden;
   margin-bottom: 3px;
+  padding: 5px 5px;
 }
 
 #search .sreach_result .box_result .result_img {
@@ -295,7 +298,7 @@ h2 {
   max-width: 550px;
   margin-bottom: 40px;
   display: flex;
-  box-shadow: 20px 20px 50px rgba(20, 1, 1, 0.475);
+  box-shadow: 7px 7px 20px rgba(20, 1, 1, 0.2);
   border-radius: 10px;
   overflow: hidden;
 }
@@ -357,6 +360,11 @@ h2 {
   background-color: red;
   border: none;
   border-radius: 10px;
+}
+
+.more_details button:active {
+  background-color: white;
+  color: red;
 }
 
 /* subscribe for more */
