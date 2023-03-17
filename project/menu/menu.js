@@ -5,9 +5,11 @@ const product = [
     image: "./image/banhmi1.jpg",
     description:
       "Bánh mì thịt nướng là món ăn đường phố đặc trưng của Việt Nam, được nhiều người yêu thích và tìm kiếm. Khi nhắc đến bánh mì thịt nướng, người ta thường nghĩ đến một chiếc bánh mì giòn tan bên ngoài, mềm mịn bên trong, cùng với lớp thịt nướng thơm phức và nhiều rau sống xanh tươi.",
-    sort: "Bánh mì",
+    sort: "cake3",
     star: 5,
     discount: 0,
+    display: true,
+    id: 0,
   },
   {
     name: "Bánh Mì Chả Thịt",
@@ -15,9 +17,11 @@ const product = [
     image: "./image/banhmi2.jpg",
     description:
       "Bánh mì chả thịt là một món ăn đặc trưng của Việt Nam, có hương vị đặc biệt và được yêu thích rộng rãi. Món ăn này được làm từ các nguyên liệu đơn giản và phổ biến như bánh mì, chả lụa và trứng.",
-    sort: "Bánh mì",
+    sort: "cake3",
     star: 4.5,
     discount: 10,
+    display: true,
+    id: 1,
   },
   {
     name: "Bánh Mì Ốp La 2 Trứng",
@@ -25,9 +29,11 @@ const product = [
     image: "./image/banhmi3.jpg",
     description:
       "Bánh mì ốp la 2 trứng là một món ăn đường phố phổ biến ở Việt Nam, được ưa chuộng bởi hương vị đặc biệt và sự tiện lợi của nó. Món ăn này gồm một chiếc bánh mì giòn tan, được xé thành hai nửa và chứa hai quả trứng ốp la chiên giòn.",
-    sort: "Bánh mì",
+    sort: "cake3",
     star: 5,
     discount: 5,
+    display: true,
+    id: 2,
   },
   {
     name: "Bánh Mì Hotdog",
@@ -35,9 +41,11 @@ const product = [
     image: "./image/banhmi4.png",
     description:
       "Bánh Mì Hotdog là một món ăn đường phố phổ biến ở Việt Nam, được ưa chuộng bởi hương vị đặc biệt và sự tiện lợi của nó. Món ăn này gồm một chiếc bánh mì giòn tan, được xé thành hai nửa và chứa hai quả trứng ốp la chiên giòn.",
-    sort: "Bánh mì",
+    sort: "cake3",
     star: 3.5,
     discount: 0,
+    display: true,
+    id: 3,
   },
   {
     name: "Hamburger Chả Lát",
@@ -45,9 +53,11 @@ const product = [
     image: "./image/banhmi5.jpg",
     description:
       "Hamburger là một món ăn phổ biến trên toàn thế giới, được biết đến với hương vị đậm đà và thịt bò xay giòn tan. Món ăn này bao gồm một chiếc bánh mì giòn, thịt bò xay, rau xanh và sốt.",
-    sort: "Bánh mì",
+    sort: "cake3",
     star: 4,
-    discount: 15,
+    discount: 0,
+    display: true,
+    id: 4,
   },
   {
     name: "Muffin Vanila",
@@ -55,9 +65,11 @@ const product = [
     image: "./image/banhngot1.jpg",
     description:
       "Muffin Vanilla là loại bánh ngọt hình trụ, được làm từ bột mì, đường, trứng, sữa, bơ và hương vani. Muffin Vanilla có hương vị thơm ngon của vani, vị ngọt và vị giòn của bánh mì, tạo nên một món ăn vô cùng hấp dẫn.",
-    sort: "Bánh ngọt",
+    sort: "cake1",
     star: 5,
     discount: 0,
+    display: true,
+    id: 5,
   },
   {
     name: "Bánh Mì Sấy Đường",
@@ -65,9 +77,11 @@ const product = [
     image: "./image/banhngot2.jpg",
     description:
       "Bánh Mì Sấy Đường là loại bánh ngọt hình trụ, được làm từ bột mì, đường, trứng, sữa, bơ và hương vani. Muffin Vanilla có hương vị thơm ngon của vani, vị ngọt và vị giòn của bánh mì, tạo nên một món ăn vô cùng hấp dẫn.",
-    sort: "Bánh ngọt",
+    sort: "cake1",
     star: 4.5,
     discount: 0,
+    display: true,
+    id: 6,
   },
   {
     name: "Muffin Nhí Nhảnh",
@@ -75,9 +89,11 @@ const product = [
     image: "./image/banhngot3.jpg",
     description:
       "Muffin Nhí Nhảnh là loại bánh ngọt hình trụ, được làm từ bột mì, đường, trứng, sữa, bơ và hương vani. Muffin Vanilla có hương vị thơm ngon của vani, vị ngọt và vị giòn của bánh mì, tạo nên một món ăn vô cùng hấp dẫn.",
-    sort: "Bánh ngọt",
+    sort: "cake1",
     star: 5,
-    discount: 20,
+    discount: 5,
+    display: true,
+    id: 7,
   },
   {
     name: "Bánh Đỏ",
@@ -85,9 +101,11 @@ const product = [
     image: "./image/banhngot4.jpg",
     description:
       "Bánh Đỏ là loại bánh ngọt hình trụ, được làm từ bột mì, đường, trứng, sữa, bơ và hương vani. Muffin Vanilla có hương vị thơm ngon của vani, vị ngọt và vị giòn của bánh mì, tạo nên một món ăn vô cùng hấp dẫn.",
-    sort: "Bánh ngọt",
+    sort: "cake1",
     star: 4,
     discount: 10,
+    display: true,
+    id: 8,
   },
   {
     name: "Su Kem",
@@ -95,9 +113,11 @@ const product = [
     image: "./image/banhngot5.jpg",
     description:
       "Bánh su kem (tiếng Pháp: chou à la crème) là món bánh ngọt ở dạng kem sữa được làm từ các nguyên liệu như bột mì, trứng, sữa, bơ... đánh đều tạo thành một hỗn hợp và sau đó bằng thao tác ép và phun qua một cái túi để định hình thành những bánh nhỏ và cuối cùng được nướng chín. Bánh có xuất xứ từ nước Pháp.",
-    sort: "Bánh ngọt",
+    sort: "cake1",
     star: 4,
     discount: 0,
+    display: true,
+    id: 9,
   },
   {
     name: "Hot Dog Đức",
@@ -105,9 +125,11 @@ const product = [
     image: "./image/banhman1.jpg",
     description:
       "Hot Dog Đức là một loại bánh mì kẹp xúc xích, được phổ biến trong ẩm thực Đức và được coi là món ăn nhanh phổ biến trên thế giới. Hot Dog Đức bao gồm một miếng xúc xích được nướng trên lửa và được xếp lên một chiếc bánh mì mềm dài và giòn, sau đó thêm các loại sốt như ketchup, mustard, hoặc sốt chua ngọt.",
-    sort: "Bánh mặn",
+    sort: "cake2",
     star: 3.5,
     discount: 0,
+    display: true,
+    id: 10,
   },
   {
     name: "Bánh Đùi Gà",
@@ -115,9 +137,11 @@ const product = [
     image: "./image/banhman2.jpg",
     description:
       "Bánh Đùi Gà thường được làm từ thịt gà, bò hoặc cả hai, và được ướp gia vị trước khi được nướng trên lửa hoặc áp chảo. Chiếc bánh mì cho Hot Dog Đức thường dài khoảng 20 đến 30 cm, được làm từ bột mì, men nở, sữa, trứng và bơ, với vỏ bánh mềm mịn và giòn.",
-    sort: "Bánh mặn",
+    sort: "cake2",
     star: 5,
     discount: 0,
+    display: true,
+    id: 11,
   },
   {
     name: "Bông Lan Trứng Muối Gà Cay Vuông",
@@ -125,9 +149,11 @@ const product = [
     image: "./image/banhman3.png",
     description:
       "Bông Lan Trứng Muối Gà Cay Vuông thường được làm từ thịt gà, bò hoặc cả hai, và được ướp gia vị trước khi được nướng trên lửa hoặc áp chảo. Chiếc bánh mì cho Hot Dog Đức thường dài khoảng 20 đến 30 cm, được làm từ bột mì, men nở, sữa, trứng và bơ, với vỏ bánh mềm mịn và giòn.",
-    sort: "Bánh mặn",
+    sort: "cake2",
     star: 4.5,
     discount: 10,
+    display: true,
+    id: 12,
   },
   {
     name: "Bông Lan Trứng Muối Gà Cay",
@@ -135,9 +161,11 @@ const product = [
     image: "./image/banhman4.jpg",
     description:
       "Bông Lan Trứng Muối Gà Cay thường được làm từ thịt gà, bò hoặc cả hai, và được ướp gia vị trước khi được nướng trên lửa hoặc áp chảo. Chiếc bánh mì cho Hot Dog Đức thường dài khoảng 20 đến 30 cm, được làm từ bột mì, men nở, sữa, trứng và bơ, với vỏ bánh mềm mịn và giòn.",
-    sort: "Bánh mặn",
+    sort: "cake2",
     star: 4,
     discount: 20,
+    display: true,
+    id: 13,
   },
   {
     name: "Pateso",
@@ -145,9 +173,11 @@ const product = [
     image: "./image/banhman5.jpg",
     description:
       "Pa tê sô là một loại bánh có nguồn gốc từ Pháp có vỏ bằng bột mì và bơ nướng lò, bên trong có nhân thịt heo, nấm mèo và hành khô. Nếu muốn thay đổi vị, có thể thay thế thịt heo bằng thịt bò, gà hoặc bất kỳ loại thịt nào tuỳ thích. Tất cả được trộn đều với gia vị và băm nhỏ rồi viên lại",
-    sort: "Bánh mặn",
+    sort: "cake2",
     star: 5,
     discount: 10,
+    display: true,
+    id: 14,
   },
   {
     name: "Bánh kem socola",
@@ -155,9 +185,11 @@ const product = [
     image: "./image/banhkem1.jpg",
     description:
       "Bánh kem socola được làm bằng cách pha trộn bột mì, đường và trứng với nhau, sau đó đưa vào lò nướng để nướng cho đến khi chín và vàng. Sau đó, bánh được cắt thành nhiều lớp mỏng và phết kem socola giữa các lớp bánh. Bề mặt bánh thường được trang trí bằng kem socola, hạt cacao hoặc socola nướng.",
-    sort: "Bánh kem",
+    sort: "cake4",
     star: 4.5,
     discount: 15,
+    display: true,
+    id: 15,
   },
   {
     name: "Bánh kem chanh",
@@ -165,9 +197,11 @@ const product = [
     image: "./image/banhkem2.jpg",
     description:
       "Bánh kem chanh được làm bằng cách pha trộn bột mì, đường và trứng với nhau, sau đó đưa vào lò nướng để nướng cho đến khi chín và vàng. Sau đó, bánh được cắt thành nhiều lớp mỏng và phết kem socola giữa các lớp bánh. Bề mặt bánh thường được trang trí bằng kem socola, hạt cacao hoặc socola nướng.",
-    sort: "Bánh kem",
+    sort: "cake4",
     star: 3.5,
     discount: 0,
+    display: true,
+    id: 16,
   },
   {
     name: "Bánh kem trứng muối",
@@ -175,9 +209,11 @@ const product = [
     image: "./image/banhkem3.jpg",
     description:
       "Bánh kem trứng muối được làm bằng cách pha trộn bột mì, đường và trứng với nhau, sau đó đưa vào lò nướng để nướng cho đến khi chín và vàng. Sau đó, bánh được cắt thành nhiều lớp mỏng và phết kem socola giữa các lớp bánh. Bề mặt bánh thường được trang trí bằng kem socola, hạt cacao hoặc socola nướng.",
-    sort: "Bánh kem",
+    sort: "cake4",
     star: 4.5,
-    discount: 0,
+    discount: 10,
+    display: true,
+    id: 17,
   },
   {
     name: "Bánh kem trứng socola",
@@ -185,9 +221,11 @@ const product = [
     image: "./image/banhkem4.jpg",
     description:
       "Bánh kem trứng muối được làm bằng cách pha trộn bột mì, đường và trứng với nhau, sau đó đưa vào lò nướng để nướng cho đến khi chín và vàng. Sau đó, bánh được cắt thành nhiều lớp mỏng và phết kem socola giữa các lớp bánh. Bề mặt bánh thường được trang trí bằng kem socola, hạt cacao hoặc socola nướng.",
-    sort: "Bánh kem",
+    sort: "cake4",
     star: 4,
     discount: 0,
+    display: true,
+    id: 18,
   },
   {
     name: "Bánh kem dâu",
@@ -195,20 +233,86 @@ const product = [
     image: "./image/banhkem5.jpg",
     description:
       "Bánh kem dâu là một loại bánh tráng miệng được pha chế từ bột mì, đường, trứng, bơ, sữa, dâu tây và kem tươi. Bánh kem dâu có vị ngọt nhẹ, hương vị dâu thơm ngon, độ giòn của bánh và độ mềm mịn của kem, tạo nên một món tráng miệng tuyệt vời.",
-    sort: "Bánh kem",
+    sort: "cake4",
     star: 5,
     discount: 10,
+    display: true,
+    id: 19,
   },
 ];
+// pagination
+const pageOne = document.querySelector("#one");
+const pageTwo = document.querySelector("#two");
+const nextBtn = document.querySelector("#next");
+const previousBtn = document.querySelector("#previous");
+const allLink = document.querySelectorAll(".pagination li a");
+// main array product will render
+let filterArr = product.slice();
 
 // filter Icon
 const filterIcon = document.querySelector(".header_filter");
 const accordion = document.querySelector(".accordion");
-console.log(accordion.style);
 filterIcon.addEventListener("click", function () {
   if (accordion.style.display == "none") {
     accordion.style.display = "block";
   } else accordion.style.display = "none";
+});
+//filter status
+const apply = document.querySelector(".filter_button button");
+const cancel = document.querySelector(".filter_icon button");
+
+let filterSort = (value) => {
+  for (let i = 0; i < filterArr.length; i++) {
+    if (filterArr[i].sort == value) {
+      filterArr[i].display = true;
+    }
+  }
+};
+
+let filterDiscount = (value) => {
+  for (let i = 0; i < filterArr.length; i++) {
+    if (value == "discount" && filterArr[i].discount) {
+      filterArr[i].display = true;
+    } else if (value == 'nodiscount' && !filterArr[i].discount) {
+      filterArr[i].display = true;
+    }
+  }
+};
+
+//when click input , 2 button can click
+const allCheckbox = document.querySelectorAll(".accordion-body input");
+console.log(allCheckbox);
+for (let i = 0; i < allCheckbox.length; i++) {
+  allCheckbox[i].addEventListener("click", function () {
+    cancel.className = "btn btn-danger";
+    document.querySelector(".filter_button button").className =
+      "btn btn-danger";
+  });
+}
+//event when click cancel
+cancel.addEventListener("click", function () {
+  for (let i = 0; i < allCheckbox.length; i++) {
+    allCheckbox[i].checked = false;
+  }
+  for (let i = 0; i < product.length; i++) {
+    product[i].display = true;
+  }
+  if (pageOne.className == "page-link active") renderUI(0, 12);
+  else renderUI(13, 20);
+});
+
+// event when click apply
+apply.addEventListener("click", function () {
+  for (let i = 0; i < filterArr.length; i++) {
+    filterArr[i].display = false;
+  }
+  for (let i = 0; i < allCheckbox.length; i++) {
+    if (allCheckbox[i].checked == true) {
+      filterSort(allCheckbox[i].value);
+      filterDiscount(allCheckbox[i].value);
+    }
+  }
+  renderUI(0, 20);
 });
 
 // function renderUI
@@ -240,66 +344,102 @@ let countStar = (star) => {
   return resultStart;
 };
 
-let change =
-  ("it-IT",
-  {
-    style: "currency",
-    currency: "VND",
-  });
-
 const renderUI = (first, last) => {
   containerItem.innerHTML = "";
   for (let i = first; i < last; i++) {
-    let priceItem = product[i].price.toLocaleString("it-IT", {
+    let priceItem = filterArr[i].price.toLocaleString("it-IT", {
       style: "currency",
       currency: "VND",
     });
     let disountItem = (
-      (product[i].price * (100 - product[i].discount)) /
+      (filterArr[i].price * (100 - filterArr[i].discount)) /
       100
     ).toLocaleString("it-IT", {
       style: "currency",
       currency: "VND",
     });
-    containerItem.innerHTML += `<div class="box_items position-relative">
+    if (filterArr[i].display) {
+      containerItem.innerHTML += `<div class="box_items position-relative">
             ${
-              product[i].discount
-                ? `<div class="discount position-absolute">${product[i].discount}%</div>`
+              filterArr[i].discount
+                ? `<div class="discount position-absolute">${filterArr[i].discount}%</div>`
                 : ""
             }
               <div class="img_item">
-                <img src=".${product[i].image}" alt="${product[i].name}">
+                <img src=".${filterArr[i].image}" alt="${filterArr[i].name}">
               </div>
               <div class="name_item">
-                ${product[i].name}
+                ${filterArr[i].name}
               </div>
               <div class="price_item d-flex justify-content-center">
                 ${
-                  product[i].discount
+                  filterArr[i].discount
                     ? `<div class="real_price">${priceItem}</div>
                 <div class="discount_price">${disountItem}</div>`
                     : `<div>${priceItem}</div>`
                 }
               </div>
               <div class="star_item">
-              ${countStar(product[i].star)}
+              ${countStar(filterArr[i].star)}
               </div>
               <div class="button_oder">
                 <button type="button" class="btn btn-danger">Đặt hàng ngay</button>
               </div>
             </div>`;
+    }
   }
 };
 
 // render UI firt time when loading page
 renderUI(0, 12);
 
+//function arrange for product
+let arrange = (filter) => {
+  let numberArr = [];
+  let checkID = [];
+  for (let i = 0; i < product.length; i++) {
+    numberArr.push(product[i][filter]);
+  }
+  numberArr.sort((a, b) => a - b);
+  for (let i = 0; i < numberArr.length; i++) {
+    for (let x = 0; x < product.length; x++) {
+      if (
+        product[x][filter] == numberArr[i] &&
+        !checkID.includes(product[x].id)
+      ) {
+        filterArr.push(product[x]);
+        checkID.push(product[x].id);
+        break;
+      }
+    }
+  }
+};
+
+// Filter array for price
+const filterOption = document.querySelector("#price");
+filterOption.addEventListener("change", function () {
+  console.log(filterOption.value);
+  if (filterOption.value == "default") {
+    filterArr = [];
+    arrange("id");
+    if (pageOne.className == "page-link active") renderUI(0, 12);
+    else renderUI(13, 20);
+  } else if (filterOption.value == "increase") {
+    filterArr = [];
+    arrange("price");
+    if (pageOne.className == "page-link active") renderUI(0, 12);
+    else renderUI(13, 20);
+  } else {
+    filterArr = [];
+    arrange("price");
+    filterArr.reverse();
+    console.log(filterArr);
+    if (pageOne.className == "page-link active") renderUI(0, 12);
+    else renderUI(13, 20);
+  }
+});
+
 // pagination
-const pageOne = document.querySelector("#one");
-const pageTwo = document.querySelector("#two");
-const nextBtn = document.querySelector("#next");
-const previousBtn = document.querySelector("#previous");
-const allLink = document.querySelectorAll(".pagination li a");
 
 for (let i = 0; i < allLink.length; i++) {
   allLink[i].addEventListener("click", function () {

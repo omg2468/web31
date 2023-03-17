@@ -83,7 +83,7 @@
               <div class="header_filter">
                 <i class="bi bi-funnel-fill"></i> <span>Lọc</span>
               </div>
-              <button class="btn btn-danger" type="button">Bỏ lọc</button>
+              <button class="btn btn-danger disabled" type="button">Bỏ lọc</button>
             </div>
             <div class="accordion" id="accordionPanelsStayOpenExample">
               <div class="accordion-item">
@@ -134,13 +134,6 @@
                         value="cake4"
                       />
                       <label for="cake4">Bánh kem</label> <br />
-                      <input
-                        type="checkbox"
-                        id="allcake"
-                        name="allcake"
-                        value="allcake"
-                      />
-                      <label for="allcake">Tất cả</label>
                     </form>
                   </div>
                 </div>
@@ -214,22 +207,15 @@
                       <input type="checkbox" id="3" name="3" value="3" />
                       <label for="3"
                         >3 <i class="bi bi-star-fill"></i> - 3.5
-                        <i class="bi bi-star-fill"></i></label
-                      ><br />
-                      <input
-                        type="checkbox"
-                        id="allstar"
-                        name="allstar"
-                        value="allstar"
-                      />
-                      <label for="allstar">Tất cả</label>
+                        <i class="bi bi-star-fill"></i
+                      ></label>
                     </form>
                   </div>
                 </div>
               </div>
             </div>
             <div class="filter_button text-center">
-              <button class="btn btn-danger" type="button">Áp dụng</button>
+              <button class="btn btn-danger disabled" type="button">Áp dụng</button>
             </div>
           </div>
         </div>
@@ -237,6 +223,7 @@
           <div class="price_sort mb-3">
             <label for="price">Sắp xếp:</label>
             <select name="price" id="price">
+              <option value="default">Mặc định</option>
               <option value="increase">Giá tăng dần</option>
               <option value="decrease">Giá giảm dần</option>
             </select>
@@ -246,12 +233,21 @@
             <nav aria-label="Page navigation example">
               <ul class="pagination justify-content-center">
                 <li class="page-item">
-                  <a class="page-link disabled" href="#" aria-label="Previous" id="previous">
+                  <a
+                    class="page-link disabled"
+                    href="#"
+                    aria-label="Previous"
+                    id="previous"
+                  >
                     <span aria-hidden="true">&laquo;</span>
                   </a>
                 </li>
-                <li class="page-item"><a class="page-link active" id="one" href="#">1</a></li>
-                <li class="page-item"><a class="page-link" id="two" href="#">2</a></li>
+                <li class="page-item">
+                  <a class="page-link active" id="one" href="#">1</a>
+                </li>
+                <li class="page-item">
+                  <a class="page-link" id="two" href="#">2</a>
+                </li>
                 <li class="page-item">
                   <a class="page-link" href="#" aria-label="Next" id="next">
                     <span aria-hidden="false">&raquo;</span>
