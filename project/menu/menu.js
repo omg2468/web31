@@ -277,6 +277,7 @@ cancel.addEventListener("click", function () {
   for (let i = 0; i < product.length; i++) {
     product[i].display = true;
   }
+  filterArr = product.slice()
   if (pageOne.className == "page-link active") renderUI(0, 12);
   else renderUI(13, 20);
 });
