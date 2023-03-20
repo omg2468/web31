@@ -9,7 +9,6 @@ const product = [
     star: 5,
     discount: 0,
     display: true,
-    id: 0,
   },
   {
     name: "Bánh Mì Chả Thịt",
@@ -240,14 +239,13 @@ const product = [
     id: 19,
   },
 ];
+
 // pagination
 const pageOne = document.querySelector("#one");
 const pageTwo = document.querySelector("#two");
 const nextBtn = document.querySelector("#next");
 const previousBtn = document.querySelector("#previous");
 const allLink = document.querySelectorAll(".pagination li a");
-// main array product will render
-let filterArr = product.slice();
 
 // filter Icon
 const filterIcon = document.querySelector(".header_filter");
@@ -261,36 +259,18 @@ filterIcon.addEventListener("click", function () {
 const apply = document.querySelector(".filter_button button");
 const cancel = document.querySelector(".filter_icon button");
 
-let filterSort = (value) => {
-  for (let i = 0; i < filterArr.length; i++) {
-    if (filterArr[i].sort == value) {
-      filterArr[i].display = true;
-    }
-  }
-};
-
-let filterDiscount = (value) => {
-  for (let i = 0; i < filterArr.length; i++) {
-    if (value == "discount" && filterArr[i].discount) {
-      filterArr[i].display = true;
-    } else if (value == 'nodiscount' && !filterArr[i].discount) {
-      filterArr[i].display = true;
-    }
-  }
-};
-
 //when click input , 2 button can click
 const allCheckbox = document.querySelectorAll(".accordion-body input");
-console.log(allCheckbox);
 for (let i = 0; i < allCheckbox.length; i++) {
   allCheckbox[i].addEventListener("click", function () {
     cancel.className = "btn btn-danger";
-    document.querySelector(".filter_button button").className =
-      "btn btn-danger";
+    apply.className = "btn btn-danger";
   });
 }
 //event when click cancel
 cancel.addEventListener("click", function () {
+  cancel.className = "btn btn-danger disabled";
+  apply.className = "btn btn-danger disabled";
   for (let i = 0; i < allCheckbox.length; i++) {
     allCheckbox[i].checked = false;
   }
@@ -301,19 +281,63 @@ cancel.addEventListener("click", function () {
   else renderUI(13, 20);
 });
 
-// event when click apply
-apply.addEventListener("click", function () {
-  for (let i = 0; i < filterArr.length; i++) {
-    filterArr[i].display = false;
-  }
-  for (let i = 0; i < allCheckbox.length; i++) {
-    if (allCheckbox[i].checked == true) {
-      filterSort(allCheckbox[i].value);
-      filterDiscount(allCheckbox[i].value);
-    }
-  }
-  renderUI(0, 20);
-});
+// main array product will render
+let filterArr = product.slice();
+/* event when click apply
+
+ */
+// event apply
+
+const filterOption = document.querySelector("#price");
+
+let filterChange = () => {
+  let inputsort = [...document.querySelectorAll("#sort input:checked")].map(
+    (n) => n.value
+  );
+
+  let inputdiscount = document.querySelector("#discount").checked;
+  let inputnodiscount = document.querySelector("#nodiscount").checked;
+  filterArr = product.filter(
+    (n) =>
+      (!inputsort.length || inputsort.includes(n.sort)) &&
+      ((inputdiscount && inputnodiscount) ||
+        ((!inputdiscount || n.discount) && (!inputnodiscount || !n.discount)))
+  );
+  console.log(inputsort);
+  console.log(filterArr);
+  if (pageOne.className == "page-link active") renderUI(0, 12);
+  else renderUI(13, 20);
+};
+
+apply.addEventListener("click", filterChange);
+
+// arrange
+let arrangeOption = () => {
+  filterArr = filterArr.sort((a, b) => {
+    if (
+      (a.price > b.price && filterOption.value == "increase") ||
+      (a.price < b.price && filterOption.value == "decrease") ||
+      (a.id > b.id && filterOption.value == "default") ||
+      (a.star < b.star && filterOption.value == "starup") ||
+      (a.star > b.star && filterOption.value == "stardown")
+    )
+      return 1;
+    if (
+      (a.price < b.price && filterOption.value == "increase") ||
+      (a.price > b.price && filterOption.value == "decrease") ||
+      (a.id < b.id && filterOption.value == "default") ||
+      (a.star > b.star && filterOption.value == "starup") ||
+      (a.star < b.star && filterOption.value == "stardown")
+    )
+      return -1;
+    return 0;
+  });
+  console.log(filterArr);
+  if (pageOne.className == "page-link active") renderUI(0, 12);
+  else renderUI(13, 20);
+};
+
+filterOption.addEventListener("input", arrangeOption);
 
 // function renderUI
 const containerItem = document.querySelector(
@@ -344,9 +368,10 @@ let countStar = (star) => {
   return resultStart;
 };
 
-const renderUI = (first, last) => {
+let renderUI = (first, last) => {
   containerItem.innerHTML = "";
   for (let i = first; i < last; i++) {
+    if (!filterArr[i]) return;
     let priceItem = filterArr[i].price.toLocaleString("it-IT", {
       style: "currency",
       currency: "VND",
@@ -391,53 +416,7 @@ const renderUI = (first, last) => {
 };
 
 // render UI firt time when loading page
-renderUI(0, 12);
-
-//function arrange for product
-let arrange = (filter) => {
-  let numberArr = [];
-  let checkID = [];
-  for (let i = 0; i < product.length; i++) {
-    numberArr.push(product[i][filter]);
-  }
-  numberArr.sort((a, b) => a - b);
-  for (let i = 0; i < numberArr.length; i++) {
-    for (let x = 0; x < product.length; x++) {
-      if (
-        product[x][filter] == numberArr[i] &&
-        !checkID.includes(product[x].id)
-      ) {
-        filterArr.push(product[x]);
-        checkID.push(product[x].id);
-        break;
-      }
-    }
-  }
-};
-
-// Filter array for price
-const filterOption = document.querySelector("#price");
-filterOption.addEventListener("change", function () {
-  console.log(filterOption.value);
-  if (filterOption.value == "default") {
-    filterArr = [];
-    arrange("id");
-    if (pageOne.className == "page-link active") renderUI(0, 12);
-    else renderUI(13, 20);
-  } else if (filterOption.value == "increase") {
-    filterArr = [];
-    arrange("price");
-    if (pageOne.className == "page-link active") renderUI(0, 12);
-    else renderUI(13, 20);
-  } else {
-    filterArr = [];
-    arrange("price");
-    filterArr.reverse();
-    console.log(filterArr);
-    if (pageOne.className == "page-link active") renderUI(0, 12);
-    else renderUI(13, 20);
-  }
-});
+window.onload = renderUI(0, 12);
 
 // pagination
 

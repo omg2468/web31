@@ -53,6 +53,9 @@
               <li class="nav-item">
                 <a class="nav-link" href="#">Liên hệ</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Thanh toán</a>
+              </li>
             </ul>
           </div>
         </div>
@@ -69,6 +72,7 @@
         </div>
         <div class="cart">
           <i class="bi bi-cart4 m-3"></i>
+          <div class="cart_number">0</div>
         </div>
       </form>
     </div>
@@ -81,9 +85,11 @@
               class="filter_icon d-flex align-items-center justify-content-between"
             >
               <div class="header_filter">
-                <i class="bi bi-funnel-fill"></i> <span>Lọc</span>
+                <i class="bi bi-funnel-fill"></i> <span>Bộ lọc</span>
               </div>
-              <button class="btn btn-danger disabled" type="button">Bỏ lọc</button>
+              <button class="btn btn-danger disabled" type="button">
+                Bỏ lọc
+              </button>
             </div>
             <div class="accordion" id="accordionPanelsStayOpenExample">
               <div class="accordion-item">
@@ -104,7 +110,7 @@
                   class="accordion-collapse collapse show"
                   aria-labelledby="panelsStayOpen-headingOne"
                 >
-                  <div class="accordion-body">
+                  <div class="accordion-body" id="sort">
                     <form>
                       <input
                         type="checkbox"
@@ -176,46 +182,11 @@
                   </div>
                 </div>
               </div>
-              <div class="accordion-item">
-                <h3 class="accordion-header" id="panelsStayOpen-headingThree">
-                  <button
-                    class="accordion-button"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#panelsStayOpen-collapseThree"
-                    aria-expanded="false"
-                    aria-controls="panelsStayOpen-collapseThree"
-                  >
-                    Đánh giá
-                  </button>
-                </h3>
-                <div
-                  id="panelsStayOpen-collapseThree"
-                  class="accordion-collapse collapse show"
-                  aria-labelledby="panelsStayOpen-headingThree"
-                >
-                  <div class="accordion-body">
-                    <form>
-                      <input type="checkbox" id="5" name="5" value="5" />
-                      <label for="5">5 <i class="bi bi-star-fill"></i></label
-                      ><br />
-                      <input type="checkbox" id="4" name="4" value="4" />
-                      <label for="4"
-                        >4 <i class="bi bi-star-fill"></i> - 4.5
-                        <i class="bi bi-star-fill"></i></label
-                      ><br />
-                      <input type="checkbox" id="3" name="3" value="3" />
-                      <label for="3"
-                        >3 <i class="bi bi-star-fill"></i> - 3.5
-                        <i class="bi bi-star-fill"></i
-                      ></label>
-                    </form>
-                  </div>
-                </div>
-              </div>
             </div>
             <div class="filter_button text-center">
-              <button class="btn btn-danger disabled" type="button">Áp dụng</button>
+              <button class="btn btn-danger disabled" type="button">
+                Áp dụng
+              </button>
             </div>
           </div>
         </div>
@@ -226,6 +197,8 @@
               <option value="default">Mặc định</option>
               <option value="increase">Giá tăng dần</option>
               <option value="decrease">Giá giảm dần</option>
+              <option value="starup">Xếp hạng cao</option>
+              <option value="stardown">Xếp hạng thấp</option>
             </select>
           </div>
           <div class="container_menu_items">

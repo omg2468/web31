@@ -116,6 +116,25 @@ h2 {
   overflow: hidden;
 }
 
+.cart {
+  position: relative;
+}
+
+.cart_number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  border-radius: 50%;
+  height: 25px;
+  width: 25px;
+  background-color: red;
+  color: white;
+  top: 0px;
+  right: 0px;
+  z-index: 99;
+}
+
 /* header */
 .container-fluid.header .background {
   z-index: 0;

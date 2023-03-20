@@ -72,6 +72,24 @@ h2 {
   padding-right: 30px;
 }
 
+.cart {
+  position: relative;
+}
+
+.cart_number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  border-radius: 50%;
+  height: 25px;
+  width: 25px;
+  background-color: red;
+  color: white;
+  top: 0px;
+  right: 0px;
+  z-index: 99;
+}
 /* news_details */
 
 .new_details {

@@ -24,6 +24,7 @@ img {
 	max-width: 100%;
 	vertical-align: middle;
 	border-radius: 4px;
+	height: 200px;
 }
 
 a {
@@ -264,7 +265,7 @@ header .count {
 	font-weight: bold;
 }
 
-.hide {
+.discount .hide {
 	display: none !important;
 }
 
