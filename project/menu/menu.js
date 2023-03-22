@@ -307,6 +307,13 @@ let filterChange = () => {
   );
   console.log(inputsort);
   console.log(filterArr);
+  if (filterArr.length <= 12) {
+    pageOne.className = "page-link active";
+    pageTwo.style.display = 'none';
+    nextBtn.className = "page-link disabled";
+    previousBtn.className = "page-link disabled";
+
+  }
   if (pageOne.className == "page-link active") renderUI(0, 12);
   else renderUI(13, 20);
 };
@@ -419,13 +426,12 @@ let renderUI = (first, last) => {
 // when click order
 let orderbox = () => {
   let box = document.createElement("div");
-  box.innerHTML = `Đăng kí thành công <i class="bi bi-check-square-fill"></i>`; 
+  box.innerHTML = `Đăng kí thành công <i class="bi bi-check-square-fill"></i>`;
   box.classList.add("order_box");
-  document.body.append(box)
+  document.body.append(box);
   let cartNumber = document.querySelector(".cart_number");
-  cartNumber.innerHTML++
+  cartNumber.innerHTML++;
 };
-
 
 // render UI firt time when loading page
 window.onload = renderUI(0, 12);
