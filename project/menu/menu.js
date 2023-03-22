@@ -410,12 +410,22 @@ let renderUI = (first, last) => {
               ${countStar(filterArr[i].star)}
               </div>
               <div class="button_oder">
-                <button type="button" class="btn btn-danger">Đặt hàng ngay</button>
+                <button type="button" class="btn btn-danger" onclick='orderbox()'>Đặt hàng ngay</button>
               </div>
             </div>`;
     }
   }
 };
+// when click order
+let orderbox = () => {
+  let box = document.createElement("div");
+  box.innerHTML = `Đăng kí thành công <i class="bi bi-check-square-fill"></i>`; 
+  box.classList.add("order_box");
+  document.body.append(box)
+  let cartNumber = document.querySelector(".cart_number");
+  cartNumber.innerHTML++
+};
+
 
 // render UI firt time when loading page
 window.onload = renderUI(0, 12);

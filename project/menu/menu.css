@@ -110,7 +110,6 @@ h2 {
 .header_filter:hover {
   background-color: rgb(255, 0, 0);
   color: white;
-
 }
 
 .container.menu .filter_button button {
@@ -233,6 +232,37 @@ h2 {
 .container.menu .pagination .active {
   color: white;
   background-color: red;
+}
+
+.order_box {
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+  z-index: 999;
+  border: 3px solid rgb(25, 253, 25);
+  padding: 10px;
+  background-color: white;
+  animation: movebox 1.2s linear forwards;
+  border-radius: 10px;
+}
+
+@keyframes movebox {
+  0% {
+    bottom: 30px;
+    display: block;
+    visibility: visible;
+  }
+
+  100% {
+    bottom: 150px;
+    display: none;
+    visibility: hidden
+  }
+}
+
+
+.order_box i {
+  color: green;
 }
 
 /* subscribe for more */
