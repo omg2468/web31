@@ -312,7 +312,6 @@ let filterChange = () => {
     pageTwo.style.display = 'none';
     nextBtn.className = "page-link disabled";
     previousBtn.className = "page-link disabled";
-
   }
   if (pageOne.className == "page-link active") renderUI(0, 12);
   else renderUI(13, 20);
@@ -323,6 +322,7 @@ apply.addEventListener("click", filterChange);
 // arrange
 let arrangeOption = () => {
   filterArr = filterArr.sort((a, b) => {
+    // if(filterOption.value == "increase"){return a.price - b.price > 0}
     if (
       (a.price > b.price && filterOption.value == "increase") ||
       (a.price < b.price && filterOption.value == "decrease") ||
@@ -426,7 +426,7 @@ let renderUI = (first, last) => {
 // when click order
 let orderbox = () => {
   let box = document.createElement("div");
-  box.innerHTML = `Đăng kí thành công <i class="bi bi-check-square-fill"></i>`;
+  box.innerHTML = `Mua hàng thành công <i class="bi bi-check-square-fill"></i>`;
   box.classList.add("order_box");
   document.body.append(box);
   let cartNumber = document.querySelector(".cart_number");

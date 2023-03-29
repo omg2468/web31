@@ -1,44 +1,50 @@
-//function arrange for product
-let arrange = (filter) => {
-  let numberArr = [];
-  let checkID = [];
-  for (let i = 0; i < product.length; i++) {
-    numberArr.push(product[i][filter]);
-  }
-  numberArr.sort((a, b) => a - b);
-  for (let i = 0; i < numberArr.length; i++) {
-    for (let x = 0; x < product.length; x++) {
-      if (
-        product[x][filter] == numberArr[i] &&
-        !checkID.includes(product[x].id)
-      ) {
-        filterArr.push(product[x]);
-        checkID.push(product[x].id);
-        break;
-      }
-    }
+// async function getData() {
+//   const data = await fetch("https://ok12345.vercel.app/products")
+//     .then((response) => response.json())
+//     .catch((rejected) => {
+//       console.log(rejected);
+//     });
+
+//   return data;
+// }
+
+// let a = 12;
+// console.log(a[0]);
+
+// var titleToNumber = function (columnTitle) {
+//   const alphabet = "0ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+//   let alpha = alphabet.split("");
+//   let value = 0;
+//   for (let i = 0; i < columnTitle.length; i++) {
+//     if (i == columnTitle.length - 1) {
+//       value += alpha.findIndex((a) => a === columnTitle[i]);
+//       return value
+//     }
+//     value +=
+//       Math.pow(26, columnTitle.length - i - 1) *
+//       alpha.findIndex((a) => a === columnTitle[i]);
+//   }
+// };
+
+// console.log(titleToNumber("AB"));
+
+let check = function (number, interge) {
+  return number / interge == Math.floor(number / interge);
+};
+
+console.log(check(7, 5));
+
+var isUgly = function (n) {
+  // if (n = 1) return true;
+  while (n != 2 && n != 3 && n != 5) {
+    if (check(n, 2)) {
+      n = n / 2;
+    } else if (check(n, 3)) {
+      n = n / 3;
+    } else if (check(n, 5)) {
+      n = n / 5;
+    } else return false;
   }
 };
 
-// Filter array for price
-const filterOption = document.querySelector("#price");
-filterOption.addEventListener("change", function () {
-  if (filterOption.value == "default") {
-    filterArr = [];
-    arrange("id");
-    if (pageOne.className == "page-link active") renderUI(0, 12);
-    else renderUI(13, 20);
-  } else if (filterOption.value == "increase") {
-    filterArr = [];
-    arrange("price");
-    if (pageOne.className == "page-link active") renderUI(0, 12);
-    else renderUI(13, 20);
-  } else {
-    filterArr = [];
-    arrange("price");
-    filterArr.reverse();
-    console.log(filterArr);
-    if (pageOne.className == "page-link active") renderUI(0, 12);
-    else renderUI(13, 20);
-  }
-});
+console.log((56%3));

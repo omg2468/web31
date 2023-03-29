@@ -110,10 +110,7 @@ h2 {
 }
 
 #search .sreach_result .box_result .description_result {
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
-  overflow: hidden;
+  color: red;
 }
 
 .cart {

@@ -6,8 +6,9 @@ const navBarLink = document.querySelectorAll(".nav-item a");
 const btnNav = document.querySelector(".navbar .container-fluid button span");
 const cart = document.querySelector(".bi-cart4");
 console.log(navBarLink);
+
 // product
-const product = [
+export const product = [
   {
     name: "Bánh mì thịt nướng",
     price: 20000,
@@ -190,6 +191,7 @@ const product = [
   },
 ];
 
+
 // navbar
 const scrollNav = () => {
   let aboutTop = aboutUs.getBoundingClientRect().top;
@@ -255,6 +257,31 @@ const result = document.querySelector("#search .sreach_result");
 const search = document.querySelector("#search input");
 console.log(result);
 
+let countStar = (star) => {
+  let resultStart = "";
+  let full;
+  let half;
+  let nostar;
+  if (star % 1 == 0) {
+    full = star;
+    nostar = 5 - star;
+    half = 0;
+  } else {
+    full = star - 0.5;
+    nostar = 5 - star - 0.5;
+    half = 1;
+  }
+  for (let i = 0; i < full; i++) {
+    resultStart += `<i class="bi bi-star-fill"></i>`;
+  }
+  resultStart += half ? `<i class="bi bi-star-half"></i>` : "";
+  for (let i = 0; i < nostar; i++) {
+    resultStart += `<i class="bi bi-star"></i>`;
+  }
+  return resultStart;
+};
+
+
 let searchProgress = () => {
   result.innerHTML = "";
   for (let i = 0; i < product.length; i++) {
@@ -270,7 +297,7 @@ let searchProgress = () => {
                   { style: "currency", currency: "VND" }
                 )} </div>
                 <div class="description_result">
-                  ${product[i].description}
+                  ${countStar(product[i].star)}
                 </div>
               </div>
             </div>
@@ -281,6 +308,4 @@ let searchProgress = () => {
 
 search.addEventListener("keyup", searchProgress);
 
-var x = 1000;
-x = x.toLocaleString("it-IT", { style: "currency", currency: "VND" });
-console.log(x);
+

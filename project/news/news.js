@@ -1,3 +1,5 @@
+import { product } from "..";
+console.log(product);
 const navbar = document.querySelector(".navbar_container");
 const navBarToogle = document.querySelector(".navbar-toggler");
 const navBarToogleIcon = document.querySelector(".navbar-toggler-icon");
