@@ -1,4 +1,2 @@
-import product, {a} from "./test.js";
+export let a = 1
 
-console.log(product)
-console.log(a)

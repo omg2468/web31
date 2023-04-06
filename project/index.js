@@ -8,7 +8,7 @@ const cart = document.querySelector(".bi-cart4");
 console.log(navBarLink);
 
 // product
-export const product = [
+const product = [
   {
     name: "Bánh mì thịt nướng",
     price: 20000,

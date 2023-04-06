@@ -11,7 +11,11 @@ const getGameList = function () {
   return fetch(
     "https://free-to-play-games-database.p.rapidapi.com/api/games",
     options
-  ).then((res) => res.json());
+  )
+    .then((res) => res.json())
+    .then((data) => {
+      console.log(data);
+    });
 };
 
 const getGameDetail = function (id) {
@@ -23,8 +27,14 @@ const getGameDetail = function (id) {
   return fetch(
     "https://free-to-play-games-database.p.rapidapi.com/api/game?id=452",
     options
-  ).then((res) => res.json());
+  )
+    .then((res) => res.json())
+    .then((data) => {
+      console.log(data);
+    });
 };
+
+getGameDetail();
 
 const toGameCard = function (game) {
   return `<a href="detail.html?game=${game.id}">
@@ -53,7 +63,6 @@ const toGameCard = function (game) {
 };
 
 let gameList = document.querySelector(".total-item");
-console.log(gameList);
 
 let loading = function (min, max) {
   getGameList().then(function (games) {
@@ -63,17 +72,17 @@ let loading = function (min, max) {
   });
 };
 
-window.onload = loading(0, 30);
+// window.onload = loading(0, 30);
 
-let a = 900;
-let b = 31;
-let c = 60;
-window.addEventListener("scroll", function () {
-  if (document.body.scrollTop > a || document.documentElement.scrollTop > a) {
-    console.log(a);
-    a = a + 900;
-    loading(b, c);
-    b = b + 30;
-    c = c + 30;
-  }
-});
+// let a = 900;
+// let b = 31;
+// let c = 60;
+// window.addEventListener("scroll", function () {
+//   if (document.body.scrollTop > a || document.documentElement.scrollTop > a) {
+//     console.log(a);
+//     a = a + 900;
+//     loading(b, c);
+//     b = b + 30;
+//     c = c + 30;
+//   }
+// });

@@ -1,18 +1,21 @@
-
+@import url("https://fonts.googleapis.com/css2?family=Signika+Negative:wght@400;500;600;700&display=swap");
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
+:root {
+  --red-color : #f00000
+}
 
 h2 {
-  border-bottom: 2px solid rgb(245, 16, 16);
+  border-bottom: 2px solid var(--red-color);
   width: fit-content;
   margin-right: auto;
   margin-left: auto;
-  margin-top: 30px;
-  text-align: center;
-  margin-bottom: 20px;
+  font-family: "Signika Negative", sans-serif;
+  font-weight: bolder;
+  text-transform: uppercase;
 }
 
 /* modal */
@@ -214,7 +217,7 @@ h2 {
 }
 
 .form-message {
-  color: red;
+  color: var(--red-color);
 }
 
 
@@ -286,7 +289,7 @@ h2 {
   border-radius: 50%;
   height: 25px;
   width: 25px;
-  background-color: red;
+  background-color: var(--red-color);
   color: white;
   top: 0px;
   right: 0px;
@@ -395,9 +398,9 @@ input[type="number"] {
 }
 
 .oder_done .btn:active {
-  color: red;
+  color: var(--red-color);
   background-color: white;
-  border: 1px solid red;
+  border: 1px solid var(--red-color);
 }
 
 .oder_done a::before {
@@ -435,7 +438,7 @@ input[type="number"] {
 .button {
   width: 100%;
   height: 100%;
-  background-color: rgb(231, 21, 21);
+  background-color: var(--red-color);
   padding: 10px 12px;
   border-radius: 10px;
   color: white;
@@ -444,8 +447,8 @@ input[type="number"] {
 }
 .button:active {
   background-color: white;
-  color: red;
-  border: 1px solid red;
+  color: var(--red-color);
+  border: 1px solid var(--red-color);
 }
 
 /* footer */
@@ -478,5 +481,5 @@ input[type="number"] {
 }
 
 .social_footer a svg:hover {
-  fill: red;
+  fill: var(--red-color);
 }

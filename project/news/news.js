@@ -1,4 +1,3 @@
-import { product } from "..";
 console.log(product);
 const navbar = document.querySelector(".navbar_container");
 const navBarToogle = document.querySelector(".navbar-toggler");

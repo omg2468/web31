@@ -1,16 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Signika+Negative:wght@400;500;600;700&display=swap");
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+:root {
+  --red-color: #f00000;
+}
+
 h2 {
-  border-bottom: 2px solid rgb(245, 16, 16);
+  border-bottom: 2px solid var(--red-color);
   width: fit-content;
   margin-right: auto;
   margin-left: auto;
   margin-top: 30px;
   margin-bottom: 20px;
+  font-family: "Signika Negative", sans-serif;
+  font-weight: bolder;
+  text-transform: uppercase;
 }
 
 /* navbar */
@@ -84,7 +92,7 @@ h2 {
   border-radius: 50%;
   height: 25px;
   width: 25px;
-  background-color: red;
+  background-color: var(--red-color);
   color: white;
   top: 0px;
   right: 0px;
@@ -108,7 +116,7 @@ h2 {
 }
 
 .header_filter:hover {
-  background-color: rgb(255, 0, 0);
+  background-color: var(--red-color);
   color: white;
 }
 
@@ -119,12 +127,12 @@ h2 {
 
 .container.menu .filter_button button:active {
   background-color: white;
-  color: red;
+  color: var(--red-color);
 }
 
 .container.menu .filter_icon button:active {
   background-color: white;
-  color: red;
+  color: var(--red-color);
 }
 
 .container.menu select {
@@ -140,9 +148,9 @@ h2 {
 .container_menu_items .discount {
   top: 10px;
   left: 10px;
-  width: 50px;
-  height: 50px;
-  background-color: red;
+  width: 65px;
+  height: 65px;
+  background-color: var(--red-color);
   border-radius: 50%;
   border: 1px solid #c2a7a7;
   box-shadow: 5px 5px 5px #4d2e2e;
@@ -150,6 +158,8 @@ h2 {
   justify-content: center;
   align-items: center;
   color: white;
+  font-size: large;
+  font-weight: bold;
 }
 
 .container_menu_items .name_item {
@@ -196,7 +206,7 @@ h2 {
 }
 
 .container_menu_items .box_items i {
-  color: rgb(255, 25, 0);
+  color: var(--red-color);
   font-size: 25px;
 }
 
@@ -213,7 +223,7 @@ h2 {
 }
 
 .container_menu_items .button_oder button:active {
-  color: red;
+  color: var(--red-color);
   background-color: white;
 }
 
@@ -224,14 +234,14 @@ h2 {
 }
 
 .container.menu .pagination a {
-  color: red;
-  border: 1px solid red;
+  color: var(--red-color);
+  border: 1px solid var(--red-color);
 }
 
 .container.menu .pagination a:active,
 .container.menu .pagination .active {
   color: white;
-  background-color: red;
+  background-color: var(--red-color);
 }
 
 .order_box {
@@ -256,10 +266,9 @@ h2 {
   100% {
     bottom: 150px;
     display: none;
-    visibility: hidden
+    visibility: hidden;
   }
 }
-
 
 .order_box i {
   color: green;
@@ -295,7 +304,7 @@ h2 {
 .container-fluid.subscribe .row .button {
   width: 100%;
   height: 100%;
-  background-color: rgb(231, 21, 21);
+  background-color: var(--red-color);
   padding: 10px 12px;
   border-radius: 10px;
   color: white;
@@ -305,12 +314,12 @@ h2 {
 
 .container-fluid.subscribe .row .button:active {
   background-color: white;
-  color: red;
-  border: 1px solid red;
+  color: var(--red-color);
+  border: 1px solid var(--red-color);
 }
 
 .container_menu_items nav {
-  margin-top: 30px
+  margin-top: 30px;
 }
 
 /* footer */
@@ -343,5 +352,5 @@ h2 {
 }
 
 .social_footer a svg:hover {
-  fill: red;
+  fill: var(--red-color);
 }

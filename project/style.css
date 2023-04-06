@@ -1,3 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Signika+Negative:wght@400;500;600;700&display=swap");
+
+:root {
+  --red-color : #f00000
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -5,11 +11,14 @@
 }
 
 h2 {
-  border-bottom: 2px solid rgb(245, 16, 16);
+  border-bottom: 2px solid var(--red-color);
   width: fit-content;
   margin-right: auto;
   margin-left: auto;
   margin-top: 30px;
+  font-family: "Signika Negative", sans-serif;
+  font-weight: bolder;
+  text-transform: uppercase;
 }
 
 /* navbar */
@@ -110,7 +119,7 @@ h2 {
 }
 
 #search .sreach_result .box_result .description_result {
-  color: red;
+  color: var(--red-color);
 }
 
 .cart {
@@ -125,7 +134,7 @@ h2 {
   border-radius: 50%;
   height: 25px;
   width: 25px;
-  background-color: red;
+  background-color: var(--red-color);
   color: white;
   top: 0px;
   right: 0px;
@@ -171,7 +180,7 @@ h2 {
 }
 
 .art_cake .subheader_art_cake {
-  color: #c81e1e;
+  color: var(--red-color);
   margin-bottom: 40px;
   text-transform: uppercase;
 }
@@ -199,7 +208,7 @@ h2 {
 .blockquote_art_cake {
   width: 80%;
   margin: auto;
-  color: #c71a1a;
+  color: var(--red-color);
   font-family: "Lora", serif;
   font-size: larger;
   position: relative;
@@ -373,14 +382,14 @@ h2 {
 
 .more_details button {
   padding: 10px;
-  background-color: red;
+  background-color: var(--red-color);
   border: none;
   border-radius: 10px;
 }
 
 .more_details button:active {
   background-color: white;
-  color: red;
+  color: var(--red-color);
 }
 
 /* subscribe for more */
@@ -413,7 +422,7 @@ input {
 .container-fluid.subscribe .row .button {
   width: 100%;
   height: 100%;
-  background-color: rgb(231, 21, 21);
+  background-color: var(--red-color);
   padding: 10px 12px;
   border-radius: 10px;
   color: white;
@@ -423,8 +432,8 @@ input {
 
 .container-fluid.subscribe .row .button:active {
   background-color: white;
-  color: red;
-  border: 1px solid red;
+  color: var(--red-color);
+  border: 1px solid var(--red-color);
 }
 
 /* footer */
@@ -457,5 +466,5 @@ input {
 }
 
 .social_footer a svg:hover {
-  fill: red;
+  fill: var(--red-color);
 }

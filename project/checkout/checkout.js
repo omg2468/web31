@@ -5,7 +5,7 @@ console.log(document.body);
 const wards = document.querySelector("#wards");
 
 async function getData() {
-  const data = await fetch("https://provinces.open-api.vn/api/?depth=3")
+  const res = await fetch("https://provinces.open-api.vn/api/?depth=3")
     .then((response) => response.json())
     .catch((rejected) => {
       console.log(rejected);
@@ -30,7 +30,6 @@ let changeCity = () => {
   if (citydata == "default") return;
   getData().then((data) => {
     a = data.findIndex((x) => x.codename === citydata);
-
     data[a].districts.map((data) => {
       districts.innerHTML += `<option value="${data.codename}">${data.name}</option>`;
     });
@@ -92,7 +91,7 @@ let inputEmail = () => {
   if (!emailForm.value) {
     emailText.innerHTML = `<div class="text-danger">Vui lòng nhập email</div>`;
   } else if (!result) {
-    emailText.innerHTML = `<div class="text-danger">Xin hãy nhập lại email</div>`;
+    emailText.innerHTML = `<div class="text-danger">Email không đúng định dạng</div>`;
   } else if (result) {
     emailText.innerHTML = "";
   }
@@ -191,25 +190,61 @@ expiryVisa.addEventListener("change", function () {
 });
 let i = 0;
 //numbervisa
+function patternMatch({ input, template }) {
+  try {
+    let j = 0;
+    let plaintext = "";
+    let countj = 0;
+    while (j < template.length) {
+      if (countj > input.length - 1) {
+        template = template.substring(0, j);
+        break;
+      }
+
+      if (template[j] == input[j]) {
+        j++;
+        countj++;
+        continue;
+      }
+
+      if (template[j] == "x") {
+        template =
+          template.substring(0, j) + input[countj] + template.substring(j + 1);
+        plaintext = plaintext + input[countj];
+        countj++;
+      }
+      j++;
+    }
+
+    return template;
+  } catch {
+    return "";
+  }
+}
+
 const sectionone = document.querySelector(".section_one");
 const sectiontwo = document.querySelector(".section_two");
 const sectionthree = document.querySelector(".section_three");
 const sectionfour = document.querySelector(".section_four");
-const sectionAll = document.querySelectorAll(".number_visa div");
-console.log(sectionAll[0].innerHTML);
+numberVisa.oninput = (e) => {
+  e.target.value = patternMatch({
+    input: e.target.value,
+    template: "xxxx xxxx xxxx xxxx",
+  });
+};
 numberVisa.addEventListener("input", function (e) {
   if (isNaN(e.data * 1)) {
     this.value = this.value.slice(0, this.value.length - 1);
   }
   sectionone.innerHTML = this.value.slice(0, 4);
-  sectiontwo.innerHTML = this.value.slice(4, 8);
-  sectionthree.innerHTML = this.value.slice(8, 12);
-  sectionfour.innerHTML = this.value.slice(12, 16);
+  sectiontwo.innerHTML = this.value.slice(5, 9);
+  sectionthree.innerHTML = this.value.slice(10, 14);
+  sectionfour.innerHTML = this.value.slice(15, 19);
   if (this.value.length == 0) {
-    sectionone.innerHTML = '0000';
-    sectiontwo.innerHTML = '0000';
-    sectionthree.innerHTML = '0000';
-    sectionfour.innerHTML = '0000';
+    sectionone.innerHTML = "0000";
+    sectiontwo.innerHTML = "0000";
+    sectionthree.innerHTML = "0000";
+    sectionfour.innerHTML = "0000";
   }
   if (this.value.length == 16) {
     checkbutton();
@@ -223,3 +258,5 @@ numberVisa.addEventListener("change", function () {
     messNumber.innerHTML = `Mã số thẻ không hợp lệ`;
   } else messNumber.innerHTML = "";
 });
+
+document.getElementById("name").innerHTML = `ok` && true;

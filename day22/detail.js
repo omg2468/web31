@@ -12,19 +12,18 @@ const getGameDetail = function (id) {
   return fetch(
     `https://free-to-play-games-database.p.rapidapi.com/api/game?id=${id}`,
     options
-  )
-    .then((response) => response.json())
+  ).then((response) => response.json());
 };
 let url = new URL(location.href);
 const game = url.searchParams.get("game");
-console.log(game)
+console.log(game);
 
-window.onload = function(){
-    const url = new URL(location.href)
-    const game = url.searchParams.get('game')
-    let body = document.body
+window.onload = function () {
+  const url = new URL(location.href);
+  const game = url.searchParams.get("game");
+  let body = document.body;
 
-    getGameDetail(game).then(function(data){
-        body.innerHTML = `<p>${data.title}</p>`
-    })
-}
+  getGameDetail(game).then(function (data) {
+    body.innerHTML = `<p>${data.title}</p>`;
+  });
+};
