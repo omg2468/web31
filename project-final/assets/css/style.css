@@ -86,7 +86,6 @@ h2 {
   width: 200%;
   max-height: 460px;
   overflow-y: scroll;
-  border-radius: 10px;
 }
 
 #search .sreach_result .box_result {

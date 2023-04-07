@@ -242,6 +242,7 @@ h2 {
 .container.menu .pagination .active {
   color: white;
   background-color: var(--red-color);
+  z-index: 0;
 }
 
 .order_box {
