@@ -123,6 +123,7 @@ h2 {
 }
 .detail-star > i {
   color: red;
+  margin-right: 2px;
 }
 
 .status-item {

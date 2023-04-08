@@ -67,12 +67,13 @@ let gameList = document.querySelector(".total-item");
 let loading = function (min, max) {
   getGameList().then(function (games) {
     for (let i = min; i < max; i++) {
+      console.log(games[i]);
       gameList.innerHTML += toGameCard(games[i]);
     }
   });
 };
 
-// window.onload = loading(0, 30);
+window.onload = loading(0, 30);
 
 // let a = 900;
 // let b = 31;
