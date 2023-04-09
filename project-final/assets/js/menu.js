@@ -412,9 +412,10 @@ let renderUI = (first, last) => {
                 : ""
             }
               <div class="img_item">
-                <img src="./assets${filterArr[i].image}" alt="${
-        filterArr[i].name
-      }">
+                      <a href="detail_item.html?id=${
+                        filterArr[i].id ? filterArr[i].id : "0"
+                      }">
+<img src="./assets${filterArr[i].image}" alt="${filterArr[i].name}"></a>
               </div>
               <div class="name_item">
                 ${filterArr[i].name}
