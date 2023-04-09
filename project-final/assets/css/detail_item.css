@@ -347,3 +347,8 @@ input {
   background-color: var(--red-color);
   color: white;
 }
+
+.adress_1 {
+  margin-top: 10px;
+  font-weight: 700;
+}

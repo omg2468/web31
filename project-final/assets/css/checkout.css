@@ -483,3 +483,8 @@ input[type="number"] {
 .social_footer a svg:hover {
   fill: var(--red-color);
 }
+
+.adress_1 {
+  margin-top: 10px;
+  font-weight: 700;
+}

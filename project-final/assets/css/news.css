@@ -7,7 +7,7 @@
 }
 
 :root {
-  --red-color : #f00000
+  --red-color: #f00000;
 }
 
 h2 {
@@ -128,6 +128,12 @@ h2 {
   overflow: hidden;
   flex-direction: column;
   margin-left: 50px;
+}
+
+@media (max-width: 556px) {
+  .box_news {
+    margin-left: 0;
+  }
 }
 
 .img_news,
@@ -257,4 +263,8 @@ input {
 
 .social_footer a svg:hover {
   fill: var(--red-color);
+}
+.adress_1 {
+  margin-top: 10px;
+  font-weight: 700;
 }
