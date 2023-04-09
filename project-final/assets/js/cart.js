@@ -121,7 +121,7 @@ const renderUI = () => {
       !item.display && "none"
     }">
                   <div class="box-img">
-                <img src=".${item.image}" alt="${item.name}" />
+                <img src="${item.image}" alt="${item.name}" />
               </div>
               <div class="description-item-2">
                 <div class="name-item-2"><h5>${item.name}</h5></div>
