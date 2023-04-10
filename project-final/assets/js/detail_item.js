@@ -74,7 +74,6 @@ window.onload = () => {
               <div class="detail-star">
                 <b>Đánh giá:</b> ${countStar(data[0].star)}
               </div>
-              <div class="status-item"><i class="bi bi-check"></i>Còn Hàng</div>
               <div class="detail-description">
                 <b>Mô tả sản phẩm:</b> ${data[0].description}
               </div>

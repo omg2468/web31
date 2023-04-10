@@ -25,6 +25,9 @@
     <link rel="stylesheet" href="./assets/css/checkout.css" />
   </head>
   <body>
+    <div class="spin-loading">
+      <div class="spinner"> </div>
+    </div>
     <!-- Modal -->
     <div
       class="modal fade bank"
@@ -93,7 +96,7 @@
             ></button>
           </div>
           <div class="modal-body">
-            <div class="card_visa">
+            <div class="card_visa d-none d-md-block">
               <div class="card_inner">
                 <div class="front_visa">
                   <div class="header_visa_front">
@@ -423,7 +426,7 @@
 
     <!-- subscribe for more -->
     <div
-      class="container-fluid subscribe text-center d-flex justify-content-center align-items-center"
+      class="container-fluid subscribe text-center"
     >
       <div class="box_sub">
         <h3>ĐĂNG KÍ NHẬN THÔNG BÁO</h3>
@@ -431,10 +434,10 @@
       </div>
       <div class="row">
         <div class="col-lg-8 col-12">
-          <input type="text" placeholder="Nhập địa chỉ Email của bạn" />
+          <div class="email-box"><input type="text" placeholder="Nhập địa chỉ Email của bạn" /></div>
         </div>
         <div class="col-lg-4 col-12">
-          <button type="button" class="button">Đăng kí</button>
+          <div class="subscribe"><button type="button" class="button">Đăng kí</button></div>
         </div>
       </div>
     </div>

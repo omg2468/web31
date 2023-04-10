@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Signika+Negative:wght@400;500;600;700&display=swap");
 
 :root {
-  --red-color : #f00000
+  --red-color: #f00000;
 }
 
 * {
@@ -399,25 +399,40 @@ h2 {
   background-color: var(--red-color);
 }
 
-.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
-  bottom: -25px
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  bottom: -25px;
 }
 
 /* subscribe for more */
 .container-fluid.subscribe {
   background-color: rgba(0, 0, 0, 0.852);
-  height: 300px;
   flex-direction: column;
 }
 
 .box_sub {
   width: 100%;
   margin-bottom: 20px;
+  padding: 20px;
   color: white;
 }
 
 .container-fluid.subscribe .row {
-  width: 50%;
+  display: flex;
+  padding: 0 50px 10px 100px;
+}
+
+@media (max-width: 768px) {
+  .container-fluid.subscribe .row {
+      padding: 0px 0px 10px;
+
+  }
+}
+
+.email-box {
+  height: 100%;
 }
 
 input {

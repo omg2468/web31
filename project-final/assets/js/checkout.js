@@ -1,8 +1,8 @@
 const city = document.querySelector("#city");
-console.log(city);
 const districts = document.querySelector("#districts");
-console.log(document.body);
 const wards = document.querySelector("#wards");
+const spin = document.querySelector(".spin-loading");
+console.log(spin);
 
 async function getData() {
   const res = await fetch("https://provinces.open-api.vn/api/?depth=3")
@@ -20,6 +20,7 @@ getData().then((data) =>
 );
 let a;
 let changeCity = () => {
+  spin.style.display = "block";
   districts.value = "default";
   districts.style.display = "block";
   districts.innerHTML = `<option value="default">Chọn huyện</option></select
@@ -32,11 +33,14 @@ let changeCity = () => {
     a = data.findIndex((x) => x.codename === citydata);
     data[a].districts.map((data) => {
       districts.innerHTML += `<option value="${data.codename}">${data.name}</option>`;
+      spin.style.display = "none";
     });
   });
 };
 
 let changedistricts = () => {
+  spin.style.display = "block";
+
   wards.value = "default";
   wards.style.display = "block";
   wards.innerHTML = `<option value="default">Chọn xã</option>`;
@@ -47,6 +51,7 @@ let changedistricts = () => {
     b = data[a].districts.findIndex((x) => x.codename === districtsdata);
     data[a].districts[b].wards.map((data) => {
       wards.innerHTML += `<option value="${data.codename}">${data.name}</option>`;
+      spin.style.display = "none";
     });
   });
 };
@@ -58,7 +63,6 @@ const nameForm = document.getElementById("name");
 const phoneForm = document.getElementById("phone");
 const emailForm = document.getElementById("email");
 const sendForm = document.querySelector(".container.form button");
-console.log(sendForm);
 // name
 let inputName = () => {
   nameForm.value = nameForm.value.toUpperCase();

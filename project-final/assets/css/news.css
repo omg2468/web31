@@ -191,18 +191,30 @@ h2 {
 /* subscribe for more */
 .container-fluid.subscribe {
   background-color: rgba(0, 0, 0, 0.852);
-  height: 300px;
   flex-direction: column;
 }
 
 .box_sub {
-  width: 60%;
+  width: 100%;
   margin-bottom: 20px;
+  padding: 20px;
   color: white;
 }
 
 .container-fluid.subscribe .row {
-  width: 50%;
+  display: flex;
+  padding: 0 50px 10px 100px;
+}
+
+@media (max-width: 768px) {
+  .container-fluid.subscribe .row {
+      padding: 0px 0px 10px;
+
+  }
+}
+
+.email-box {
+  height: 100%;
 }
 
 input {

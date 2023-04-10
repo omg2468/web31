@@ -307,9 +307,9 @@ let searchProgress = () => {
     if (product[i].name.toLowerCase().includes(search.value) && search.value) {
       result.innerHTML += `<div class="box_result d-flex">
       <div class="result_img">
-                <img src="./assets${product[i].image}" alt="${
-        product[i].name
-      }" />
+                <a href="https://omg2468.github.io/web31/project-final/detail_item.html?id=${product[i].id}"><img src="./assets${
+                  product[i].image
+                }" alt="${product[i].name}" /></a>
               </div>
               <div class="result_text">
                 <div class="name_result"><h4>${product[i].name}</h4></div>
@@ -327,7 +327,7 @@ let searchProgress = () => {
   }
 };
 
-search.addEventListener("focusout", closesearch);
+// search.addEventListener("focusout", closesearch);
 search.addEventListener("focusin", searchProgress);
 search.addEventListener("keyup", searchProgress);
 getProduct();
