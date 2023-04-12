@@ -149,3 +149,55 @@ let orderbox = () => {
   cartNumber.innerHTML =
     Number(number.innerHTML) + Number(cartNumber.innerHTML);
 };
+
+//call api
+const URL_PRODUCT = `https://api-product-g1bk.vercel.app/product`;
+var product;
+
+const getProduct = async () => {
+  const res = await fetch(URL_PRODUCT);
+  const data = await res.json();
+  product = data;
+};
+getProduct();
+ // search
+const result = document.querySelector("#search .sreach_result");
+const search = document.querySelector("#search input");
+console.log(search);
+
+
+let closesearch = () => {
+  result.innerHTML = "";
+};
+
+let searchProgress = () => {
+  result.innerHTML = "";
+  for (let i = 0; i < product.length; i++) {
+    if (product[i].name.toLowerCase().includes(search.value) && search.value) {
+      result.innerHTML += `<a href="https://omg2468.github.io/web31/project-final/detail_item.html?id=${
+        product[i].id
+      }" class = "no-decoration"><div class="box_result d-flex">
+      <div class="result_img">
+                <img src="./assets${product[i].image}" alt="${
+        product[i].name
+      }"/>
+              </div>
+              <div class="result_text">
+                <div class="name_result"><h4>${product[i].name}</h4></div>
+                <div class="price_result">${product[i].price.toLocaleString(
+                  "it-IT",
+                  { style: "currency", currency: "VND" }
+                )} </div>
+                <div class="description_result">
+                  ${countStar(product[i].star)}
+                </div>
+              </div>
+            </div>
+          </div></a>`;
+    }
+  }
+};
+
+search.addEventListener("focusout", closesearch);
+search.addEventListener("focusin", searchProgress);
+search.addEventListener("keyup", searchProgress);

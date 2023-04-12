@@ -263,9 +263,7 @@ const allLink = document.querySelectorAll(".pagination li a");
 const filterIcon = document.querySelector(".header_filter");
 const accordion = document.querySelector(".accordion");
 filterIcon.addEventListener("click", function () {
-  if (accordion.style.display == "none") {
-    accordion.style.display = "block";
-  } else accordion.style.display = "none";
+  accordion.style.display =  accordion.style.display == "none" ? "block" : "none"
 });
 //filter status
 const apply = document.querySelector(".filter_button button");
@@ -476,3 +474,44 @@ for (let i = 0; i < allLink.length; i++) {
   });
 }
 getProduct();
+// search
+const result = document.querySelector("#search .sreach_result");
+const search = document.querySelector("#search input");
+console.log(search);
+
+
+let closesearch = () => {
+  result.innerHTML = "";
+};
+
+let searchProgress = () => {
+  result.innerHTML = "";
+  for (let i = 0; i < product.length; i++) {
+    if (product[i].name.toLowerCase().includes(search.value) && search.value) {
+      result.innerHTML += `<a href="https://omg2468.github.io/web31/project-final/detail_item.html?id=${
+        product[i].id
+      }" class = "no-decoration"><div class="box_result d-flex">
+      <div class="result_img">
+                <img src="./assets${product[i].image}" alt="${
+        product[i].name
+      }"/>
+              </div>
+              <div class="result_text">
+                <div class="name_result"><h4>${product[i].name}</h4></div>
+                <div class="price_result">${product[i].price.toLocaleString(
+                  "it-IT",
+                  { style: "currency", currency: "VND" }
+                )} </div>
+                <div class="description_result">
+                  ${countStar(product[i].star)}
+                </div>
+              </div>
+            </div>
+          </div></a>`;
+    }
+  }
+};
+
+search.addEventListener("focusout", closesearch);
+search.addEventListener("focusin", searchProgress);
+search.addEventListener("keyup", searchProgress);

@@ -463,7 +463,6 @@ input {
 .container-fluid.subscribe .row .button:active {
   background-color: white;
   color: var(--red-color);
-  border: 1px solid var(--red-color);
 }
 
 /* footer */

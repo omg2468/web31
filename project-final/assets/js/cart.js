@@ -42,8 +42,7 @@ const boxTotal = document.querySelector(".box-item-money");
 const totalCheck = document.querySelector(".total-check");
 const items2 = document.querySelector(".container-item-2");
 const cartNumber = document.querySelector(".cart_number");
-console.log(items2);
-
+const containerCart = document.querySelector(".container-cart");
 const rendercart = () => {
   cartNumber.innerHTML = "";
   let total = 0;
@@ -149,6 +148,16 @@ const renderUI = () => {
               })"><i class="bi bi-x"></i></div>
               </div>`;
   });
+  for (let a = 0, i = 0; i < product.length; i++) {
+    if (!product[i].display) {
+      a++;
+    }
+    if (a == product.length) {
+      containerCart.innerHTML = `<h2>GIỎ HÀNG</h2>
+      <p class="noitem text-center">Không có sản phẩm nào trong giỏ hàng</p>
+      `;
+    }
+  }
 };
 
 let add = (id) => {
@@ -196,3 +205,79 @@ let close1 = (id) => {
 };
 renderUI();
 rendercart();
+
+
+//call api
+const URL_PRODUCT = `https://api-product-g1bk.vercel.app/product`;
+var product1;
+
+const getProduct = async () => {
+  const res = await fetch(URL_PRODUCT);
+  const data = await res.json();
+  product1 = data;
+};
+getProduct();
+ // search
+const result = document.querySelector("#search .sreach_result");
+const search = document.querySelector("#search input");
+console.log(search);
+
+let countStar = (star) => {
+  let resultStart = "";
+  let full;
+  let half;
+  let nostar;
+  if (star % 1 == 0) {
+    full = star;
+    nostar = 5 - star;
+    half = 0;
+  } else {
+    full = star - 0.5;
+    nostar = 5 - star - 0.5;
+    half = 1;
+  }
+  for (let i = 0; i < full; i++) {
+    resultStart += `<i class="bi bi-star-fill"></i>`;
+  }
+  resultStart += half ? `<i class="bi bi-star-half"></i>` : "";
+  for (let i = 0; i < nostar; i++) {
+    resultStart += `<i class="bi bi-star"></i>`;
+  }
+  return resultStart;
+};
+
+let closesearch = () => {
+  result.innerHTML = "";
+};
+
+let searchProgress = () => {
+  result.innerHTML = "";
+  for (let i = 0; i < product1.length; i++) {
+    if (product1[i].name.toLowerCase().includes(search.value) && search.value) {
+      result.innerHTML += `<a href="https://omg2468.github.io/web31/project-final/detail_item.html?id=${
+        product1[i].id
+      }" class = "no-decoration"><div class="box_result d-flex">
+      <div class="result_img">
+                <img src="./assets${product1[i].image}" alt="${
+        product1[i].name
+      }"/>
+              </div>
+              <div class="result_text">
+                <div class="name_result"><h4>${product1[i].name}</h4></div>
+                <div class="price_result">${product1[i].price.toLocaleString(
+                  "it-IT",
+                  { style: "currency", currency: "VND" }
+                )} </div>
+                <div class="description_result">
+                  ${countStar(product1[i].star)}
+                </div>
+              </div>
+            </div>
+          </div></a>`;
+    }
+  }
+};
+
+search.addEventListener("focusout", closesearch);
+search.addEventListener("focusin", searchProgress);
+search.addEventListener("keyup", searchProgress);
