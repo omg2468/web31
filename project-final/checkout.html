@@ -26,7 +26,7 @@
   </head>
   <body>
     <div class="spin-loading">
-      <div class="spinner"> </div>
+      <div class="spinner"></div>
     </div>
     <!-- Modal -->
     <div
@@ -336,20 +336,25 @@
                 id="email"
                 placeholder="Email"
               />
+
               <div class="form-message email"></div>
             </div>
             <div class="adress_customer">
-              <select id="city" name="city">
-                <option value="default">Chọn tỉnh</option>
+              <select id="city" name="city" class="form-select">
+                <option value="default" selected>Chọn tỉnh</option>
               </select>
-              <select id="districts" name="districts">
+              <select id="districts" name="districts" class="form-select">
                 <option value="default">Chọn huyện</option>
               </select>
-              <select name="wards" id="wards">
+              <select name="wards" id="wards" class="form-select">
                 <option value="default">Chọn xã</option>
               </select>
             </div>
-            <textarea rows="3" placeholder="Ghi chú"></textarea>
+            <textarea
+              rows="3"
+              placeholder="Ghi chú"
+              class="form-control"
+            ></textarea>
           </div>
         </div>
         <div class="col-lg-6 col-12">
@@ -417,7 +422,11 @@
             />
           </div>
           <div class="oder_done">
-            <div class="back_button"><a href="https://omg2468.github.io/web31/project-final/cart.html"> Quay lại giỏ hàng</a></div>
+            <div class="back_button">
+              <a href="https://omg2468.github.io/web31/project-final/cart.html">
+                Quay lại giỏ hàng</a
+              >
+            </div>
             <div class="btn btn-danger">Thanh toán ngay</div>
           </div>
         </div>
@@ -425,24 +434,28 @@
     </div>
 
     <!-- subscribe for more -->
-    <div
-      class="container-fluid subscribe text-center"
-    >
+    <div class="container-fluid subscribe text-center">
       <div class="box_sub">
         <h3>ĐĂNG KÍ NHẬN THÔNG BÁO</h3>
         <b>Đăng kí nhận thông tin khuyến mãi</b>
       </div>
       <div class="row">
         <div class="col-lg-8 col-12">
-          <div class="email-box"><input type="text" placeholder="Nhập địa chỉ Email của bạn" /></div>
+          <div class="email-box">
+            <input type="text" placeholder="Nhập địa chỉ Email của bạn" />
+          </div>
         </div>
         <div class="col-lg-4 col-12">
-          <div class="subscribe"><button type="button" class="button">Đăng kí</button></div>
+          <div class="subscribe">
+            <button type="button" class="button">Đăng kí</button>
+          </div>
         </div>
       </div>
     </div>
     <!-- footer -->
-    <div class="container_footer d-flex align-items-center pb-5 text-xl-start text-center">
+    <div
+      class="container_footer d-flex align-items-center pb-5 text-xl-start text-center"
+    >
       <div class="container mt-5">
         <div class="row align-items-center">
           <div class="aboutus_footer col-xl-4 offset-xl-1 col-12 mb-4">

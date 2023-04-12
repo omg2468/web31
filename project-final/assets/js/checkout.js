@@ -20,7 +20,6 @@ getData().then((data) =>
 );
 let a;
 let changeCity = () => {
-  spin.style.display = "block";
   districts.value = "default";
   districts.style.display = "block";
   districts.innerHTML = `<option value="default">Chọn huyện</option></select
@@ -29,6 +28,8 @@ let changeCity = () => {
   wards.innerHTML = `<option value="default">Chọn xã</option>`;
   let citydata = city.value;
   if (citydata == "default") return;
+  spin.style.display = "block";
+
   getData().then((data) => {
     a = data.findIndex((x) => x.codename === citydata);
     data[a].districts.map((data) => {
@@ -39,14 +40,14 @@ let changeCity = () => {
 };
 
 let changedistricts = () => {
-  spin.style.display = "block";
-
   wards.value = "default";
   wards.style.display = "block";
   wards.innerHTML = `<option value="default">Chọn xã</option>`;
 
   let districtsdata = districts.value;
   if (districtsdata == "default") return;
+  spin.style.display = "block";
+
   getData().then((data) => {
     b = data[a].districts.findIndex((x) => x.codename === districtsdata);
     data[a].districts[b].wards.map((data) => {

@@ -5,7 +5,6 @@ const aboutUs = document.querySelector(".container-fluid.about_us");
 const navBarLink = document.querySelectorAll(".nav-item a");
 const btnNav = document.querySelector(".navbar .container-fluid button span");
 const cart = document.querySelector(".bi-cart4");
-console.log(navBarLink);
 
 // product
 // const product = [
@@ -271,7 +270,6 @@ TrandingSlider.on("click", function () {
 // search
 const result = document.querySelector("#search .sreach_result");
 const search = document.querySelector("#search input");
-console.log(result);
 
 let countStar = (star) => {
   let resultStart = "";
@@ -300,16 +298,19 @@ let countStar = (star) => {
 let closesearch = () => {
   result.innerHTML = "";
 };
+getProduct();
 
 let searchProgress = () => {
   result.innerHTML = "";
   for (let i = 0; i < product.length; i++) {
     if (product[i].name.toLowerCase().includes(search.value) && search.value) {
-      result.innerHTML += `<div class="box_result d-flex">
+      result.innerHTML += `<a href="https://omg2468.github.io/web31/project-final/detail_item.html?id=${
+        product[i].id
+      }" class = "no-decoration"><div class="box_result d-flex">
       <div class="result_img">
-                <a href="https://omg2468.github.io/web31/project-final/detail_item.html?id=${product[i].id}"><img src="./assets${
-                  product[i].image
-                }" alt="${product[i].name}" /></a>
+                <img src="./assets${product[i].image}" alt="${
+        product[i].name
+      }"/>
               </div>
               <div class="result_text">
                 <div class="name_result"><h4>${product[i].name}</h4></div>
@@ -322,7 +323,7 @@ let searchProgress = () => {
                 </div>
               </div>
             </div>
-          </div>`;
+          </div></a>`;
     }
   }
 };
@@ -330,4 +331,3 @@ let searchProgress = () => {
 // search.addEventListener("focusout", closesearch);
 search.addEventListener("focusin", searchProgress);
 search.addEventListener("keyup", searchProgress);
-getProduct();
