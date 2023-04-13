@@ -160,35 +160,10 @@ const getProduct = async () => {
   product = data;
 };
 getProduct();
- // search
 // search
 const result = document.querySelector("#search .sreach_result");
 const search = document.querySelector("#search");
 const searchInput = document.querySelector("#search input");
-
-let countStar = (star) => {
-  let resultStart = "";
-  let full;
-  let half;
-  let nostar;
-  if (star % 1 == 0) {
-    full = star;
-    nostar = 5 - star;
-    half = 0;
-  } else {
-    full = star - 0.5;
-    nostar = 5 - star - 0.5;
-    half = 1;
-  }
-  for (let i = 0; i < full; i++) {
-    resultStart += `<i class="bi bi-star-fill"></i>`;
-  }
-  resultStart += half ? `<i class="bi bi-star-half"></i>` : "";
-  for (let i = 0; i < nostar; i++) {
-    resultStart += `<i class="bi bi-star"></i>`;
-  }
-  return resultStart;
-};
 
 let searchProgress = () => {
   result.innerHTML = "";
