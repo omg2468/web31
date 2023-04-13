@@ -217,10 +217,10 @@ const getProduct = async () => {
   product1 = data;
 };
 getProduct();
- // search
+// search
 const result = document.querySelector("#search .sreach_result");
-const search = document.querySelector("#search input");
-console.log(search);
+const search = document.querySelector("#search");
+const searchInput = document.querySelector("#search input");
 
 let countStar = (star) => {
   let resultStart = "";
@@ -246,30 +246,29 @@ let countStar = (star) => {
   return resultStart;
 };
 
-let closesearch = () => {
-  result.innerHTML = "";
-};
-
 let searchProgress = () => {
   result.innerHTML = "";
-  for (let i = 0; i < product1.length; i++) {
-    if (product1[i].name.toLowerCase().includes(search.value) && search.value) {
+  for (let i = 0; i < (product && product.length); i++) {
+    if (
+      product[i].name.toLowerCase().includes(searchInput.value) &&
+      searchInput.value
+    ) {
       result.innerHTML += `<a href="https://omg2468.github.io/web31/project-final/detail_item.html?id=${
-        product1[i].id
+        product[i].id
       }" class = "no-decoration"><div class="box_result d-flex">
       <div class="result_img">
-                <img src="./assets${product1[i].image}" alt="${
-        product1[i].name
+                <img src="./assets${product[i].image}" alt="${
+        product[i].name
       }"/>
               </div>
               <div class="result_text">
-                <div class="name_result"><h4>${product1[i].name}</h4></div>
-                <div class="price_result">${product1[i].price.toLocaleString(
+                <div class="name_result"><h4>${product[i].name}</h4></div>
+                <div class="price_result">${product[i].price.toLocaleString(
                   "it-IT",
                   { style: "currency", currency: "VND" }
                 )} </div>
                 <div class="description_result">
-                  ${countStar(product1[i].star)}
+                  ${countStar(product[i].star)}
                 </div>
               </div>
             </div>
@@ -278,6 +277,12 @@ let searchProgress = () => {
   }
 };
 
-search.addEventListener("focusout", closesearch);
-search.addEventListener("focusin", searchProgress);
-search.addEventListener("keyup", searchProgress);
+let closesearch = () => {
+  result.innerHTML = "";
+};
+window.document.addEventListener("click", closesearch);
+searchInput.addEventListener("focusin", searchProgress);
+searchInput.addEventListener("keyup", searchProgress);
+searchInput.addEventListener("click", (e) => {
+  e.stopPropagation();
+});

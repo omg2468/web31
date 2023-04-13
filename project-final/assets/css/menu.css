@@ -299,7 +299,8 @@ h2 {
   border: 3px solid rgb(25, 253, 25);
   padding: 10px;
   background-color: white;
-  animation: movebox 1.2s linear forwards;
+  animation: movebox 0.5s ease-in forwards
+  , movebox-static 1.5s ease-in 0.5s forwards;
   border-radius: 10px;
 }
 
@@ -311,7 +312,17 @@ h2 {
   }
 
   100% {
-    bottom: 150px;
+    bottom: 80px;
+  }
+}
+
+@keyframes movebox-static {
+  0% {
+    bottom: 80px;
+  }
+
+  100% {
+    bottom: 80px;
     display: none;
     visibility: hidden;
   }

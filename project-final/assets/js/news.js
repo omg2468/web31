@@ -9,9 +9,10 @@ const getProduct = async () => {
 };
 getProduct();
  // search
+// search
 const result = document.querySelector("#search .sreach_result");
-const search = document.querySelector("#search input");
-console.log(search);
+const search = document.querySelector("#search");
+const searchInput = document.querySelector("#search input");
 
 let countStar = (star) => {
   let resultStart = "";
@@ -37,14 +38,13 @@ let countStar = (star) => {
   return resultStart;
 };
 
-let closesearch = () => {
-  result.innerHTML = "";
-};
-
 let searchProgress = () => {
   result.innerHTML = "";
-  for (let i = 0; i < product.length; i++) {
-    if (product[i].name.toLowerCase().includes(search.value) && search.value) {
+  for (let i = 0; i < (product && product.length); i++) {
+    if (
+      product[i].name.toLowerCase().includes(searchInput.value) &&
+      searchInput.value
+    ) {
       result.innerHTML += `<a href="https://omg2468.github.io/web31/project-final/detail_item.html?id=${
         product[i].id
       }" class = "no-decoration"><div class="box_result d-flex">
@@ -69,6 +69,12 @@ let searchProgress = () => {
   }
 };
 
-search.addEventListener("focusout", closesearch);
-search.addEventListener("focusin", searchProgress);
-search.addEventListener("keyup", searchProgress);
+let closesearch = () => {
+  result.innerHTML = "";
+};
+window.document.addEventListener("click", closesearch);
+searchInput.addEventListener("focusin", searchProgress);
+searchInput.addEventListener("keyup", searchProgress);
+searchInput.addEventListener("click", (e) => {
+  e.stopPropagation();
+});

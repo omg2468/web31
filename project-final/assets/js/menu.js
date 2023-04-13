@@ -475,19 +475,42 @@ for (let i = 0; i < allLink.length; i++) {
 }
 getProduct();
 // search
+// search
 const result = document.querySelector("#search .sreach_result");
-const search = document.querySelector("#search input");
-console.log(search);
+const search = document.querySelector("#search");
+const searchInput = document.querySelector("#search input");
 
-
-let closesearch = () => {
-  result.innerHTML = "";
+let countStar = (star) => {
+  let resultStart = "";
+  let full;
+  let half;
+  let nostar;
+  if (star % 1 == 0) {
+    full = star;
+    nostar = 5 - star;
+    half = 0;
+  } else {
+    full = star - 0.5;
+    nostar = 5 - star - 0.5;
+    half = 1;
+  }
+  for (let i = 0; i < full; i++) {
+    resultStart += `<i class="bi bi-star-fill"></i>`;
+  }
+  resultStart += half ? `<i class="bi bi-star-half"></i>` : "";
+  for (let i = 0; i < nostar; i++) {
+    resultStart += `<i class="bi bi-star"></i>`;
+  }
+  return resultStart;
 };
 
 let searchProgress = () => {
   result.innerHTML = "";
-  for (let i = 0; i < product.length; i++) {
-    if (product[i].name.toLowerCase().includes(search.value) && search.value) {
+  for (let i = 0; i < (product && product.length); i++) {
+    if (
+      product[i].name.toLowerCase().includes(searchInput.value) &&
+      searchInput.value
+    ) {
       result.innerHTML += `<a href="https://omg2468.github.io/web31/project-final/detail_item.html?id=${
         product[i].id
       }" class = "no-decoration"><div class="box_result d-flex">
@@ -512,6 +535,12 @@ let searchProgress = () => {
   }
 };
 
-search.addEventListener("focusout", closesearch);
-search.addEventListener("focusin", searchProgress);
-search.addEventListener("keyup", searchProgress);
+let closesearch = () => {
+  result.innerHTML = "";
+};
+window.document.addEventListener("click", closesearch);
+searchInput.addEventListener("focusin", searchProgress);
+searchInput.addEventListener("keyup", searchProgress);
+searchInput.addEventListener("click", (e) => {
+  e.stopPropagation();
+});
