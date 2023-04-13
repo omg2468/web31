@@ -2,7 +2,6 @@ const city = document.querySelector("#city");
 const districts = document.querySelector("#districts");
 const wards = document.querySelector("#wards");
 const spin = document.querySelector(".spin-loading");
-console.log(spin);
 
 async function getData() {
   const res = await fetch("https://provinces.open-api.vn/api/?depth=3")
