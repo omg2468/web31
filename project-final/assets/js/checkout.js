@@ -149,7 +149,7 @@ securityVisa.addEventListener("focusout", function () {
   cardInner.classList.toggle("rotate");
 });
 
-securityVisa.addEventListener("change", function () {
+securityVisa.addEventListener("focusout", function () {
   if (!this.value || this.value.length < 3)
     messsecurity.innerHTML = `Vui lòng nhập đúng mã bảo mật`;
   else messsecurity.innerHTML = "";
@@ -157,7 +157,7 @@ securityVisa.addEventListener("change", function () {
 });
 
 //nameVisa
-nameVisa.addEventListener("input", function () {
+nameVisa.addEventListener("focusout", function () {
   if (!nameVisa.value) messname.innerHTML = `Vui lòng nhập tên`;
   else messname.innerHTML = "";
   document.querySelector(
@@ -181,7 +181,7 @@ expiryVisa.addEventListener("input", function (e) {
   checkbutton();
 });
 
-expiryVisa.addEventListener("change", function () {
+expiryVisa.addEventListener("focusout", function () {
   if (!this.value) {
     messexpiry.innerHTML = `Vui lòng nhập ngày hết hạn`;
   } else if (this.value.length < this.maxLength) {
@@ -254,12 +254,15 @@ numberVisa.addEventListener("input", function (e) {
   }
 });
 
-numberVisa.addEventListener("change", function () {
-  if (!this.value) {
+numberVisa.addEventListener("focusout", function () {
+  if (!numberVisa.value) {
     messNumber.innerHTML = `Vui lòng nhập số thẻ`;
-  } else if (this.value.length < 16) {
+  } else if (numberVisa.value.length < 16) {
     messNumber.innerHTML = `Mã số thẻ không hợp lệ`;
-  } else messNumber.innerHTML = "";
+  } else {
+    messNumber.innerHTML = "";
+    console.log("lot");
+  }
   checkbutton();
 });
 

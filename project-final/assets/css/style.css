@@ -74,7 +74,7 @@ h2 {
 }
 
 .navbar_container form {
-  margin-right: 20px;
+  margin-right: 35px;
 }
 
 .navbar_container form input {
@@ -154,13 +154,16 @@ h2 {
   transform: translate(-50%, -50%);
 }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
   .container-fluid.header .background {
     width: 250px;
   }
+  .navbar_container form {
+    margin-right: 20px;
+  }
 }
 
-@media screen and (max-width: 576px) {
+@media (max-width: 576px) {
   .container-fluid.header .background {
     width: 200px;
   }

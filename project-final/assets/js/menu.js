@@ -1,5 +1,3 @@
-
-
 const URL = `https://api-product-g1bk.vercel.app/product`;
 var product;
 var filterArr;
@@ -23,7 +21,8 @@ const allLink = document.querySelectorAll(".pagination li a");
 const filterIcon = document.querySelector(".header_filter");
 const accordion = document.querySelector(".accordion");
 filterIcon.addEventListener("click", function () {
-  accordion.style.display =  accordion.style.display == "none" ? "block" : "none"
+  accordion.style.display =
+    accordion.style.display == "none" ? "block" : "none";
 });
 //filter status
 const apply = document.querySelector(".filter_button button");
@@ -49,6 +48,8 @@ cancel.addEventListener("click", function () {
   }
   filterArr = product.slice();
   filterOption.value = "default";
+  pageTwo.style.display = "block";
+  nextBtn.className = "page-link";
   if (pageOne.className == "page-link active") renderUI(0, 12);
   else renderUI(13, 20);
 });
@@ -236,7 +237,6 @@ getProduct();
 const result = document.querySelector("#search .sreach_result");
 const search = document.querySelector("#search");
 const searchInput = document.querySelector("#search input");
-
 
 let searchProgress = () => {
   result.innerHTML = "";
