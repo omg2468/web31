@@ -75,8 +75,6 @@ let filterChange = () => {
       ((inputdiscount && inputnodiscount) ||
         ((!inputdiscount || n.discount) && (!inputnodiscount || !n.discount)))
   );
-  console.log(inputsort);
-  console.log(filterArr);
   if (filterArr.length <= 12) {
     pageOne.className = "page-link active";
     pageTwo.style.display = "none";

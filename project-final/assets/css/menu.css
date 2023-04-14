@@ -186,9 +186,11 @@ h2 {
   border-radius: 5px;
 }
 
+
 .container_menu_items .menu_item {
   flex-wrap: wrap;
   text-align: center;
+  justify-content: space-between;
 }
 
 .container_menu_items .discount {
@@ -218,13 +220,12 @@ h2 {
 .container_menu_items .box_items {
   width: 30%;
   height: 450px;
-  margin-bottom: 10px;
+  margin-bottom: 25px;
   border-radius: 10px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  margin-right: 20px;
 }
 
 @media (max-width: 768px) {

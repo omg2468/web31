@@ -178,7 +178,20 @@ h2 {
 
 @media (max-width: 556px) {
   .box_news {
-    margin-left: 0;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container-fluid.subscribe .row {
+    padding: 0px 0px 30px;
+  }
+}
+
+@media (max-width:992px){
+  .box_news {
+    max-width: 600px;
   }
 }
 
@@ -250,12 +263,6 @@ h2 {
 .container-fluid.subscribe .row {
   display: flex;
   padding: 0 50px 30px 100px;
-}
-
-@media (max-width: 768px) {
-  .container-fluid.subscribe .row {
-    padding: 0px 0px 30px;
-  }
 }
 
 .email-box {
