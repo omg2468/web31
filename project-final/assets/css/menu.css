@@ -472,7 +472,31 @@ h2 {
 }
 
 @media (max-width: 992px) {
-    .navbar_container form {
+  .navbar_container form {
     margin-right: 10px;
+  }
+  .container-fluid.header .background {
+    width: 450px;
+  }
+  .container-fluid.subscribe .row {
+    padding: 0px 70px 30px 70px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container-fluid.header .background {
+    width: 250px;
+  }
+  .navbar_container form {
+    margin-right: 10px;
+  }
+  .container-fluid.subscribe .row {
+    padding: 0px 0px 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .container-fluid.header .background {
+    width: 200px;
   }
 }

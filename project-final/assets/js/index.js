@@ -73,14 +73,30 @@ var TrandingSlider = new Swiper(".swiper1", {
   autoplay: {
     delay: 2500,
   },
+  on: {
+    slideChange: function () {
+      // get the current active slide index
+      var activeIndex = this.activeIndex;
+
+      // remove the event from the previously active slide
+      this.slides.eq(activeIndex - 1).off("click");
+      this.slides.eq(activeIndex + 1).off("click");
+
+      // add your event to the current active slide
+      this.slides.eq(activeIndex).on("click", function (e) {
+        // do something when the center slide is clicked
+        console.log(e.target.style.display = 'none');
+      });
+    },
+  },
 });
 
 TrandingSlider.on("click", function () {
   // Get the clicked slide index
   const clickedIndex = TrandingSlider.clickedIndex;
-
   // Animate the slide to the center
   TrandingSlider.slideTo(clickedIndex);
+  console.log(clickedIndex);
 });
 
 getProduct();
