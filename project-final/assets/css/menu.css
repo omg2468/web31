@@ -73,7 +73,7 @@ h2 {
 }
 
 .navbar_container form {
-  margin-right: 20px;
+  margin-right: 30px;
 }
 
 .navbar_container form input {
@@ -469,4 +469,10 @@ h2 {
 
 .adrees_header {
   font-size: 25px;
+}
+
+@media (max-width: 992px) {
+    .navbar_container form {
+    margin-right: 10px;
+  }
 }
