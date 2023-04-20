@@ -29,7 +29,7 @@ const scrollNav = () => {
     navBarToogle.style.borderColor = "black";
     navBarToogleIcon.className = "navbar-toggler-icon black";
   } else {
-    navbar.style.backgroundColor = "rgba(119, 124, 106, 0.258)";
+    navbar.style.backgroundColor = "rgba(0, 0, 0, 1)";
     navbar.style.color = "white";
     navBarLink.forEach((link) => {
       link.style.color = "white";
@@ -63,7 +63,7 @@ var TrandingSlider = new Swiper(".swiper1", {
   coverflowEffect: {
     rotate: 0,
     stretch: 0,
-    depth: 200,
+    depth: 250,
     modifier: 2,
   },
   pagination: {

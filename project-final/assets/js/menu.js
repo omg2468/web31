@@ -1,12 +1,14 @@
 const URL = `https://api-product-g1bk.vercel.app/product`;
 var product;
 var filterArr;
+const spin = document.querySelector(".spin-loading");
 
 const getProduct = async () => {
   const res = await fetch(URL);
   const data = await res.json();
   product = data;
   filterArr = product.slice();
+  spin.style.display = "none";
   renderUI(0, 12);
 };
 
@@ -21,12 +23,20 @@ const allLink = document.querySelectorAll(".pagination li a");
 const filterIcon = document.querySelector(".header_filter");
 const accordion = document.querySelector(".accordion");
 filterIcon.addEventListener("click", function () {
+  cancel.style.display = cancel.style.display == "none" ? "block" : "none";
   accordion.style.display =
     accordion.style.display == "none" ? "block" : "none";
 });
+
 //filter status
 const apply = document.querySelector(".filter_button button");
 const cancel = document.querySelector(".filter_icon button");
+window.onload = () => {
+  if (screen.width < 980) {
+    cancel.style.display = "none";
+    accordion.style.display = "none";
+  }
+};
 
 //when click input , 2 button can click
 const allCheckbox = document.querySelectorAll(".accordion-body input");

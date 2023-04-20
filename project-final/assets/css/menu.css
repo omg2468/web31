@@ -143,6 +143,48 @@ h2 {
 #search .sreach_result .box_result .description_result {
   color: var(--red-color);
 }
+/* spin */
+
+.spin-loading {
+  display: block;
+}
+
+.spin-loading::after {
+  content: "";
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.347);
+}
+
+.spinner {
+  z-index: 2;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  box-shadow: 48px 0 0 0 rgba(200, 0, 0, 0.3),
+    36px 36px 0 0 rgba(200, 0, 0, 0.3), 0px 48px 0 0 rgba(200, 0, 0, 0.3),
+    -36px 36px 0 0 rgba(200, 0, 0, 0.3), -48px 0 0 0 rgba(200, 0, 0, 0.3),
+    -36px -36px 0 0 rgba(200, 0, 0, 0.3), 0px -48px 0 0 rgba(200, 0, 0, 0.3),
+    36px -36px 0 0 rgba(200, 0, 0, 0.3);
+  animation: animate 1.5s infinite linear;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 
 /* menu */
 
@@ -159,6 +201,7 @@ h2 {
   display: flex;
   justify-content: end;
   padding: 10px;
+  padding-left: 0;
   border-radius: 10px;
 }
 
@@ -168,7 +211,7 @@ h2 {
 
 .container.menu .filter_button button {
   width: 50%;
-  margin-top: 10px;
+  margin: 20px;
 }
 
 .container.menu .filter_button button:active {
@@ -186,11 +229,10 @@ h2 {
   border-radius: 5px;
 }
 
-
 .container_menu_items .menu_item {
   flex-wrap: wrap;
   text-align: center;
-  justify-content: space-between;
+  gap: 5%;
 }
 
 .container_menu_items .discount {
@@ -300,8 +342,8 @@ h2 {
   border: 3px solid rgb(25, 253, 25);
   padding: 10px;
   background-color: white;
-  animation: movebox 0.5s ease-in forwards
-  , movebox-static 1.5s ease-in 0.5s forwards;
+  animation: movebox 0.5s ease-in forwards,
+    movebox-static 1.5s ease-in 0.5s forwards;
   border-radius: 10px;
 }
 
@@ -420,6 +462,11 @@ h2 {
   fill: var(--red-color);
 }
 .adress_1 {
-  margin-top: 10px;
+  margin-top: 13px;
   font-weight: 700;
+  font-size: 18px;
+}
+
+.adrees_header {
+  font-size: 25px;
 }

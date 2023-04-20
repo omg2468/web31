@@ -6,7 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Thực đơn</title>
     <!-- favicon -->
-    <link rel="shortcut icon" href="./assets/images/logo.png" type="image/x-icon" />
+    <link
+      rel="shortcut icon"
+      href="./assets/images/logo.png"
+      type="image/x-icon"
+    />
     <!-- bootstrap -->
     <link
       rel="stylesheet"
@@ -20,6 +24,10 @@
     <link rel="stylesheet" href="./assets/css/menu.css" />
   </head>
   <body>
+    <!-- spin -->
+        <div class="spin-loading">
+      <div class="spinner"></div>
+    </div>
     <!-- nav -->
     <div
       class="navbar_container position-fixed top-0 z-2 d-flex justify-content-center align-items-start"
@@ -41,23 +49,39 @@
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
                 <a
-                  class="nav-link active "
+                  class="nav-link active"
                   aria-current="page"
                   href="https://omg2468.github.io/web31/project-final/index.html"
                   >Trang chủ</a
                 >
               </li>
-              <li class="nav-item ">
-                <a class="nav-link text-danger" href="https://omg2468.github.io/web31/project-final/menu.html">Thực đơn</a>
+              <li class="nav-item">
+                <a
+                  class="nav-link text-danger"
+                  href="https://omg2468.github.io/web31/project-final/menu.html"
+                  >Thực đơn</a
+                >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="https://omg2468.github.io/web31/project-final/news.html">Tin tức</a>
+                <a
+                  class="nav-link"
+                  href="https://omg2468.github.io/web31/project-final/news.html"
+                  >Tin tức</a
+                >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="https://omg2468.github.io/web31/project-final/contact.html">Liên hệ</a>
+                <a
+                  class="nav-link"
+                  href="https://omg2468.github.io/web31/project-final/contact.html"
+                  >Liên hệ</a
+                >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="https://omg2468.github.io/web31/project-final/cart.html">Giỏ hàng</a>
+                <a
+                  class="nav-link"
+                  href="https://omg2468.github.io/web31/project-final/cart.html"
+                  >Giỏ hàng</a
+                >
               </li>
             </ul>
           </div>
@@ -73,13 +97,14 @@
           <div class="sreach_result position-absolute text-bg-light"></div>
         </div>
         <div class="cart">
-          <a href="https://omg2468.github.io/web31/project-final/cart.html"><i class="bi bi-cart4 m-3"></i></a>
+          <a href="https://omg2468.github.io/web31/project-final/cart.html"
+            ><i class="bi bi-cart4 m-3"></i
+          ></a>
           <div class="cart_number">0</div>
         </div>
       </form>
     </div>
     <!-- menu -->
-
     <div class="container menu">
       <h2 clas>Thực đơn</h2>
       <div class="row">
@@ -89,7 +114,8 @@
               class="filter_icon d-flex align-items-center justify-content-between"
             >
               <div class="header_filter">
-                <i class="bi bi-funnel-fill"></i> <span>Bộ lọc</span> <i class="bi bi-chevron-down"></i>
+                <i class="bi bi-funnel-fill"></i> <span>Bộ lọc</span>
+                <i class="bi bi-chevron-down"></i>
               </div>
               <button class="btn btn-danger disabled" type="button">
                 Bỏ lọc
@@ -186,11 +212,11 @@
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="filter_button text-center">
-              <button class="btn btn-danger disabled" type="button">
-                Áp dụng
-              </button>
+              <div class="filter_button text-center">
+                <button class="btn btn-danger disabled" type="button">
+                  Áp dụng
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -206,8 +232,7 @@
             </select>
           </div>
           <div class="container_menu_items">
-            <div class="menu_item d-flex">
-            </div>
+            <div class="menu_item d-flex"></div>
             <nav aria-label="Page navigation example">
               <ul class="pagination justify-content-center">
                 <li class="page-item">
@@ -239,24 +264,28 @@
     </div>
 
     <!-- subscribe for more -->
-    <div
-      class="container-fluid subscribe text-center"
-    >
+    <div class="container-fluid subscribe text-center">
       <div class="box_sub">
         <h3>ĐĂNG KÍ NHẬN THÔNG BÁO</h3>
         <b>Đăng kí nhận thông tin khuyến mãi</b>
       </div>
       <div class="row">
         <div class="col-lg-8 col-12">
-          <div class="email-box"><input type="text" placeholder="Nhập địa chỉ Email của bạn" /></div>
+          <div class="email-box">
+            <input type="text" placeholder="Nhập địa chỉ Email của bạn" />
+          </div>
         </div>
         <div class="col-lg-4 col-12">
-          <div class="subscribe"><button type="button" class="button">Đăng kí</button></div>
+          <div class="subscribe">
+            <button type="button" class="button">Đăng kí</button>
+          </div>
         </div>
       </div>
     </div>
     <!-- footer -->
-    <div class="container_footer d-flex align-items-center pb-5 text-xl-start text-center">
+    <div
+      class="container_footer d-flex align-items-center pb-5 text-xl-start text-center"
+    >
       <div class="container mt-5">
         <div class="row align-items-center">
           <div class="aboutus_footer col-xl-4 offset-xl-1 col-12 mb-4">
