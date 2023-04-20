@@ -159,8 +159,11 @@ h2 {
 }
 
 @media (max-width: 992px) {
-    .navbar_container form {
+  .navbar_container form {
     margin-right: 10px;
+  }
+  .container-fluid.header .background {
+    width: 450px;
   }
 }
 
@@ -301,6 +304,10 @@ h2 {
   margin-bottom: 60px;
 }
 
+.swiper-wrapper {
+  padding: 0 30px;
+}
+
 .swiper-slide.sell {
   width: 600px;
   height: 400px;
@@ -312,7 +319,7 @@ h2 {
 
 .swiper-slide.sell img {
   width: 100%;
-  height: 500px;
+  height: 100%;
 }
 
 .swiper-slide-shadow-left,
@@ -359,6 +366,9 @@ h2 {
   .img_news,
   .info_news {
     width: 100%;
+  }
+  .swiper-wrapper {
+    padding: 0;
   }
 }
 
@@ -432,14 +442,13 @@ h2 {
 
 .box_sub {
   width: 100%;
-  margin-bottom: 20px;
   padding: 20px;
   color: white;
 }
 
 .container-fluid.subscribe .row {
   display: flex;
-  padding: 0 50px 30px 100px;
+  padding: 0px 300px 30px 300px;
 }
 
 @media (max-width: 768px) {

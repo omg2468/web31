@@ -61,8 +61,8 @@ var TrandingSlider = new Swiper(".swiper1", {
     },
   },
   coverflowEffect: {
-    rotate: 0,
-    stretch: 0,
+    rotate: 10,
+    stretch: 10,
     depth: 250,
     modifier: 2,
   },
@@ -71,7 +71,7 @@ var TrandingSlider = new Swiper(".swiper1", {
     clickable: true,
   },
   autoplay: {
-    delay: 2000,
+    delay: 2500,
   },
 });
 

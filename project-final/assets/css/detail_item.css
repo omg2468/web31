@@ -364,14 +364,13 @@ h2 {
 
 .box_sub {
   width: 100%;
-  margin-bottom: 20px;
   padding: 20px;
   color: white;
 }
 
 .container-fluid.subscribe .row {
   display: flex;
-  padding: 0 50px 30px 100px;
+  padding: 0px 300px 30px 300px;
 }
 
 @media (max-width: 768px) {
