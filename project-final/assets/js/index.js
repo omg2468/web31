@@ -6,7 +6,7 @@ const navBarLink = document.querySelectorAll(".nav-item a");
 const btnNav = document.querySelector(".navbar .container-fluid button span");
 const cart = document.querySelector(".bi-cart4");
 
-const URL_PRODUCT = `https://api-product-g1bk.vercel.app/product`;
+const URL_PRODUCT = `https://api-product-rskq-44r04fk6p-omg2468.vercel.app/product`;
 var product;
 
 const getProduct = async () => {
@@ -61,9 +61,9 @@ var TrandingSlider = new Swiper(".swiper1", {
     },
   },
   coverflowEffect: {
-    rotate: 10,
-    stretch: 10,
-    depth: 250,
+    rotate: 0,
+    stretch: 0,
+    depth: 200,
     modifier: 2,
   },
   pagination: {
@@ -73,30 +73,43 @@ var TrandingSlider = new Swiper(".swiper1", {
   autoplay: {
     delay: 2500,
   },
+  /*Thêm event cho phần tử ở giữa */
+  // on: {
+  //   slideChange: function () {
+  //     // get the current active slide index
+  //     var activeIndex = this.activeIndex;
+
+  //     // remove the event from the previously active slide
+  //     this.slides.eq(activeIndex - 1).off("click");
+  //     this.slides.eq(activeIndex + 1).off("click");
+
+  //     // add your event to the current active slide
+  //     this.slides.eq(activeIndex).on("click", function (e) {
+  //       // do something when the center slide is clicked
+  //     });
+  //   },
+  // },
+  /* Thêm class cho phần tử ở giữa*/
   on: {
     slideChange: function () {
       // get the current active slide index
       var activeIndex = this.activeIndex;
 
-      // remove the event from the previously active slide
-      this.slides.eq(activeIndex - 1).off("click");
-      this.slides.eq(activeIndex + 1).off("click");
+      // remove the style from the previously active slide
+      this.slides.eq(activeIndex - 1).removeClass("center");
+      this.slides.eq(activeIndex + 1).removeClass("center");
+      this.slides.eq(activeIndex - 2).removeClass("center");
+      this.slides.eq(activeIndex + 2).removeClass("center");
 
-      // add your event to the current active slide
-      this.slides.eq(activeIndex).on("click", function (e) {
-        // do something when the center slide is clicked
-        console.log(e.target.style.display = 'none');
-      });
+      // add the style to the current active slide
+      this.slides.eq(activeIndex).addClass("center");
     },
   },
 });
 
 TrandingSlider.on("click", function () {
-  // Get the clicked slide index
   const clickedIndex = TrandingSlider.clickedIndex;
-  // Animate the slide to the center
   TrandingSlider.slideTo(clickedIndex);
-  console.log(clickedIndex);
 });
 
 getProduct();
@@ -171,4 +184,28 @@ searchInput.addEventListener("click", (e) => {
   e.stopPropagation();
 });
 
+// slider
 
+let dash = (e) => {
+  if (e.target.parentElement.querySelector("span").innerHTML > 1)
+    e.target.parentElement.querySelector("span").innerHTML--;
+};
+
+let plus = (e) => {
+e.target.parentElement.querySelector("span").innerHTML++;
+};
+
+// when click order
+let orderbox = (e) => {
+  const number = e.target.parentElement.parentElement.querySelector("span");
+  console.log(number);
+  let box = document.createElement("div");
+  box.innerHTML = `Thêm vào giỏ hàng thành công <i class="bi bi-check-square-fill"></i>`;
+  box.classList.add("order_box");
+  if (Number(number.innerHTML) > 0) {
+    document.body.append(box);
+  }
+  let cartNumber = document.querySelector(".cart_number");
+  cartNumber.innerHTML =
+    Number(number.innerHTML) + Number(cartNumber.innerHTML);
+};

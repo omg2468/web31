@@ -288,9 +288,14 @@ h2 {
   width: 600px;
   height: 400px;
   overflow: hidden;
-  border: 10px solid white;
+  border: 5px solid white;
   animation: 1s linear;
   border-radius: 10px;
+  display: flex;
+}
+
+.swiper-slide.sell .box-description {
+  display: none;
 }
 
 .swiper-slide.sell img {
@@ -303,6 +308,123 @@ h2 {
   display: none;
 }
 
+.swiper-slide .box-description {
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+}
+
+.swiper-slide.center.sell .box-description {
+  display: block;
+}
+
+.swiper-slide.center.sell img{
+  width: 50%;
+}
+
+/* oder-box */
+.order_box {
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+  z-index: 999;
+  border: 3px solid rgb(25, 253, 25);
+  padding: 10px;
+  background-color: white;
+  animation: movebox 1.2s linear forwards;
+  border-radius: 10px;
+}
+
+@keyframes movebox {
+  0% {
+    bottom: 30px;
+    display: block;
+    visibility: visible;
+  }
+
+  100% {
+    bottom: 150px;
+    display: none;
+    visibility: hidden;
+  }
+}
+
+.order_box i {
+  color: green;
+}
+/* detail_item */
+
+.detail-item-container {
+  margin-top: 80px;
+  margin-bottom: 40px;
+}
+
+.detail-price {
+  margin-bottom: 5px;
+}
+
+.detail-price > * {
+  margin-right: 5px;
+}
+
+.detail-price .real-price {
+  font-weight: bold;
+  color: var(--red-color);
+}
+.detail-star > i {
+  color: red;
+  margin-right: 2px;
+}
+
+.detail-star {
+  margin-bottom: 5px;
+}
+
+.detail-description {
+  margin-bottom: 10px;
+  line-height: 22px;
+  height: 132px;
+  overflow: hidden;
+}
+
+.box-img img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.button-item .add-item button {
+  color: var(--red-color);
+  background-color: white;
+  border: 2px solid var(--red-color);
+  padding: 3px 10px;
+  border-radius: 10px;
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+.button-item .buy-now button {
+  color: white;
+  background-color: var(--red-color);
+  padding: 3px 10px;
+  border-radius: 10px;
+  border: 1px solid var(--red-color);
+  width: 100%;
+}
+
+.button-item .add-number-item {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.button-item .add-number-item i {
+  margin: 0 10px;
+  color: red;
+  font-size: 20px;
+}
+
+.button-item .add-number-item span {
+  font-size: 20px;
+}
 /* news */
 .container-fluid.news {
   margin-bottom: 20px;
@@ -345,6 +467,9 @@ h2 {
   }
   .swiper-wrapper {
     padding: 0;
+  }
+  .detail-description {
+    height: 110px;
   }
 }
 
@@ -524,5 +649,11 @@ input {
 @media (max-width: 576px) {
   .container-fluid.header .background {
     width: 200px;
+  }
+  .detail-price del {
+    display: none;
+  }
+  .detail-description {
+    height: 88px;
   }
 }

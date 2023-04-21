@@ -1,11 +1,11 @@
 // get API
-const URL_DATA = `https://api-product-g1bk.vercel.app/product`;
+const URL_DATA = `https://api-product-rskq-44r04fk6p-omg2468.vercel.app/product`;
 const containeritem = document.querySelector(".detail-item-container");
 const spin = document.querySelector(".spin-loading");
 
 const getdetail = async (id) => {
   const res = await fetch(
-    `https://api-product-g1bk.vercel.app/product?id=${id}`
+    `https://api-product-rskq-44r04fk6p-omg2468.vercel.app/product?id=${id}`
   );
   const data = await res.json();
   spin.style.display = 'none'
