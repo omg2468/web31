@@ -317,7 +317,7 @@ h2 {
   display: block;
 }
 
-.swiper-slide.center.sell img{
+.swiper-slide.center.sell img {
   width: 50%;
 }
 
@@ -384,6 +384,9 @@ h2 {
   line-height: 22px;
   height: 132px;
   overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 6;
 }
 
 .box-img img {
@@ -470,6 +473,7 @@ h2 {
   }
   .detail-description {
     height: 110px;
+    -webkit-line-clamp: 5;
   }
 }
 
@@ -495,7 +499,7 @@ h2 {
 .text_news {
   overflow: hidden;
   height: 100px;
-  line-height: 1.5;
+  line-height: 25px;
   --max_lines: 4;
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -655,5 +659,6 @@ input {
   }
   .detail-description {
     height: 88px;
+    -webkit-line-clamp: 4;
   }
 }
