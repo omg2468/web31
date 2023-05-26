@@ -206,7 +206,6 @@ let close1 = (id) => {
 renderUI();
 rendercart();
 
-
 //call api
 const URL_PRODUCT = `https://api-product-rskq-44r04fk6p-omg2468.vercel.app/product`;
 var product1;

@@ -106,7 +106,6 @@ emailForm.addEventListener("focusout", inputEmail);
 /*modal 2
  */
 const numberVisa = document.getElementById("number-visa");
-console.log(numberVisa);
 const nameVisa = document.getElementById("name_visa");
 const expiryVisa = document.getElementById("expiry");
 const securityVisa = document.getElementById("security");
@@ -157,7 +156,7 @@ securityVisa.addEventListener("focusout", function () {
 });
 
 //nameVisa
-nameVisa.addEventListener("focusout", function () {
+nameVisa.addEventListener("input", function () {
   if (!nameVisa.value) messname.innerHTML = `Vui lòng nhập tên`;
   else messname.innerHTML = "";
   document.querySelector(
@@ -233,8 +232,8 @@ numberVisa.oninput = (e) => {
   e.target.value = patternMatch({
     input: e.target.value,
     template: "xxxx xxxx xxxx xxxx",
-  });
-};
+  })
+}
 numberVisa.addEventListener("input", function (e) {
   if (isNaN(e.data * 1)) {
     this.value = this.value.slice(0, this.value.length - 1);

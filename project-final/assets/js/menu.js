@@ -60,8 +60,8 @@ cancel.addEventListener("click", function () {
   filterOption.value = "default";
   pageTwo.style.display = "block";
   nextBtn.className = "page-link";
-  if (pageOne.className == "page-link active") renderUI(0, 12);
-  else renderUI(13, 20);
+  if (pageOne.className == "page-link active") {renderUI(0, 12)}
+  else {renderUI(13, 20)}
 });
 
 // main array product will render
